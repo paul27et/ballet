@@ -1,0 +1,119 @@
+.dancerCard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  outline: 0;
+  background-color: var(--main-bg-color);
+  display: flex;
+}
+
+.dancerImage {
+  width: 42.92vw;
+  height: 62.5vw;
+}
+
+.arrowContainer {
+  padding: 0 2.08vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.arrow {
+  width: 4.51vw;
+  height: 2.78vw;
+}
+
+.closeContainer {
+  position: fixed;
+  display: flex;
+  right: 0;
+  top: 0;
+  height: 6.94vw;
+  padding: 2.08vw;
+  justify-content: end;
+}
+
+.descriptionContainer {
+  padding-top: 6.94vw;
+  overflow-y: scroll;
+}
+
+.descriptionContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.name {
+  composes: titleCormorant96 from global;
+  color: var(--main-color);
+}
+
+.jobContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.47vw;
+  gap: 0.35vw;
+}
+
+.jobTitle {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+}
+
+.job {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+}
+
+.careerContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.2vw;
+  gap: 0.35vw;
+}
+
+.careerTitle {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+}
+
+.career {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+}
+
+.repertoirContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.2vw;
+  gap: 0.35vw;
+}
+
+.repertoirTitle {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+}
+
+.repertoirPlaysContainer {
+
+}
+
+.repertoirPlay {
+  display: flex;
+  flex-direction: column;
+}
+
+.playTitle {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+}
+
+.playDescription {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+}

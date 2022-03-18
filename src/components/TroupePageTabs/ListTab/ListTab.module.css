@@ -21,7 +21,17 @@
   vertical-align: top;
 }
 
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .text {
   color: var(--main-color);
   composes: textCormorant80 from global;
+}
+
+.subText {
+  color: var(--main-color-grey);
+  composes: textManrope18 from global;
 }

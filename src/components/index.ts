@@ -12,4 +12,3 @@ export * from './HoverOverHoc';
 export * from './SiteMenu';
 export * from './TroupePageTabs';
 export * from './DancerCard';
-export * from './Image';
