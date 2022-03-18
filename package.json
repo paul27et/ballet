@@ -6,6 +6,7 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
+    "serve": "vite preview",
     "fix": "eslint --fix \"src/**\""
   },
   "license": "MIT",

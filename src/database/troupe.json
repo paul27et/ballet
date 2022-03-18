@@ -3,32 +3,32 @@
     {
       "name": "Фадеев Андриан",
       "job": "худ.руководитель, директор",
-      "image": "./src/assets/bocharova.png"
+      "image": "./bocharova.png"
     },
     {
       "name": "алла бочарова",
       "job": "ведущая солистка",
-      "image": "./src/assets/bocharova.png"
+      "image": "./bocharova.png"
     },
     {
       "name": "Андрей Сорокин",
       "job": "ведущий солист",
-      "image": "./src/assets/bocharova.png"
+      "image": "./bocharova.png"
     },
     {
       "name": "Фадеев Андриан",
       "job": "худ.руководитель, директор",
-      "image": "./src/assets/bocharova.png"
+      "image": "./bocharova.png"
     },
     {
       "name": "Елена Чернова",
       "job": "ведущая солистка",
-      "image": "./src/assets/bocharova.png"
+      "image": "./bocharova.png"
     },
     {
       "name": "Степан Демин",
       "job": "ведущий солист",
-      "image": "./src/assets/bocharova.png"
+      "image": "./bocharova.png"
     }
   ],
   "females" : [

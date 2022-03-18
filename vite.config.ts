@@ -8,6 +8,7 @@ export default defineConfig({
   build: {
 		target: "esnext",
 	},
+  publicDir: './src/assets',
   resolve: {
     alias: {
       assets: path.resolve(__dirname, './src/assets'),
