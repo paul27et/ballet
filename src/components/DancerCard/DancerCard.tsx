@@ -1,6 +1,4 @@
-import { Modal } from 'solid-bootstrap';
-import { Component, createEffect, createSignal, For, onCleanup, onMount, splitProps } from 'solid-js';
-import { Portal } from 'solid-js/web';
+import { Component, createEffect, createSignal, For, splitProps } from 'solid-js';
 import { DancerInterface, DancerPlayInterface } from 'interfaces';
 import arrowLeft from 'assets/arrowLeft.svg';
 import arrowRight from 'assets/arrowRight.svg';
@@ -8,7 +6,7 @@ import closeIcon from 'assets/close.svg';
 // @ts-ignore
 import { dancers } from 'database/dancers.json' 
 import styles from './DancerCard.module.css';
-import { preventScroll } from '../../App';
+import { FullScreenModal } from 'components';
 
 const PlayCard: Component<DancerPlayInterface & { getIsAnyActive: Function, setIsAnyActive: Function }> = (props) => {
   const [local] = splitProps(props, ['image', 'title', 'description', 'getIsAnyActive', 'setIsAnyActive'])
@@ -55,59 +53,49 @@ export const DancerCard: Component<{ name: string, closeCard: Function }> = (pro
   const dancer = dancers.find((dancer: DancerInterface) => dancer.name.toLowerCase() == local.name.toLowerCase())
   const [getIsAnyActive, setIsAnyActive] = createSignal(false)
 
-  onMount(() => {
-    document.body.classList.add('modalOpen')
-  })
-
-  onCleanup(() => {
-    document.body.classList.remove('modalOpen')
-  })
-
   const parseText = (text: string) => {
     return text.split('|').map(textItem => <div>{textItem}<br /><br /></div>)
   }
 
   return (
-    <Portal mount={document.getElementById('portal') as Node}>
-      <div class={styles.dancerCard}>
-        <img class={styles.dancerImage} src={dancer.image} alt="" />
-        <div class={styles.arrowContainer} >
-          <img class={styles.arrow} src={arrowLeft} alt=""/>
+    <FullScreenModal>
+      <img class={styles.dancerImage} src={dancer.image} alt="" />
+      <div class={styles.arrowContainer} >
+        <img class={styles.arrow} src={arrowLeft} alt=""/>
+      </div>
+      <div class={styles.descriptionContainer}>
+        <div class={styles.closeContainer} onclick={() => local.closeCard()}>
+          <img src={closeIcon} alt="" />
         </div>
-        <div class={styles.descriptionContainer}>
-          <div class={styles.closeContainer} onclick={() => local.closeCard()}>
-            <img src={closeIcon} alt="" />
-          </div>
-          <div class={styles.name}>{dancer.name}</div>
-          <div class={styles.jobContainer}>
-            <div class={styles.jobTitle}>Категория</div>
-            <div class={styles.job}>{dancer.job}</div>
-          </div>
-          <div class={styles.careerContainer}>
-            <div class={styles.careerTitle}>Карьера</div>
-            <div class={styles.career}>{parseText(dancer.career)}</div>
-          </div>
-          <div class={styles.repertoirContainer}>
-            <div class={styles.repertoirTitle}>Репертуар</div>
-            <div class={styles.repertoirPlaysContainer}>
-              <For each={dancer.repertoir}>
-                {(play: DancerPlayInterface) => (
-                  <PlayCard
-                    image={play.image}
-                    title={play.title}
-                    description={play.description}
-                    getIsAnyActive={getIsAnyActive} 
-                    setIsAnyActive={setIsAnyActive} 
-                  />
-                )}
-              </For>
-            </div>
-          </div>
+        <div class={styles.name}>{dancer.name}</div>
+        <div class={styles.jobContainer}>
+          <div class={styles.jobTitle}>Категория</div>
+          <div class={styles.job}>{dancer.job}</div>
         </div>
-        <div class={styles.arrowContainer}>
-          <img class={styles.arrow} src={arrowRight} alt=""/>
+        <div class={styles.careerContainer}>
+          <div class={styles.careerTitle}>Карьера</div>
+          <div class={styles.career}>{parseText(dancer.career)}</div>
+        </div>
+        <div class={styles.repertoirContainer}>
+          <div class={styles.repertoirTitle}>Репертуар</div>
+          <div class={styles.repertoirPlaysContainer}>
+            <For each={dancer.repertoir}>
+              {(play: DancerPlayInterface) => (
+                <PlayCard
+                  image={play.image}
+                  title={play.title}
+                  description={play.description}
+                  getIsAnyActive={getIsAnyActive} 
+                  setIsAnyActive={setIsAnyActive} 
+                />
+              )}
+            </For>
+          </div>
         </div>
       </div>
-    </Portal>
+      <div class={styles.arrowContainer}>
+        <img class={styles.arrow} src={arrowRight} alt=""/>
+      </div>
+    </FullScreenModal>
   );
 };

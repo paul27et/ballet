@@ -1,0 +1,13 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  outline: 0;
+  background-color: var(--main-bg-color);
+  display: flex;
+}

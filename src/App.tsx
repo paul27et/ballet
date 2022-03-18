@@ -11,6 +11,10 @@ export const preventScroll = (e: Event) => {
   return false;
 }
 
+export const parseText = (text: string) => {
+  return text.split('|').map(textItem => <div>{textItem}<br /><br /></div>)
+}
+
 const App: Component = () => {
   const [getMenuActive, setMenuActive] = createSignal(false)
 

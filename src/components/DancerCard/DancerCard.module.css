@@ -12,10 +12,6 @@
   display: flex;
 }
 
-.dancerCard body {
-  overflow: hidden;
-}
-
 .dancerImage {
   width: 42.92vw;
   height: 62.5vw;

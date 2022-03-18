@@ -4,3 +4,4 @@ export * from './404';
 export * from './DocumentsPage';
 export * from './AffichePage';
 export * from './TroupePage';
+export * from './AboutPage';
