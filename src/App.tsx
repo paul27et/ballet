@@ -45,6 +45,8 @@ const App: Component = () => {
         <Route path="/404" element={<ErrorPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/documents" element={<DocumentsPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/affiche" element={<AffichePage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
+        <Route path="affiche" element={<AffichePage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
+        <Route path="/ballet/affiche" element={<AffichePage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/troupe" element={<TroupePage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/menu" element={<SiteMenu onCloseClick={() => onMenuButtonClick(false)} />} />
         <Route path="/*all" element={<ErrorPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
