@@ -1,6 +1,7 @@
 {
   "name": "ballet",
   "version": "0.0.0",
+  “homepage” : “https://paul27et.github.io/ballet/",
   "description": "",
   "scripts": {
     "start": "vite",
