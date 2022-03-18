@@ -1,7 +1,7 @@
 import { Component, createSignal, onMount } from 'solid-js';
 import { Routes, Route } from 'solid-app-router';
 import styles from './App.module.css';
-import { EventsPage, ContactsPage, ErrorPage, DocumentsPage, AffichePage, TroupePage } from './pages';
+import { EventsPage, ErrorPage, ContactsPage, DocumentsPage, AffichePage, TroupePage} from './pages';
 import { SiteMenu } from 'components';
 
 export const preventScroll = (e: Event) => {

@@ -7,17 +7,17 @@
       "image": "./src/assets/bocharova.png",
       "repertoir": [
         {
-          "image": "./src/assets/jiselle.png",
+          "image": "assets/jiselle.png",
           "title": "Жизель",
           "description": "хореография Жана Коралли, Жюля Перро, Мариуса Петипа"
         },
         {
-          "image": "./src/assets/donKihot.png",
+          "image": "assets/donKihot.png",
           "title": "Дон Кихот",
           "description": "постановка Йохана Кобборга"
         },
         {
-          "image": "./src/assets/lebedinoe.png",
+          "image": "assets/lebedinoe.png",
           "title": "ЛЕБЕДИНОЕ ОЗЕРО",
           "description": "хореография Мариуса Петипа, Льва Иванова"
         }
@@ -27,20 +27,20 @@
       "name": "Алла Бочарова",
       "job": "Ведущая солистка",
       "career": "Заслуженная артистка РФ - 2018 г.|Лауреат Молодежной премии Правительства Санкт-Петербурга в номинации «За достижения в области сценического творчества» - 2015 г.|С 2012 г. — солистка Санкт-Петербургского государственного академического театра балета имени Леонида Якобсона.|В 2006-2012 гг. — артистка Санкт-Петербургского театра балета Константина Тачкина.",
-      "image": "./src/assets/bocharova.png",
+      "image": "assets/bocharova.png",
       "repertoir": [
         {
-          "image": "./src/assets/jiselle.png",
+          "image": "assets/jiselle.png",
           "title": "Жизель",
           "description": "хореография Жана Коралли, Жюля Перро, Мариуса Петипа"
         },
         {
-          "image": "./src/assets/donKihot.png",
+          "image": "assets/donKihot.png",
           "title": "Дон Кихот",
           "description": "постановка Йохана Кобборга"
         },
         {
-          "image": "./src/assets/lebedinoe.png",
+          "image": "assets/lebedinoe.png",
           "title": "ЛЕБЕДИНОЕ ОЗЕРО",
           "description": "хореография Мариуса Петипа, Льва Иванова"
         }

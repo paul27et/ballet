@@ -6,7 +6,6 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
     "fix": "eslint --fix \"src/**\""
   },
   "license": "MIT",
@@ -22,7 +21,6 @@
     "solid-app-router": "^0.3.0",
     "solid-bootstrap": "^1.0.7",
     "solid-js": "^1.3.7",
-    "solid-transition-group": "^0.0.8",
-    "vite-plugin-singlefile": "^0.7.1"
+    "solid-transition-group": "^0.0.8"
   }
 }
