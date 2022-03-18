@@ -39,7 +39,7 @@ const App: Component = () => {
     <div class={styles.app}>
       {/* <div id="cursorRouned" class={styles.cursorRounded}></div>
       <div id="cursorPointed" class={styles.cursorPointed}></div> */}
-      <Routes>
+      <Routes base="/ballet/">
         <Route path="/events" element={<EventsPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/contacts" element={<ContactsPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/404" element={<ErrorPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />

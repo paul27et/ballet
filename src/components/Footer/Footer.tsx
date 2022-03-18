@@ -1,3 +1,4 @@
+import { Link } from 'solid-app-router';
 import type { Component } from 'solid-js';
 import styles from './Footer.module.css';
 
@@ -22,11 +23,11 @@ export const Footer: Component = () => {
       </div>
       <div class={styles.info}>
         <span class={styles.links}>
-          <a href="/affiche">Афиша</a>,
-          <a href="/about"> О театре</a>,
-          <a href="/events"> События</a>,
-          <a href="/contacts"> Контакты</a>,
-          <a href="/docs"> Документы</a>
+          <Link href="/ballet/affiche">Афиша</Link>,
+          <Link href="/ballet/about"> О театре</Link>,
+          <Link href="/ballet/events"> События</Link>,
+          <Link href="/ballet/contacts"> Контакты</Link>,
+          <Link href="/ballet/docs"> Документы</Link>
         </span>
         <span class={styles.copyright}>
           Театр балета Л.Якобсона © 2022

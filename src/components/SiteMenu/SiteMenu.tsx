@@ -6,6 +6,7 @@ import closeIcon from 'assets/close.svg'
 import styles from './SiteMenu.module.css';
 import { HoverOverHoc } from 'components';
 import { preventScroll } from '../../App';
+import { Link } from 'solid-app-router';
 
 export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
   const [local] = splitProps(props, ['onCloseClick'])
@@ -71,53 +72,53 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
             <div class={styles.linkContainer}>
               <span class={styles.number}>01/</span>
               <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
-                <a 
+                <Link
                   class={styles.link}
-                  href="/affiche"
+                  href="/ballet/affiche"
                   onmouseover={() => onLinkMouseOver('affiche')}
                   onclick={() => local.onCloseClick(false)}
                 >
                   АФИША
-                </a>
+                </Link>
               </HoverOverHoc>
             </div>
             <div class={styles.linkContainer}>
               <span class={styles.number}>02/</span>
               <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
-                <a 
+                <Link 
                   class={styles.link} 
-                  href="/about"
+                  href="/ballet/about"
                   onmouseover={() => onLinkMouseOver('about')}
                   onclick={() => local.onCloseClick(false)}
                 >
                   О ТЕАТРЕ
-                </a>
+                </Link>
               </HoverOverHoc>
             </div>
             <div class={styles.linkContainer}>
               <span class={styles.number}>03/</span>
               <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
-                <a 
+                <Link 
                   class={styles.link} 
-                  href="/events"
+                  href="/ballet/events"
                   onmouseover={() => onLinkMouseOver('events')}
                   onclick={() => local.onCloseClick(false)}
                 >
                   СОБЫТИЯ
-                </a>
+                </Link>
               </HoverOverHoc>
             </div>
             <div class={styles.linkContainer}>
               <span class={styles.number}>04/</span>
               <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
-                <a 
+                <Link 
                   class={styles.link} 
-                  href="/contacts"
+                  href="/ballet/contacts"
                   onmouseover={() => onLinkMouseOver('contacts')}
                   onclick={() => local.onCloseClick(false)}
                 >
                   КОНТАКТЫ
-                </a>
+                </Link>
               </HoverOverHoc>
             </div>
         </div>
