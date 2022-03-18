@@ -40,6 +40,7 @@
   composes: titleCormorant28 from global;
   color: var(--main-color);
   margin-top: 1.04vw;
+  width: 22.29vw;
 }
 
 .faceJob {

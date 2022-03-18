@@ -12,6 +12,10 @@
   display: flex;
 }
 
+.dancerCard body {
+  overflow: hidden;
+}
+
 .dancerImage {
   width: 42.92vw;
   height: 62.5vw;
@@ -100,20 +104,50 @@
 }
 
 .repertoirPlaysContainer {
-
+  margin-top: 1.04vw;
+  margin-bottom: 2.29vw;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.08vw;
+  row-gap: 3.47vw;
+  width: 40.28vw;
 }
 
 .repertoirPlay {
   display: flex;
   flex-direction: column;
+  width: 19.1vw;
+  transition: all 1s ease;
 }
 
 .playTitle {
   composes: textManrope24 from global;
   color: var(--main-color);
+  text-transform: uppercase;
+  margin-top: 1.04vw;
 }
 
 .playDescription {
   composes: textManrope18 from global;
   color: var(--main-color-grey);
+}
+
+.repertoirPlayInactive {
+  opacity: 0.2;
+  transition: all 1s ease;
+}
+
+.repertoirPlayInactive .playImage {
+  filter: grayscale(1);
+  transition: all 1s ease;
+}
+
+.repertoirPlayColored .playImage {
+  filter: grayscale(0);
+  transition: all 1s ease;
+}
+
+.playImage {
+  filter: grayscale(1);
+  transition: all 1s ease;
 }

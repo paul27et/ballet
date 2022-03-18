@@ -1,7 +1,9 @@
 import { Component, createSignal, onCleanup, onMount, splitProps } from 'solid-js';
-import startMenuImage from 'assets/startMenuImage.png'
-import startMenuImageHovered from 'assets/startMenuImageHovered.png'
-import startMenuImageHovered2 from 'assets/startMenuImageHovered2.png'
+import mainImage from 'assets/menu/main.png'
+import aboutImage from 'assets/menu/about.png'
+import afishaImage from 'assets/menu/afisha.png'
+import contactsImage from 'assets/menu/contacts.png'
+import eventsImage from 'assets/menu/events.png'
 import closeIcon from 'assets/close.svg'
 import styles from './SiteMenu.module.css';
 import { HoverOverHoc } from 'components';
@@ -12,7 +14,7 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
   const [local] = splitProps(props, ['onCloseClick'])
   const [getIsActive, setIsActive] = createSignal(false)
   const [getImageClass, setImageClass] = createSignal(styles.hiddenImage)
-  const [getActiveImage, setActiveImage] = createSignal(startMenuImage)
+  const [getActiveImage, setActiveImage] = createSignal(mainImage)
 
   onMount(() => {
     window.scrollTo(0, 0)
@@ -26,17 +28,17 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
   const onLinkMouseOver = (page: string) => {
     switch (page) {
       case 'affiche':
-        setActiveImage(startMenuImageHovered)
+        setActiveImage(afishaImage)
         break;
       case 'about':
-        setActiveImage(startMenuImageHovered2) 
+        setActiveImage(aboutImage) 
         break;
       case 'contacts':
-        setActiveImage(startMenuImage)
+        setActiveImage(contactsImage)
         break;
-      // case 'events':
-      //   setImage(startMenuImageHovered2)
-      //   break;
+      case 'events':
+        setActiveImage(eventsImage)
+        break;
       default:
         break;
     }
@@ -48,18 +50,28 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
       <div class={styles.over}>
         <div class={styles.imgContainer}>
           <img 
-            class={`${styles.img} ${getActiveImage() !== startMenuImage ? getImageClass() : ''}`} 
-            src={startMenuImage}
+            class={`${styles.img} ${getActiveImage() !== mainImage ? getImageClass() : ''}`} 
+            src={mainImage}
             alt="" 
           />
           <img 
-            class={`${styles.img} ${getActiveImage() !== startMenuImageHovered ? getImageClass() : ''}`}
-            src={startMenuImageHovered}
+            class={`${styles.img} ${getActiveImage() !== afishaImage ? getImageClass() : ''}`}
+            src={afishaImage}
             alt="" 
           />
           <img 
-            class={`${styles.img} ${getActiveImage() !== startMenuImageHovered2 ? getImageClass() : ''}`}
-            src={startMenuImageHovered2}
+            class={`${styles.img} ${getActiveImage() !== aboutImage ? getImageClass() : ''}`}
+            src={aboutImage}
+            alt=""
+          />
+          <img 
+            class={`${styles.img} ${getActiveImage() !== contactsImage ? getImageClass() : ''}`}
+            src={contactsImage}
+            alt=""
+          />
+          <img 
+            class={`${styles.img} ${getActiveImage() !== eventsImage ? getImageClass() : ''}`}
+            src={eventsImage}
             alt=""
           />
         </div>

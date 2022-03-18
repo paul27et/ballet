@@ -1,5 +1,5 @@
 import { Modal } from 'solid-bootstrap';
-import { Component, For, onCleanup, onMount, splitProps } from 'solid-js';
+import { Component, createEffect, createSignal, For, onCleanup, onMount, splitProps } from 'solid-js';
 import { Portal } from 'solid-js/web';
 import { DancerInterface, DancerPlayInterface } from 'interfaces';
 import arrowLeft from 'assets/arrowLeft.svg';
@@ -10,17 +10,57 @@ import { dancers } from 'database/dancers.json'
 import styles from './DancerCard.module.css';
 import { preventScroll } from '../../App';
 
+const PlayCard: Component<DancerPlayInterface & { getIsAnyActive: Function, setIsAnyActive: Function }> = (props) => {
+  const [local] = splitProps(props, ['image', 'title', 'description', 'getIsAnyActive', 'setIsAnyActive'])
+  const [getIsActive, setIsActive] = createSignal('active')
+  
+  const onMouseOver = () => {
+    setIsActive('colored')
+    local.setIsAnyActive(true)
+  }
+
+  const onMouseLeave = () => {
+    setIsActive('active')
+    local.setIsAnyActive(false)
+  }
+
+  createEffect(() => {
+    if (!local.getIsAnyActive()) {
+      setIsActive('active')
+    } else if (getIsActive() !== 'colored' && local.getIsAnyActive()) {
+      setIsActive('inactive')
+    }
+  })
+
+  const getAdditionalClass = () => {
+    if (getIsActive() === 'colored') {
+      return styles.repertoirPlayColored
+    } else if (getIsActive() === 'inactive') {
+      return styles.repertoirPlayInactive
+    }
+    return ''
+  }
+
+  return (
+    <div class={`${styles.repertoirPlay} ${getAdditionalClass()}`} onmouseover={onMouseOver} onmouseleave={onMouseLeave}>
+      <img class={styles.playImage} src={local.image} alt="" />
+      <div class={styles.playTitle}>{local.title}</div>
+      <div class={styles.playDescription}>{local.description}</div>
+    </div>
+  )
+} 
+
 export const DancerCard: Component<{ name: string, closeCard: Function }> = (props) => {
   const [local] = splitProps(props, ['name', 'closeCard'])
   const dancer = dancers.find((dancer: DancerInterface) => dancer.name.toLowerCase() == local.name.toLowerCase())
+  const [getIsAnyActive, setIsAnyActive] = createSignal(false)
 
   onMount(() => {
-    window.scrollTo(0, 0)
-    document.addEventListener('wheel', preventScroll, { passive: false })
+    document.body.classList.add('modalOpen')
   })
 
   onCleanup(() => {
-    document.removeEventListener('wheel', preventScroll)
+    document.body.classList.remove('modalOpen')
   })
 
   const parseText = (text: string) => {
@@ -52,11 +92,13 @@ export const DancerCard: Component<{ name: string, closeCard: Function }> = (pro
             <div class={styles.repertoirPlaysContainer}>
               <For each={dancer.repertoir}>
                 {(play: DancerPlayInterface) => (
-                  <div class={styles.repertoirPlay}>
-                    <img class={styles.playImage} src={play.image} alt="" />
-                    <div class={styles.playTitle}>{play.title}</div>
-                    <div class={styles.playDescription}>{play.description}</div>
-                  </div>
+                  <PlayCard
+                    image={play.image}
+                    title={play.title}
+                    description={play.description}
+                    getIsAnyActive={getIsAnyActive} 
+                    setIsAnyActive={setIsAnyActive} 
+                  />
                 )}
               </For>
             </div>
