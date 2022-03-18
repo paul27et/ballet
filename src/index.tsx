@@ -7,7 +7,7 @@ import App from './App';
 
 render(
   () => (
-  <Router base="ballet">
+  <Router>
     <App />
   </Router>
   ),
