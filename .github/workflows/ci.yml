@@ -20,7 +20,27 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: ./deploy.sh
+      - name: npm install
+        run: npm run build
+
+      - name: cd dist
+        run: cd dist
+
+      - name: git init
+        run: git init
+
+      - name: git checkout -b main
+        run: git checkout -b main
+
+      - name: git add -A
+        run: git add -A
+
+      - name: git commit -m 'deploy'
+        run: git commit -m 'deploy'
+
+      - name: git push -f git@github.com:paul27et/ballet.git main:gh-pages
+        run: git push -f git@github.com:paul27et/ballet.git main:gh-pages
+
+      - name: cd -
+        run: cd -
