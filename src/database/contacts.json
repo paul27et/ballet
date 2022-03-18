@@ -1,0 +1,34 @@
+{
+  "contacts": [
+    {
+      "title": "Приемная СПбГБУК «Театр балета им. Л.Якобсона»",
+      "mail": ["office@yacobsonballet.ru"],
+      "phone": "+7 (812) 273-19-97"
+    },
+    {
+      "title": "Организация творческих мероприятий и планирование гастрольной деятельности",
+      "mail": ["office@yacobsonballet.ru"],
+      "phone": "+7 (812) 273-19-97"
+    },
+    {
+      "title": "Руководитель пресс-службы",
+      "mail": ["kproku@yacobsonballet"],
+      "phone": "+7 (812) 272-42-73"
+    },
+    {
+      "title": "Режиссерское управление",
+      "mail": ["company@yacobsonballet.ru", "ru@yacobsonballet.ru"],
+      "phone": "+7 (812) 272-51-33"
+    },
+    {
+      "title": "Отдел рекламы и PR",
+      "mail": ["pr@yacobsonballet.ru"],
+      "phone": "+7 (812) 579-16-72"
+    },
+    {
+      "title": "Бухгалтерия",
+      "mail": [],
+      "phone": "+7 (812) 272-77-90"
+    }
+  ]
+}

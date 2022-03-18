@@ -1,0 +1,33 @@
+@keyframes fadein {
+  from { 
+    color: var(--main-color);
+    border-bottom-color: var(--main-color);
+  }
+  to { 
+    color: var(--main-color-grey);
+    border-bottom-color: var(--main-color-grey);
+  }
+}
+
+@keyframes fadeout {
+  from { 
+    color: var(--main-color-grey); 
+    border-bottom-color: var(--main-color-grey);
+  }
+  to { 
+    color: var(--main-color);
+    border-bottom-color: var(--main-color);
+  }
+}
+
+.active * {
+  color: var(--main-color);
+  border-bottom-color: var(--main-color);
+  animation: fadeout 0.5s ease-in alternate;
+}
+
+.inactive * {
+  color: var(--main-color-grey);
+  border-bottom-color: var(--main-color-grey);
+  animation: fadein 0.5s ease-in alternate;
+}

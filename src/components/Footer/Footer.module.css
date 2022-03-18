@@ -1,0 +1,41 @@
+.footerContainer {
+  margin-top: 34.72vw;
+}
+
+.socialMediaContainer {
+  composes: titleCormorant36 from global;
+  border-top: 1px solid var(--main-color-grey);
+  border-bottom: 1px solid var(--main-color-grey);
+  color: var(--main-color);
+  padding: 5.2vw 0;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6.04vw;
+}
+
+.info {
+  composes: textManrope18 from global;
+  display: flex;
+  justify-content: space-between;
+  margin: 2.08vw 0;
+  color: var(--main-color-grey);
+}
+
+a {
+  color: var(--main-color-grey);
+}
+
+a:hover {
+  color: var(--main-color);
+}
+
+.links {
+  text-decoration: none;
+}
+
+.copyright {
+
+}

@@ -1,0 +1,23 @@
+.newsTab {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgContainer {
+  position: sticky;
+  top: 10vw;
+  height: 100%;
+  padding-top: 8.33vw;
+}
+
+.img {
+  width: 32.71vw;
+  height: 41.875vw;
+}
+
+.newsList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 2.4vw;
+}

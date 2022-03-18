@@ -1,0 +1,6 @@
+.row {
+  padding: 6.94vw 6.04vw 0 6.04vw;
+  display: flex;
+  justify-content: space-between;
+}
+

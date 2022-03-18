@@ -1,0 +1,73 @@
+.page {
+  padding: 0 2.29vw;
+}
+
+.getInTouch {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 3.42vw;
+  padding-bottom: 6.94vw;
+  border-bottom: 1px solid var(--main-color-grey);
+}
+
+.address {
+  composes: titleManrope24 from global;
+  padding-bottom: 2.01vw;
+  color: var(--main-color);
+  text-align: left;
+}
+
+.contactUs {
+  composes: titleCormorant150 from global;
+  color: var(--main-color);
+  text-align: right;
+}
+
+.contacts {
+  display: flex;
+  padding-top: 9.375vw;
+  /* gap: 11.875vw; */
+  justify-content: space-between;
+}
+
+.contactsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 6.94vw;
+}
+
+.firstColumn {
+  width: 30.42vw;
+}
+
+.secondColumn {
+  width: 24.3vw;
+}
+
+.thirdColumn {
+  width: 16.94vw;
+}
+
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.title {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+  line-height: 2vw;
+}
+
+.phone {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+  margin-top: 2.1vw;
+}
+
+.mail {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+}

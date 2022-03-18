@@ -1,0 +1,249 @@
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  --main-bg-color: #151515;
+  --main-color: #ECEAE4;
+  --main-color-grey: #7A7572;
+  --main-color-lightgrey: #c2c2c2;
+  --main-color-black: #000000;
+}
+
+body {
+  background-color: #151515;
+}
+
+a {
+  text-decoration: none; /* no underline */
+}
+
+.app {
+  text-align: center;
+}
+
+.cursorRounded {
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.cursorPointed {
+  z-index: 999;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.link {
+  color: #b318f0;
+}
+
+.colorMainBg {
+  background-color: var(--main-bg-color);
+}
+
+.color-main {
+  color: var(--main-color);
+}
+
+.color-grey {
+  color: var(--main-color-grey);
+}
+
+:global(.titleCormorant150) {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10.42vw;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+:global(.titleCormorant96) {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 6.7vw;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+:global(.titleManrope36) {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5vw;
+  line-height: 120%;
+}
+
+:global(.titleCormorant36) {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vw;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+:global(.titleManrope24) {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.7vw;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+:global(.titleCormorant28) {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.94vw;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+:global(.titleManrope18) {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25vw;
+  line-height: 140%;
+}
+
+:global(.textCormorant36) {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vw;
+  line-height: 100%;
+}
+
+:global(.textCormorant80) {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5.56vw;
+  line-height: 110%;
+}
+
+:global(.textManrope24) {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.67vw;
+  line-height: 140%;
+}
+
+:global(.textManrope18) {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25vw;
+  line-height: 120%;
+}
+
+:global(.textManrope18Bold) {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 120%;
+}
+
+:global(.textLibre93) {
+  font-family: 'Libre Caslon Display', serif;;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6.46vw;
+  line-height: 115%;  
+  text-transform: uppercase;
+}
+
+:global(.textLibre80) {
+  font-family: 'Libre Caslon Display', serif;;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.55vw;
+  line-height: 120%;  
+  text-transform: uppercase;
+}
+
+:global(.textLibre18) {
+  font-family: 'Libre Caslon Display', serif;;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 150%;  
+  text-transform: uppercase;
+}
+
+:global(.accordion-button) {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5.56vw;
+  line-height: 110%;
+  background-color: var(--main-bg-color);
+  color: inherit;
+  padding: 0;
+}
+
+:global(.accordion-button:focus) {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5.56vw;
+  line-height: 110%;
+  background-color: var(--main-bg-color);
+  color: inherit;
+  padding: 0;
+  box-shadow: none;
+}
+
+:global(.accordion-button:not(.collapsed)) {
+  color: inherit;
+  background-color: var(--main-bg-color);
+  padding: 0;
+}
+
+:global(.accordion-body) {
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  text-align: left;
+}
+
+:global(.accordion-item) {
+  background-color: var(--main-bg-color);
+  color: inherit;
+  padding: 5.21vw 0;
+  border-bottom: 1px solid;
+}
+
+:global(.accordion-flush .accordion-item:last-child) {
+  border-bottom: 1px solid;
+}
+
+:global(.accordion-button::after) {
+  width: 0;
+}

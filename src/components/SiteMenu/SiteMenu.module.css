@@ -1,0 +1,84 @@
+@keyframes fadein {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+@keyframes fadeout {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+.siteMenu {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  display: flex;
+  padding-right: 11.18vw;
+  justify-content: space-between;
+}
+
+.overflowImageContainer {
+  display: flex;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.img {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hiddenImage {
+  opacity: 0;
+}
+
+.closeContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.close {
+  margin-top: 2.08vw;
+  margin-right: 2.91vw
+}
+
+.menuContainer {
+  display: flex;
+}
+
+.mainMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.47vw;
+  text-align: left;
+}
+
+.linkContainer {
+  display: flex;
+}
+
+.number {
+  composes: textLibre18 from global;
+  color: var(--main-color);
+  margin: 0.8vw 1.04vw 0;
+}
+
+.link {
+  composes: titleCormorant96 from global;
+}
+
+.link:hover {
+  color: var(--main-color);
+}

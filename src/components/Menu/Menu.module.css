@@ -1,0 +1,25 @@
+.iconContainer {
+  cursor: pointer;
+}
+
+.icon {
+  width: 2.8vw;
+  height: 2.8vw;
+}
+
+.logo {
+  width: 10.3vw;
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 6.94vw;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1.7vw;
+}

@@ -1,0 +1,13 @@
+.toursContainer {
+  margin-top: 6.94vw;
+  text-align: left;
+}
+
+.title {
+  composes: textLibre80 from global;
+  color: var(--main-color);
+  position: sticky;
+  top: 0;
+  height: 100%;
+  padding-top: 14.4vw;
+}

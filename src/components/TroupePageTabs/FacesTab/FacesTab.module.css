@@ -1,0 +1,48 @@
+.facesContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 3.47vw;
+  row-gap: 6.94vw;
+  column-gap: 2.08vw;
+}
+
+.faceCard {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: all 1s ease;
+}
+
+.faceCardInactive {
+  opacity: 0.2;
+  transition: all 1s ease;
+}
+
+.faceCardInactive .faceImage {
+  filter: grayscale(1);
+  transition: all 1s ease;
+}
+
+.faceCardColored .faceImage {
+  filter: grayscale(0);
+  transition: all 1s ease;
+}
+
+.faceImage {
+  height: 22.29vw;
+  width: 22.29vw;
+  filter: grayscale(1);
+  transition: all 1s ease;
+}
+
+.faceName {
+  composes: titleCormorant28 from global;
+  color: var(--main-color);
+  margin-top: 1.04vw;
+}
+
+.faceJob {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+}

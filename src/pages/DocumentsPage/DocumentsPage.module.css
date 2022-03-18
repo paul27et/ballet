@@ -1,0 +1,17 @@
+.documentsPage {
+  padding: 0 2.29vw;
+}
+
+.accordionContainer {
+  margin-top: 1.73vw;
+}
+
+.accordionBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.04vw;
+}
+
+.documentLink:hover {
+  color: inherit;
+}

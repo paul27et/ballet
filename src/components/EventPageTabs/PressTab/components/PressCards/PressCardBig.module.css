@@ -1,0 +1,26 @@
+.pressCardBig {
+  height: 69.44vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image {
+  width: 83.33vw;
+  height: 42.01vw;
+}
+
+.imageFooter {
+  composes: textManrope18 from global;
+  display: flex;
+  justify-content: space-between;
+  color: var(--main-color-grey);
+  margin-top: 1.04vw;
+}
+
+.text {
+  composes: textCormorant36 from global;
+  color: var(--main-color);
+  text-align: left;
+  margin-top: 0.69vw;
+}

@@ -1,0 +1,53 @@
+@keyframes fadein {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+@keyframes fadeout {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+.cardContainer {
+  width: 48.61vw;
+  height: 23.19vw;
+  text-align: left;
+  margin-top: 6.9vw;
+  opacity: 1;
+  animation: fadeout 0.5s ease-in alternate;
+}
+
+.blurred {
+  opacity: 0.5;
+  animation: fadein 0.5s ease-in alternate;
+}
+
+.date {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+}
+
+.title {
+  composes: titleCormorant36 from global;
+  color: var(--main-color);
+  margin: 0.7vw 0 1.4vw 0;
+}
+
+.description {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+}
+
+.more {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+  margin-top: 2.8vw;
+  padding-bottom: 5.2vw;
+  /* border-bottom: 1px solid var(--main-color); */
+  box-shadow: 0 2px 1px -2px var(--main-color);
+}
+
+.img {
+  height: 41vw;
+  width: 32vw;
+}

@@ -1,0 +1,13 @@
+.menuItem {
+  composes: titleManrope36 from global;
+  color: var(--main-color-grey);
+}
+
+.textStyle {
+  composes: titleManrope24 from global;
+  color: var(--main-color-grey);
+}
+
+.menuItemActive {
+  color: var(--main-color);
+}

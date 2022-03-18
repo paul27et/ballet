@@ -1,0 +1,23 @@
+.errorPage {
+  padding: 0 2.29vw;
+}
+
+.title {
+  font-family: "Libre Caslon Display", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45.14vw;
+  line-height: 45.83vw;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--main-color);
+  margin-top: 1.39vw;
+}
+
+.sorry {
+  composes: textManrope24 from global;
+  text-align: center;
+  margin-top: 1.39vw;
+  margin-bottom: 4.6vw;
+  color: var(--main-color);
+}

@@ -1,0 +1,88 @@
+.affichePage {
+  padding: 0 2.29vw;
+}
+
+
+.selectContainer {
+  display: flex;
+  justify-content: end;
+  gap: 6.04vw;
+  margin-top: 3.37vw;
+}
+
+.select {
+  composes: textManrope18Bold from global;
+  background-color: var(--main-color-bg);
+  padding: 10px 0;
+  width: 20.21vw;
+  color: var(--main-color);
+  border: none;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.playContainer {
+  display: flex;
+  gap: 10.07vw;
+}
+
+.firstMonth {
+  margin-top: 5.56vw;
+}
+
+.notFirstMonth {
+  margin-top: 11.53vw;
+}
+
+.month {
+  composes: titleManrope36 from global;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: left;
+  padding-bottom: 2.08vw;
+  border-bottom: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.play {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.47vw 0;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.dateContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.date {
+  composes: textLibre93 from global;
+  color: var(--main-color);
+}
+
+.daytime {
+  composes: textManrope18Bold from global;
+  color: var(--main-color-grey);
+  padding: 0.625vw;
+}
+
+.title {
+  composes: titleCormorant96 from global;
+  color: var(--main-color);
+}
+
+.place {
+  composes: textManrope18Bold from global;
+  color: var(--main-color-grey);
+  padding-top: 0.69vw;
+}
+
+.buttonContainer {
+  padding-top: 2.6vw;
+}
