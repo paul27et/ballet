@@ -6,8 +6,8 @@
   font-family: "Libre Caslon Display", serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 45.14vw;
-  line-height: 45.83vw;
+  font-size: min(45.14vw, 72.2vh);
+  line-height: min(45.83vw, 73.3);
   text-transform: uppercase;
   text-align: center;
   color: var(--main-color);
