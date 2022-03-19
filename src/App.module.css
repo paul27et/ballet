@@ -78,7 +78,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 10.42vw;
+  font-size: min(10.42vw, 16.67vh);
   line-height: 110%;
   text-transform: uppercase;
 }
@@ -87,7 +87,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 6.7vw;
+  font-size: min(6.7vw, 10.67vh);
   line-height: 110%;
   text-transform: uppercase;
 }
@@ -96,7 +96,7 @@ a {
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 2.5vw;
+  font-size: min(2.5vw, 4vh);
   line-height: 120%;
 }
 
@@ -104,7 +104,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 2.5vw;
+  font-size: min(2.5vw, 4vh);
   line-height: 120%;
   text-transform: uppercase;
 }
@@ -113,7 +113,7 @@ a {
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.7vw;
+  font-size: min(1.7vw, 2.67vh);
   line-height: 130%;
   text-transform: uppercase;
 }
@@ -122,7 +122,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.94vw;
+  font-size: min(1.94vw, 3.11vh);
   line-height: 120%;
   text-transform: uppercase;
 }
@@ -131,7 +131,7 @@ a {
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.25vw;
+  font-size: min(1.25vw, 2vh);
   line-height: 140%;
 }
 
@@ -139,7 +139,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 2.5vw;
+  font-size: min(2.5vw, 4vh);
   line-height: 100%;
 }
 
@@ -147,7 +147,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 5.56vw;
+  font-size: min(5.56vw, 8.89vh);
   line-height: 110%;
 }
 
@@ -155,7 +155,7 @@ a {
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.67vw;
+  font-size: min(1.67vw, 2.67vh);
   line-height: 140%;
 }
 
@@ -163,7 +163,7 @@ a {
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.25vw;
+  font-size: min(1.25vw, 2vh);
   line-height: 120%;
 }
 
@@ -171,7 +171,7 @@ a {
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.25vw;
+  font-size: min(1.25vw, 2vh);
   line-height: 120%;
 }
 
@@ -179,7 +179,7 @@ a {
   font-family: 'Libre Caslon Display', serif;;
   font-style: normal;
   font-weight: 400;
-  font-size: 6.46vw;
+  font-size: min(6.46vw, 10.33vh);
   line-height: 115%;  
   text-transform: uppercase;
 }
@@ -188,7 +188,7 @@ a {
   font-family: 'Libre Caslon Display', serif;;
   font-style: normal;
   font-weight: 400;
-  font-size: 5.55vw;
+  font-size: min(5.55vw, 8.89vh);
   line-height: 120%;  
   text-transform: uppercase;
 }
@@ -197,7 +197,7 @@ a {
   font-family: 'Libre Caslon Display', serif;;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.25vw;
+  font-size: min(1.25vw, 2vh);
   line-height: 150%;  
   text-transform: uppercase;
 }

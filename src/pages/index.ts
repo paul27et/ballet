@@ -7,3 +7,4 @@ export * from './TroupePage';
 export * from './AboutPage';
 export * from './RepertoirPage';
 export * from './PlayPage';
+export * from './LandingPage';

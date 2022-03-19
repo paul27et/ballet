@@ -67,7 +67,7 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
             <div class={styles.smallTitle}>Описание</div>
             <div class={styles.descriptionText}>
               {play.description}
-              <img class={styles.arrowIcon}src={arrowRight} alt="" onclick={() => setModalActive(true)} />
+              <img class={styles.arrowIcon} src={arrowRight} alt="" onclick={() => setModalActive(true)} />
               <Show when={getModalActive()}>
                 <PlayModal text={play.fullDescription} image={play.modalImage} closeCard={() => setModalActive(false)} />
               </Show>
@@ -77,9 +77,11 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
                 <div class={styles.infoText}>{play.long}</div>
                 <div class={styles.infoTitle}>Продолжительность</div>
               </div>
-              <div class={styles.infoItem}>
-                <div class={styles.infoText}>{play.antracts}</div>
-              </div>
+              <Show when={play.antracts.length > 0}>
+                <div class={styles.infoItem}>
+                  <div class={styles.infoText}>{play.antracts}</div>
+                </div>
+              </Show>
               <div class={styles.infoItem}>
                 <div class={styles.infoText}>{play.premier}</div>
                 <div class={styles.infoTitle}>Премьера возобновления</div>

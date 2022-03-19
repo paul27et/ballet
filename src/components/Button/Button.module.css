@@ -2,16 +2,15 @@
   composes: textManrope18 from global;
   text-transform: uppercase;
   color: var(--main-color);
-  background-color: var(--main-bg-color);
   border: 1px solid var(--main-color);
   padding: 0.4vw 1.7vw;
+  background-color: var(--main-bg-color);
 }
 
 .button24 {
   composes: textManrope24 from global;
   text-transform: uppercase;
   color: var(--main-color);
-  background-color: var(--main-bg-color);
   border: 1px solid var(--main-color);
   padding: 0.4vw 1.7vw;
 }
@@ -22,4 +21,8 @@
 
 .noPadding {
   padding: 0;
+}
+
+.noBackground {
+  background: transparent;
 }

@@ -4,6 +4,7 @@ export interface RepertoirInterface {
   title: string,
   type: string,
   image: string,
+  modalImage: string,
   bigImage: string,
   closePlays: ClosePlayInterface[],
   description: string,

@@ -1,0 +1,131 @@
+.videoBackground {
+  width: 100vw;
+  height: 100vh;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+.menuContainer {
+  padding: 0 2.29vw;
+}
+
+.contentContainer {
+  padding: 0 2.29vw;
+  margin-top: 10.42vw;
+}
+
+.afficheTitle {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+  text-align: left;
+}
+
+.calendar div {
+  box-sizing: border-box;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 3.47vw 0 2.22vh 0;
+}
+
+.title {
+  composes: titleCormorant36 from global;
+  color: var(--main-color);
+}
+
+.table {
+  composes: textLibre80 from global;
+  display: block;
+  height: 100vh;
+}
+
+.header {
+  composes: textManrope18 from global;
+  color: var(--main-color);
+  border-top: 1px solid var(--main-color);
+  padding: 1.11vh 0;
+}
+
+.flexTable {
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px solid var(--main-color);
+  color: var(--main-color-grey);
+}
+
+.flexRow {
+  width: calc(100% / 7);
+  text-align: center;
+  padding: auto;
+}
+
+.row {
+  padding: 3.33vh 0;
+}
+
+.tableLink {
+  color: var(--main-color);
+}
+
+.arrowInactive {
+  opacity: 0.5;
+  transition: all 1s ease;
+}
+
+.bannersContainer {
+  margin-top: 16.67vh;
+}
+
+.bannersTitle {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+  padding-left: 2.29vw;
+  margin-bottom: 5.56vh;
+  text-align: left;
+}
+
+.banner {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.bannerTextContainer {
+  text-align: left;
+  width: 39.3vw;
+  margin-left: 11.46vw;
+}
+
+.bannerTitle {
+  composes: titleCormorant96 from global;
+  color: var(--main-color);
+}
+
+.bannerSubtitle {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+}
+
+.button {
+  padding-top: 2.22vh; 
+}
+
+.type {
+  composes: textManrope18 from global;
+  color: var(--main-color);
+  display: flex;
+  margin-left: 27.08vw;
+  margin-bottom: 8.67vw;
+  height: 100%;
+  align-items: end;
+}

@@ -1,7 +1,7 @@
 import { Component, createSignal, onMount } from 'solid-js';
 import { Routes, Route } from 'solid-app-router';
 import styles from './App.module.css';
-import { EventsPage, ErrorPage, ContactsPage, DocumentsPage, AffichePage, TroupePage, RepertoirPage, PlayPage} from './pages';
+import { EventsPage, ErrorPage, ContactsPage, DocumentsPage, AffichePage, TroupePage, RepertoirPage, PlayPage, LandingPage} from './pages';
 import { SiteMenu } from 'components';
 
 export const preventScroll = (e: Event) => {
@@ -44,6 +44,7 @@ const App: Component = () => {
       {/* <div id="cursorRouned" class={styles.cursorRounded}></div>
       <div id="cursorPointed" class={styles.cursorPointed}></div> */}
       <Routes base="/ballet/">
+        <Route path="/" element={<LandingPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/events" element={<EventsPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/contacts" element={<ContactsPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/404" element={<ErrorPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
