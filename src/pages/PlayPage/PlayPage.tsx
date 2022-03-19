@@ -49,8 +49,10 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
               <For each={play.closePlays}>
                 {(item: ClosePlayInterface) => (
                   <div class={styles.playItem}>
-                    <div class={styles.date}>{item.date}</div>
-                    <div class={styles.place}>{item.place}</div>
+                    <div class={styles.playItemText}>
+                      <div class={styles.date}>{item.date}</div>
+                      <div class={styles.place}>{item.place}</div>
+                    </div>
                     <Button text="Купить билет" borderless bigText />
                   </div>
                 )}

@@ -56,6 +56,11 @@
   border-top: 1px solid var(--main-color-grey);
 }
 
+.playItemText {
+  display: flex;
+  gap: 8.125vw;
+}
+
 .date {
   composes: textManrope24 from global;
   color: var(--main-color);
