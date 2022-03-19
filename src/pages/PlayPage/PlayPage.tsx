@@ -42,20 +42,22 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
           <div class={styles.playType}>{play.type}</div>
           <img class={styles.image} src={play.bigImage} alt="" />
         </div>
-        <div class={styles.closePlays}>
-          <div class={styles.smallTitle}>Ближайшие спектакли</div>
-          <div class={styles.playsList}>
-            <For each={play.closePlays}>
-              {(item: ClosePlayInterface) => (
-                <div class={styles.playItem}>
-                  <div class={styles.date}>{item.date}</div>
-                  <div class={styles.place}>{item.place}</div>
-                  <Button text="Купить билет" borderless bigText />
-                </div>
-              )}
-            </For>
+        <Show when={play.closePlays.length > 0}>
+          <div class={styles.closePlays}>
+            <div class={styles.smallTitle}>Ближайшие спектакли</div>
+            <div class={styles.playsList}>
+              <For each={play.closePlays}>
+                {(item: ClosePlayInterface) => (
+                  <div class={styles.playItem}>
+                    <div class={styles.date}>{item.date}</div>
+                    <div class={styles.place}>{item.place}</div>
+                    <Button text="Купить билет" borderless bigText />
+                  </div>
+                )}
+              </For>
+            </div>
           </div>
-        </div>
+        </Show>
         <div class={styles.descriptionContainer}>
           <div class={styles.description}>
             <div class={styles.smallTitle}>Описание</div>
