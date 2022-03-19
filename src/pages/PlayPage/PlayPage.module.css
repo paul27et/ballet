@@ -130,4 +130,15 @@
 
 .imagesContainer {
   margin-top: 1.74vw;
+  height: 74.22vh;
+  display: flex;
+  margin-left: -2.29vw;
+  width: 100vw;
+  gap: 6.04vw;
+  overflow-x: scroll;
+  align-items: end;
+}
+
+.imagesContainer::-webkit-scrollbar {
+  display: none;
 }

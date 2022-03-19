@@ -46,7 +46,7 @@ export const FaceCard: Component<FaceInterface & { getIsAnyActive: Function, set
         <DancerCard name={local.name} closeCard={() => setDancerCard(false)} />
       </Show>
       <img class={styles.faceImage} src={local.image} alt="" />
-      <span class={styles.faceName}>{local.name}</span>
+      <span class={styles.faceName}>{local.name.split(' ').map((text: string) => <span>{text}<br /></span>)}</span>
       <span class={styles.faceJob}>{local.job}</span>
     </div>
   );

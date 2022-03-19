@@ -29,6 +29,7 @@
 .text {
   color: var(--main-color);
   composes: textCormorant80 from global;
+  text-transform: uppercase;
 }
 
 .subText {

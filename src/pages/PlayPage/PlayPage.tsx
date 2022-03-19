@@ -11,6 +11,21 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
   const playId = useParams().id;
   const play = repertoir.find((play: RepertoirInterface) => play.id === playId)
 
+  const processImage = (src: string) => {
+    const img = new Image();
+    const intViewportHeight = window.innerHeight;
+    img.onload = function() {
+      const { naturalWidth: width, naturalHeight: height } = img
+      if (width > height) {
+        img.height = intViewportHeight * 0.55
+      } else {
+        img.height = intViewportHeight * 0.74
+      }
+    }
+    img.src = src;
+    return img
+  }
+
   return (
     <div class={styles.playPage}>
       <Show when={local.isMenuActive}>
@@ -80,7 +95,7 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
           <div class={styles.imagesContainer}>
             <For each={play.gallery}>
               {(item: string) => (
-                <img src={item} alt="" />
+                <>{processImage(item)}</>
               )}
             </For>
           </div>
