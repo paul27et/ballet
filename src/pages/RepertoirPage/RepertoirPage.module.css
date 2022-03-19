@@ -1,0 +1,11 @@
+.container {
+  padding: 0 2.29vw;
+}
+
+.tabItem {
+  composes: titleManrope36 from global;
+}
+
+.menuContainer {
+  margin-bottom: 2.47vw;
+}

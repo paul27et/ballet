@@ -1,7 +1,7 @@
 import { Component, createSignal, onMount } from 'solid-js';
 import { Routes, Route } from 'solid-app-router';
 import styles from './App.module.css';
-import { EventsPage, ErrorPage, ContactsPage, DocumentsPage, AffichePage, TroupePage} from './pages';
+import { EventsPage, ErrorPage, ContactsPage, DocumentsPage, AffichePage, TroupePage, RepertoirPage, PlayPage} from './pages';
 import { SiteMenu } from 'components';
 
 export const preventScroll = (e: Event) => {
@@ -50,7 +50,8 @@ const App: Component = () => {
         <Route path="/documents" element={<DocumentsPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/affiche" element={<AffichePage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/troupe" element={<TroupePage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
-        <Route path="/menu" element={<SiteMenu onCloseClick={() => onMenuButtonClick(false)} />} />
+        <Route path="/repertoir" element={<RepertoirPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
+        <Route path="/repertoir/:id" element={<PlayPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         <Route path="/*all" element={<ErrorPage onMenuButtonClick={(state: boolean) => onMenuButtonClick(state)} isMenuActive={getMenuActive()} />} />
         {/* <Route path="/" element={<MainPage />} /> */}
       </Routes>

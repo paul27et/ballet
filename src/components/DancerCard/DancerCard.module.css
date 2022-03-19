@@ -49,8 +49,9 @@
 }
 
 .name {
-  composes: titleCormorant96 from global;
+  composes: textCormorant80 from global;
   color: var(--main-color);
+  text-transform: uppercase;
 }
 
 .jobContainer {

@@ -1,0 +1,38 @@
+.listTab {
+  margin-top: 3.47vw;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.listItem {
+  display: flex;
+  padding-top: 3.47vw;
+}
+
+.idx {
+  composes: textLibre18 from global;
+  color: var(--main-color);
+  padding-right: 1.04vw;
+  padding-top: 1.18vw;
+  vertical-align: top;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  color: var(--main-color);
+  composes: textCormorant80 from global;
+  text-transform: uppercase;
+}
+
+.subText {
+  color: var(--main-color-grey);
+  composes: textManrope18 from global;
+}

@@ -6,3 +6,4 @@ export * from './DocumentsInterface';
 export * from './PlaysInterface';
 export * from './TroupeInterface';
 export * from './DancerInterface';
+export * from './RepertoirInterface';

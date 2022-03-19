@@ -3,7 +3,7 @@ import styles from './ListTab.module.css';
 
 interface ListItemInterface {
   name: string,
-  job: string,
+  job?: string,
 }
 
 export const ListTab: Component<{ list: string[] | ListItemInterface[] }> = (props) => {

@@ -1,0 +1,31 @@
+.toursModal {
+  display: flex;
+  gap: 8.4vw;
+}
+
+.image {
+  width: 42.92vw;
+  height: 100vh;
+}
+
+.text {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+  /* padding: 0 8.4vw 0 0; */
+}
+
+.closeContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 2.08vw 2.29vw 0 0;
+}
+
+.descriptionContainer {
+  padding: 6.94vw 8.4vw 0 0;
+  overflow-y: scroll;
+}
+
+.descriptionContainer::-webkit-scrollbar {
+  display: none;
+}
