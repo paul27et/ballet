@@ -50,9 +50,11 @@
         }
       ],
       "gallery": [
-        "./performance/nutcracker/nutcrackerGallery1.png", 
-        "./performance/nutcracker/nutcrackerGallery2.png", 
-        "./performance/nutcracker/nutcrackerGallery3.png"
+        "./performance/jiselle/gallery/jiselleGallery1.jpg", 
+        "./performance/jiselle/gallery/jiselleGallery2.jpg", 
+        "./performance/jiselle/gallery/jiselleGallery3.jpg", 
+        "./performance/jiselle/gallery/jiselleGallery4.jpg", 
+        "./performance/jiselle/gallery/jiselleGallery5.jpg"
       ]
     }, 
     {
@@ -105,9 +107,10 @@
         }
       ],
       "gallery": [
-        "./performance/nutcracker/nutcrackerGallery1.png", 
-        "./performance/nutcracker/nutcrackerGallery2.png", 
-        "./performance/nutcracker/nutcrackerGallery3.png"
+        "./performance/donKihot/gallery/donKihotGallery1.jpg", 
+        "./performance/donKihot/gallery/donKihotGallery2.jpg",
+        "./performance/donKihot/gallery/donKihotGallery3.jpg",
+        "./performance/donKihot/gallery/donKihotGallery4.jpg"
       ]
     }, 
     {
@@ -155,9 +158,12 @@
         }
       ],
       "gallery": [
-        "./performance/nutcracker/nutcrackerGallery1.png", 
-        "./performance/nutcracker/nutcrackerGallery2.png", 
-        "./performance/nutcracker/nutcrackerGallery3.png"
+        "./performance/lake/gallery/lakeGallery1.jpg",
+        "./performance/lake/gallery/lakeGallery2.jpg",
+        "./performance/lake/gallery/lakeGallery3.jpg",
+        "./performance/lake/gallery/lakeGallery4.jpg",
+        "./performance/lake/gallery/lakeGallery5.jpg",
+        "./performance/lake/gallery/lakeGallery6.jpg"
       ]
     }, 
     {
@@ -179,7 +185,7 @@
         }
       ],
       "description": "Партитура «Щелкунчика» вошла в музыкальную культуру как одна из самых драгоценных страниц наследия Петра Чайковского",
-      "fullDescription": "Партитура «Щелкунчика» вошла в музыкальную культуру как одна из самых драгоценных страниц наследия Петра Чайковского",
+      "fullDescription": "Партитура «Щелкунчика» вошла в музыкальную культуру как одна из самых драгоценных страниц наследия Петра Чайковского.|Постановщикам разных времен с 1891 года, с момента рождения музыки к «Щелкунчику», предстояла труднейшая задача – сочинить спектакль-сказку и одновременно философскую поэму, интересную как для взрослых, так и для детей. Тем более что этот балет – один из самых любимых во всем мире.|Каждый год в декабрьские предрождественские дни его дают во многих театрах мира. Тысячи новых поклонников музыки Чайковского погружаются в волшебную атмосферу мечты и сказочных приключений. Публика вновь увидит шедевр классики 22 февраля на сцене БКЗ «Октябрьский».|Хореограф Василий Вайнонен, создавший свою версию «Щелкунчика» в 1934 году — премьера состоялась в Ленинградском театре оперы и балета имени С. М. Кирова (ныне Мариинский), придумал идеальный спектакль для детей. В нем были и фантастические фокусы, и яркие куклы, и горящая праздничными огнями елка, предложенная художником Владимиром Дмитриевым.|В. Вайнонен погрузил «Щелкунчика» в философские раздумья о недостижимости идеального счастья, насытил его романтическими пассажами, благодаря которым незамысловатый детский утренник стал классикой ХХ века.",
       "long": "2 часа 45 минут",
       "antracts": "2 АНТРАКТА",
       "premier": "2 ноября 2013 г.",
@@ -261,9 +267,10 @@
         }
       ],
       "gallery": [
-        "./performance/nutcracker/nutcrackerGallery1.png", 
-        "./performance/nutcracker/nutcrackerGallery2.png", 
-        "./performance/nutcracker/nutcrackerGallery3.png"
+        "./performance/beauty/gallery/beautyGallery1.jpg", 
+        "./performance/beauty/gallery/beautyGallery2.jpg",
+        "./performance/beauty/gallery/beautyGallery3.jpg",
+        "./performance/beauty/gallery/beautyGallery4.jpg"
       ]
     }, 
     {
@@ -299,9 +306,10 @@
         }
       ],
       "gallery": [
-        "./performance/nutcracker/nutcrackerGallery1.png", 
-        "./performance/nutcracker/nutcrackerGallery2.png", 
-        "./performance/nutcracker/nutcrackerGallery3.png"
+        "./performance/chopin/gallery/chopinGallery1.jpg", 
+        "./performance/chopin/gallery/chopinGallery2.jpg",
+        "./performance/chopin/gallery/chopinGallery3.jpg",
+        "./performance/chopin/gallery/chopinGallery4.jpg"
       ]
     }, 
     {
@@ -318,10 +326,44 @@
       "id": "romeoJulliet",
       "section": "Современный",
       "title": "ромео и джульетта",
-      "type": "Одноактный балет  6+",
+      "type": "Одноактный балет 6+",
       "image": "../performance/romeoJulliet/romeoJulliet.png",
       "bigImage": "./performance/romeoJulliet/romeoJulliet.png",
-      "modalImage":"./performance/romeoJulliet/romeoJulliet.png"
+      "modalImage":"./performance/romeoJulliet/gallery/romeoJullietGallery2.jpg",
+      "closePlays": [],
+      "description": "Постановка приурочена к 450-летию со дня рождения Уильяма Шекспира, автора всемирно известной трагедии о Ромео и Джульетте",
+      "fullDescription": "Театр продолжает сотрудничество с молодым талантливым балетмейстером Антоном Пимоновым, который выпустил в Театре балета имени Леонида Якобсона два балета — «Iberia» и «В темпе снов» в программе «Лики современной хореографии».|Учитывая сложность драматургического материала великой трагедии Уильяма Шекспира «Ромео и Джульетта», было решено обратиться к известному режиссеру, лауреату Государственной премии Российской Федерации и театральных премий «Золотая маска» и «Золотой софит» Игорю Коняеву. Он с радостью принял предложение об участии в проекте и выступил режиссером-постановщиком балета и автором либретто.|Классическое либретто Прокофьева-Радлова-Лавровского изменено, место действия перенесено на театральные подмостки и в мир закулисья, где враждуют две актерские династии.|В фокусе постановки — классика и модерн, традиция и новаторство, поиск современных решений и стремление к совершенству однажды найденной формы, конфликт на почве любви, борьба идей и самолюбий.|Перед зрителем предстают две балетные труппы — Capulet Classic Ballet Theatre и Montague Modern Dance Theatre. С помощью современных технических средств в спектакле каждая декорация решает множество разноплановых задач.|Художником-постановщиком спектакля стал народный художник России, лауреат театральных премий «Золотая маска» и «Золотой софит» Вячеслав Окунев, художником по свету — заслуженный работник культуры России Евгений Ганзбург.|Премьера состоялась 19 и 20 декабря 2014 года на сцене БДТ имени Товстоногова.",
+      "long": "2 часа 10 минут ",
+      "antracts": "1 АНТРАКТ",
+      "premier": "19 ДЕКАБРЯ 2014 г.",
+      "people": [
+        {
+          "name": "Сергей Прокофьев",
+          "job": "Музыка"
+        },
+        {
+          "name": "Игорь Коняев",
+          "job": "Режиссерская концепция, либретто"
+        },
+        {
+          "name": "Антон Пимонов",
+          "job": "Хореография"
+        },
+        {
+          "name": "Вячеслав Окунев",
+          "job": "Сценогафия, костюмы"
+        },
+        {
+          "name": "Евгений Ганзбург",
+          "job": "Художник по свету"
+        }
+      ],
+      "gallery": [
+        "./performance/romeoJulliet/gallery/romeoJullietGallery1.jpg",
+        "./performance/romeoJulliet/gallery/romeoJullietGallery2.jpg",
+        "./performance/romeoJulliet/gallery/romeoJullietGallery3.jpg",
+        "./performance/romeoJulliet/gallery/romeoJullietGallery4.jpg"
+      ]
     },
     {
       "id": "stoneBank",
@@ -342,19 +384,119 @@
       "id": "queen",
       "section": "Современный",
       "title": "пиковая дама",
-      "type": "Одноактный балет  6+",
-      "image": "../performance/queen/queen.png",
+      "type": "Одноактный балет          6+",
+      "image": "./performance/queen/queen.png",
       "bigImage": "./performance/queen/queen.png",
-      "modalImage":"./performance/queen/queen.png"
+      "modalImage":"./performance/queen/queen.png",
+      "closePlays": [],
+      "description": "Санкт-Петербургский государственный академический театр балета имени Леонида Якобсона в декабре 2019  выпустил премьеру – балет «Пиковая дама», поставленный в жанре неоклассики известным танцовщиком и хореографом Иньяки Урлезагой (Аргентина) по мотивам повести Александра Пушкина на музыку Петра Чайковского",
+      "fullDescription": "Хореографическая композиция в одном акте «Шопениана» — шедевр Михаила Фокина, поставленный в начале ХХ века. Хореограф, вдохновленный сюитой Фредерика Шопена и балетом «Сильфида», где блистала легендарная Мария Тальони, удивительно тонко и красиво оживил мазурки и прелюды гениального композитора.|В основу стилизации, поставленной для Анны Павловой, легла сказочная история любви воздушной Сильфиды, символа крылатой надежды, к земному юноше. Сам Фокин писал: «Это был танец в стиле Тальони, в стиле того давно забытого времени, когда в балетном искусстве господствовала поэзия, когда танцовщица поднималась на пуанты не для того, чтобы продемонстрировать стальной носок, а для того, чтобы, едва касаясь земли, создавать своим танцем впечатление легкости, чего-то неземного, фантастического... Публика была очарована, и я вместе с ней».",
+      "long": "2 часа 10 минут ",
+      "antracts": "2 АНТРАКТА",
+      "premier": "5 декабря 2019 г.",
+      "people": [
+        {
+          "name": "Пётр ильич чайковский",
+          "job": "Музыка"
+        },
+        {
+          "name": "Иньяки Урлезаги",
+          "job": "Хореография, либретто"
+        },
+        {
+          "name": "Эцио Фриджерио",
+          "job": "Художник - сценограф"
+        },
+        {
+          "name": "Риккардо Массирони",
+          "job": "Художник - технолог"
+        },
+        {
+          "name": "Франка Скуарчапино",
+          "job": "Художник по костюмам"
+        },
+        {
+          "name": "Ирэне Монти",
+          "job": "Художник - технолог по костюмам"
+        },
+        {
+          "name": "Виничио Кели",
+          "job": "Художник по свету"
+        },
+        {
+          "name": "Андреса Риссо",
+          "job": "Аранжировка оркестра"
+        }
+      ],
+      "gallery": [
+        "./performance/queen/gallery/queenGallery1.jpg", 
+        "./performance/queen/gallery/queenGallery2.jpg", 
+        "./performance/queen/gallery/queenGallery3.jpg", 
+        "./performance/queen/gallery/queenGallery4.jpg"
+      ]
     },
     {
       "id": "spartacus",
       "section": "Наследие Якобсона",
       "title": "Спартак",
-      "type": "Одноактный балет  6+",
+      "type": "Балет в 2-х актах 10+",
       "image": "../performance/spartacus/spartacus.png",
       "bigImage": "./performance/spartacus/spartacus.png",
-      "modalImage":"./performance/romeoJulliet/romeoJulliet.png"
+      "modalImage":"./performance/spartacus/gallery/spartacusGallery4.jpg",
+      "closePlays": [],
+      "description": "«СПАРТАК» – один из самых известных балетов Леонида Якобсона. Он был поставлен на музыку Арама Хачатуряна в 1956 году для сцены Кировского (ныне – Мариинского) театра. Спустя четверть века, уже после смерти хореографа, в созданной им труппе шла одноактная версия балета, а позднее самые значительные фрагменты хореографии составили двухактный спектакль",
+      "fullDescription": "«СПАРТАК» – один из самых известных балетов Леонида Якобсона. Он был поставлен на музыку Арама Хачатуряна в 1956 году для сцены Кировского (ныне – Мариинского) театра. Спустя четверть века, уже после смерти хореографа, в созданной им труппе шла одноактная версия балета, а позднее самые значительные фрагменты хореографии составили двухактный спектакль.|«Сцены из римской жизни», как определил жанр балета сам хореограф, сменяют одна другую с кинематографической быстротой. Бои гладиаторов, шествия легионеров, пиры и оргии римской знати, праздники плебса и восстание рабов сливаются в единое театрально-живописное полотно жизни античного Рима. На фоне многоцветья массовых сцен особенно выразительны дуэты главных действующих лиц – нежное адажио Фригии и Спартака и чувственно-страстный диалог Эгины и Гармодия.|Отказавшись от пуантов и академических канонов классического танца, одев исполнителей в античные туники и сандалии, балетмейстер с неукротимой эмоциональностью и неистощимой фантазией сочинил необычайно образную, свободно льющуюся хореографию, навеянную рисунками этрусских ваз и композициями римских барельефов.|Бережно восстановив лучшие страницы спектакля, театр балета имени Леонида Якобсона сегодня предлагает свою версию «Спартака» современному зрителю.",
+      "long": "2 часа 40 минут",
+      "antracts": "1 АНТРАКТ",
+      "premier": "24 ФЕВРАЛЯ 2013 г.",
+      "people": [
+        {
+          "name": "Арам Хачатурян",
+          "job": "Музыка"
+        },
+        {
+          "name": "Леонида Якобсона",
+          "job": "Хореография"
+        },
+        {
+          "name": "Николай Волков",
+          "job": "Либретто"
+        },
+        {
+          "name": "Семена Пастуха",
+          "job": "Сценогафия"
+        },
+        {
+          "name": "Галина Соловьева",
+          "job": "Художник по костюмам"
+        }
+      ],
+      "gallery": [
+        "./performance/spartacus/gallery/spartacusGallery1.jpg", 
+        "./performance/spartacus/gallery/spartacusGallery2.jpg",
+        "./performance/spartacus/gallery/spartacusGallery3.jpg",
+        "./performance/spartacus/gallery/spartacusGallery4.jpg"
+      ]
+    },
+    {
+      "id": "wedding",
+      "section": "Наследие Якобсона",
+      "title": "Свадебный кортеж"
+    },
+    {
+      "id": "classicism",
+      "section": "Наследие Якобсона",
+      "title": "Классицизм-Романтизм"
+    },
+    {
+      "id": "russianBallet",
+      "section": "Наследие Якобсона",
+      "title": "Шедевры русского балета. Хореографические миниатюры леонида якобсона"
+    },
+    {
+      "id": "outOfTime",
+      "section": "Наследие Якобсона",
+      "title": "Вне Времени. Шедевры Леонида Якобсона"
     },
     {
       "id": "bug",
@@ -400,7 +542,7 @@
         "./performance/roden/gallery/rodenGallery4.jpg",
         "./performance/roden/gallery/rodenGallery5.jpg",
         "./performance/roden/gallery/rodenGallery6.jpg",
-        "./performance/roden/gallery/rodenGallery7.jpg"
+"./performance/roden/gallery/rodenGallery7.jpg"
       ]
     },
     {
