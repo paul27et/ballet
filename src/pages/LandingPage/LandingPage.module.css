@@ -1,3 +1,14 @@
+@keyframes fadein {
+  from { 
+    opacity: 0;
+    transform : translateY(3em)
+  }
+  to { 
+    opacity: 1;
+    transform : translateY(0)
+  }
+}
+
 .videoBackground {
   width: 100vw;
   height: 100vh;
@@ -128,4 +139,45 @@
   margin-bottom: 8.67vw;
   height: 100%;
   align-items: end;
+}
+
+.partnersTitle {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+  text-align: left;
+}
+
+.partnersContainer {
+  padding: 0 2.29vw;
+  margin-top: 16.7vh;
+}
+
+.partners {
+  display: flex;
+  margin-top: 5.56vh;
+  justify-content: space-between;
+}
+
+.partnerImageContainer {
+  width: 32vw;
+}
+
+.partnerImage {
+  width: inherit;
+  animation: fadein 1s ease;
+  padding-top: 7.78vh;
+  transition: all 1s ease;
+}
+
+.partnersList {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.partnerItem {
+  composes: textCormorant80 from global;
+  text-transform: uppercase;
+  padding: 5.56vh 0;
+  border-bottom: 1px solid;
 }

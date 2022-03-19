@@ -1,0 +1,24 @@
+{
+  "partners": [
+    {
+      "link": "example.com",
+      "text": "ТАСС",
+      "image": "./partners/tass.png"
+    },
+    {
+      "link": "example.com",
+      "text": "ИНГОССТРАХ",
+      "image": "./partners/vpn.png"
+    },
+    {
+      "link": "example.com",
+      "text": "САНКТ-ПЕТЕРБУРГ",
+      "image": "./partners/tass.png"
+    },
+    {
+      "link": "example.com",
+      "text": "НЕТ КОРРУПЦИИ",
+      "image": "./partners/vpn.png"
+    }
+  ]
+}

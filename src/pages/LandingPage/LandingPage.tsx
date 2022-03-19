@@ -1,5 +1,5 @@
-import { Button, Footer, Menu, SiteMenu } from 'components';
-import { Component, createSignal, Match, Show, splitProps, Switch } from 'solid-js';
+import { Button, Footer, HoverOverHoc, Menu, SiteMenu } from 'components';
+import { Component, createEffect, createSignal, For, Match, Show, splitProps, Switch } from 'solid-js';
 import { Link } from 'solid-app-router';
 import arrowLeft from 'assets/arrowLeft.svg';
 import arrowRight from 'assets/arrowRight.svg';
@@ -7,6 +7,8 @@ import nutcrackerBanner from 'assets/banners/nutcrackerBanner.png';
 import lakeBanner from 'assets/banners/lakeBanner.png';
 import rodenBanner from 'assets/banners/rodenBanner.png';
 import video from 'assets/videoBackground.mp4'
+// @ts-ignore
+import { partners } from 'database/partners.json'
 import styles from './LandingPage.module.css';
 
 const Calendar: Component<{ month: string, setMonth: Function }> = (props) => {
@@ -161,6 +163,55 @@ const Banner: Component<{ image: string, title: string, subtitle?: string, type:
   )
 }
 
+const Partners: Component = () => {
+  const [getImage, setImage] = createSignal('')
+  const [getOffset, setOffset] = createSignal(0)
+  const [getIsAnyActive, setIsAnyActive] = createSignal(false)
+  let imageRef: HTMLImageElement | undefined
+
+  const imageEffect = (offset: number) => {
+    if (imageRef) {
+      imageRef.style.marginTop = `${offset*18}vh`
+    }
+  }
+
+  createEffect(() => imageEffect(getOffset()))
+
+  const onMouseOver = (image: string, idx: number) => {
+    setImage(image)
+    setOffset(idx)
+  }
+
+  const onMouseLeave = () => {
+    setImage('')
+    setOffset(0)
+  }
+ 
+  return (
+    <div class={styles.partnersContainer}>
+      <div class={styles.partnersTitle}>Партнеры</div>
+      <div class={styles.partners}>
+        <div class={styles.partnerImageContainer}>
+          <Show when={getImage().length > 0}>
+            <img class={styles.partnerImage} src={getImage()} alt="" ref={imageRef} />
+          </Show>
+        </div>
+        <div class={styles.partnersList}>
+          <For each={partners}>
+            {(partner: { text: string, link: string, image: string }, idx) => (
+              <HoverOverHoc getIsAnyActive={getIsAnyActive} setIsAnyActive={setIsAnyActive}>
+                <div class={styles.partnerItem} onmouseover={() => onMouseOver(partner.image, idx())} onmouseleave={onMouseLeave}>
+                  <a href={partner.link}>{partner.text}</a>
+                </div>
+              </HoverOverHoc>
+            )}
+          </For>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export const LandingPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
   const [getMonth, setMonth] = createSignal('Февраль')
@@ -194,6 +245,7 @@ export const LandingPage: Component<{ onMenuButtonClick: Function, isMenuActive:
         <Banner image={nutcrackerBanner} title="Щелкунчик" subtitle="22 февраля 2022 в 19:00 / Александринский театр" type="Балет в 3-х актах" />
         <Banner image={rodenBanner} title="Роден" type="Хореографические миниатюры" />
       </div>
+      <Partners />
       <div class={styles.menuContainer}>
         <Footer />
       </div>
