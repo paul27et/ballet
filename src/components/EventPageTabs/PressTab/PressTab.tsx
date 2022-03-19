@@ -9,8 +9,12 @@ export const PressTab: Component<{ press: any }> = (props) => {
   let elements : NodeListOf<Element> = []
   let windowHeight = 0
 
+  onMount(() => {
+    document.getElementById('pressTab')?.scrollIntoView()
+  })
+
   return (
-    <div class={styles.pressTab}>
+    <div id="pressTab" class={styles.pressTab}>
       <div class={styles.row}>
         <PressCardSmall data={local.press[0]} />
         <PressCardSmall data={local.press[1]} offset />

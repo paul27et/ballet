@@ -1,13 +1,15 @@
-import { Component, For, Show, splitProps } from 'solid-js';
+import { Component, createSignal, For, Show, splitProps } from 'solid-js';
 import { useParams } from 'solid-app-router';
-import { Button, Footer, Menu, SiteMenu } from 'components';
+import { Button, Footer, Menu, PlayModal, SiteMenu } from 'components';
 import { ClosePlayInterface, PeoplePlayInterface, RepertoirInterface } from 'interfaces';
+import arrowRight from 'assets/arrowRight.svg'
 // @ts-ignore
 import { repertoir } from 'database/repertoir.json';
 import styles from './PlayPage.module.css';
 
 export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
+  const [getModalActive, setModalActive] = createSignal(false)
   const playId = useParams().id;
   const play = repertoir.find((play: RepertoirInterface) => play.id === playId)
 
@@ -65,6 +67,10 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
             <div class={styles.smallTitle}>Описание</div>
             <div class={styles.descriptionText}>
               {play.description}
+              <img class={styles.arrowIcon}src={arrowRight} alt="" onclick={() => setModalActive(true)} />
+              <Show when={getModalActive()}>
+                <PlayModal text={play.fullDescription} image={play.modalImage} closeCard={() => setModalActive(false)} />
+              </Show>
             </div>
             <div class={styles.info}>
               <div class={styles.infoItem}>

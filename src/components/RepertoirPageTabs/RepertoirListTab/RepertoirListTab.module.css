@@ -1,3 +1,14 @@
+@keyframes fadein {
+  from { 
+    opacity: 0;
+    transform : translateY(3em)
+  }
+  to { 
+    opacity: 1;
+    transform : translateY(0)
+  }
+}
+
 .listTab {
   margin-top: 3.47vw;
 }
@@ -15,7 +26,6 @@
 
 .idx {
   composes: textLibre18 from global;
-  color: var(--main-color);
   padding-right: 1.04vw;
   padding-top: 1.18vw;
   vertical-align: top;
@@ -27,12 +37,16 @@
 }
 
 .text {
-  color: var(--main-color);
   composes: textCormorant80 from global;
   text-transform: uppercase;
 }
 
-.subText {
-  color: var(--main-color-grey);
-  composes: textManrope18 from global;
+.image {
+  position: absolute;
+  right: 0;
+  width: 46.67vw;
+  height: 34.58vw;
+  object-fit: cover;
+  z-index: -1;
+  animation: fadein 1s ease;
 }

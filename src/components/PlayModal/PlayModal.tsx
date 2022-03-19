@@ -4,7 +4,7 @@ import closeIcon from 'assets/close.svg';
 import styles from './PlayModal.module.css';
 import { parseText } from '../../App';
 
-export const ToursModal: Component<{ text: string, image: string, closeCard: Function }> = (props) => {
+export const PlayModal: Component<{ text: string, image: string, closeCard: Function }> = (props) => {
   const [local] = splitProps(props, ['text', 'image', 'closeCard'])
 
   return (

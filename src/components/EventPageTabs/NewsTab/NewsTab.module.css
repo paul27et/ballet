@@ -1,4 +1,5 @@
 .newsTab {
+  padding-top: 7.5vw;
   display: flex;
   justify-content: space-between;
 }
@@ -10,9 +11,19 @@
   padding-top: 8.33vw;
 }
 
+
 .img {
   width: 32.71vw;
-  height: 41.875vw;
+  height: 66.5vh;
+  object-fit: cover;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .img {
+    width: 28vw;
+    height: 62.5vh;
+    object-fit: cover;
+  }
 }
 
 .newsList {

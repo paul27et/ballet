@@ -1,4 +1,4 @@
-import { Component, For, splitProps } from 'solid-js';
+import { Component, For, onMount, splitProps } from 'solid-js';
 import styles from './ListTab.module.css';
 
 interface ListItemInterface {
@@ -8,6 +8,10 @@ interface ListItemInterface {
 
 export const ListTab: Component<{ list: string[] | ListItemInterface[] }> = (props) => {
   const [local] = splitProps(props, ['list'])
+
+  onMount(() => {
+    document.getElementById('listTab')?.scrollIntoView()
+  })
 
   const parseListItem = (item: string | ListItemInterface) => {
     if(typeof(item) === 'string') {
@@ -22,7 +26,7 @@ export const ListTab: Component<{ list: string[] | ListItemInterface[] }> = (pro
   }
 
   return (
-    <div class={styles.listTab}>
+    <div id="listTab" class={styles.listTab}>
       <div class={styles.listContainer}>
         <For each={local.list as ListItemInterface[]}>
           {(item, idx) => (

@@ -12,6 +12,11 @@ interface TabsMenuInterface {
 export const TabsMenu: Component<TabsMenuInterface> = (props) => {
   const [local] = splitProps(props, ['headers', 'active', 'onTabClick', 'textStyle']);
 
+  const onTabClick = (name: string) => {
+    local.onTabClick(name)
+    
+  }
+
   return (
     <div class={styles.menuContainer}>
       <div class={styles.menu}>

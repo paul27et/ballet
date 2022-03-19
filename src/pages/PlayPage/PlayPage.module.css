@@ -147,3 +147,14 @@
 .imagesContainer::-webkit-scrollbar {
   display: none;
 }
+
+.arrowIcon {
+  padding-left: 1vw;
+  opacity: 0.4;
+  transition: all 1s ease;
+}
+
+.arrowIcon:hover {
+  opacity: 1;
+  transition: all 1s ease;
+}

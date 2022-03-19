@@ -1,4 +1,4 @@
-import { Component, createSignal, For, Show, splitProps } from 'solid-js';
+import { Component, createSignal, For, onMount, Show, splitProps } from 'solid-js';
 import { NewsCardInterface } from 'interfaces';
 import styles from './NewsTab.module.css';
 import { NewsCard } from 'components';
@@ -8,8 +8,12 @@ export const NewsTab: Component<{ news: NewsCardInterface[] }> = (props) => {
   const [getCurrentImage, setCurrentImage] = createSignal(local.news[0].image)
   const [getBlur, setBlur] = createSignal(false)
 
+  onMount(() => {
+    document.getElementById('newsTab')?.scrollIntoView()
+  })
+
   return (
-    <div class={styles.newsTab}>
+    <div id="newsTab" class={styles.newsTab}>
       <div class={styles.imgContainer}> 
         <Show when={getCurrentImage()}>
           {/* <img class={styles.img} src={getCurrentImage()} alt=""/> */}

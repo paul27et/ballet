@@ -12,7 +12,13 @@ export const FacesTab: Component<{ faces: Object }> = (props) => {
       <div class={styles.facesContainer}>
         <For each={local.faces as FaceInterface[]}>
           {(face) => (
-            <FaceCard image={face.image} name={face.name} job={face.job} getIsAnyActive={getIsAnyActive} setIsAnyActive={setIsAnyActive} />
+            <FaceCard 
+              image={face.image} 
+              name={face.name} 
+              job={face.job} 
+              getIsAnyActive={getIsAnyActive} 
+              setIsAnyActive={setIsAnyActive} 
+            />
           )}
         </For>
       </div>

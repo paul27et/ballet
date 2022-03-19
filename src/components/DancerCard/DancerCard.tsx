@@ -1,4 +1,4 @@
-import { Component, createEffect, createSignal, For, splitProps } from 'solid-js';
+import { Component, createEffect, createSignal, For, onMount, splitProps } from 'solid-js';
 import { DancerInterface, DancerPlayInterface } from 'interfaces';
 import arrowLeft from 'assets/arrowLeft.svg';
 import arrowRight from 'assets/arrowRight.svg';

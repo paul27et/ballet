@@ -18,6 +18,12 @@ export const FaceCard: Component<FaceInterface & { getIsAnyActive: Function, set
     local.setIsAnyActive(false)
   }
 
+  const onClick = () => {
+    setIsActive('active')
+    local.setIsAnyActive(false)
+    setDancerCard(true)
+  }
+
   createEffect(() => {
     if (!local.getIsAnyActive()) {
       setIsActive('active')
@@ -40,7 +46,7 @@ export const FaceCard: Component<FaceInterface & { getIsAnyActive: Function, set
       class={`${styles.faceCard} ${getAdditionalClass()}`} 
       onmouseover={onMouseOver}
       onmouseleave={onMouseLeave}
-      onclick={() => setDancerCard(true)}
+      onclick={onClick}
     >
       <Show when={getDancerCard()}>
         <DancerCard name={local.name} closeCard={() => setDancerCard(false)} />
