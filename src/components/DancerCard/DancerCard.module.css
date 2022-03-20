@@ -27,6 +27,7 @@
 .arrow {
   width: 4.51vw;
   height: 2.78vw;
+  opacity: 0;
 }
 
 .closeContainer {
@@ -68,7 +69,7 @@
 
 .job {
   composes: textManrope24 from global;
-  color: var(--main-color);
+  color: var(--main-color-lightgrey);
 }
 
 .careerContainer {
@@ -85,7 +86,7 @@
 
 .career {
   composes: textManrope24 from global;
-  color: var(--main-color);
+  color: var(--main-color-lightgrey);
 }
 
 .repertoirContainer {

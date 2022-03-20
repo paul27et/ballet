@@ -60,7 +60,7 @@
 
 .cardText {
   composes: textManrope24 from global;
-  color: var(--main-color);
+  color: var(--main-color-lightgrey);
   text-align: left;
   width: 40.625vw;
 }

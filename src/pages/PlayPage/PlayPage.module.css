@@ -158,3 +158,15 @@
   opacity: 1;
   transition: all 1s ease;
 }
+
+.localButton {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+}
+
+.age {
+  padding-left: 2.08vw;
+}

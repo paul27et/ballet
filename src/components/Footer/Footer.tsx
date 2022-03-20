@@ -27,7 +27,7 @@ export const Footer: Component = () => {
           <Link href="/ballet/about"> О театре</Link>,
           <Link href="/ballet/events"> События</Link>,
           <Link href="/ballet/contacts"> Контакты</Link>,
-          <Link href="/ballet/docs"> Документы</Link>
+          <Link href="/ballet/documents"> Документы</Link>
         </span>
         <span class={styles.copyright}>
           Театр балета Л.Якобсона © 2022

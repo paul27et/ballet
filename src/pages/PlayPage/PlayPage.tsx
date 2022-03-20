@@ -1,4 +1,4 @@
-import { Component, createSignal, For, Show, splitProps } from 'solid-js';
+import { Component, createSignal, For, onMount, Show, splitProps } from 'solid-js';
 import { useParams } from 'solid-app-router';
 import { Button, Footer, Menu, PlayModal, SiteMenu } from 'components';
 import { ClosePlayInterface, PeoplePlayInterface, RepertoirInterface } from 'interfaces';
@@ -6,6 +6,7 @@ import arrowRight from 'assets/arrowRight.svg'
 // @ts-ignore
 import { repertoir } from 'database/repertoir.json';
 import styles from './PlayPage.module.css';
+import { stringify } from 'querystring';
 
 export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
@@ -28,6 +29,12 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
     return img
   }
 
+  const parseType = (text: string) => {
+    const arr = text.split(' ')
+    const age = arr.pop()
+    return <>{arr.join(' ')}<span class={styles.age}>{age}</span></>
+  }
+
   return (
     <div class={styles.playPage}>
       <Show when={local.isMenuActive}>
@@ -41,7 +48,7 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
           {play.title}
         </div>
         <div class={styles.imageContainer}>
-          <div class={styles.playType}>{play.type}</div>
+          <div class={styles.playType}>{parseType(play.type)}</div>
           <img class={styles.image} src={play.bigImage} alt="" />
         </div>
         <Show when={play.closePlays.length > 0}>
@@ -55,7 +62,7 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
                       <div class={styles.date}>{item.date}</div>
                       <div class={styles.place}>{item.place}</div>
                     </div>
-                    <Button text="Купить билет" borderless bigText />
+                    <Button text="Купить билет" style={styles.localButton} />
                   </div>
                 )}
               </For>

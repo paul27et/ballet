@@ -10,7 +10,7 @@
 
 .text {
   composes: textManrope24 from global;
-  color: var(--main-color);
+  color: var(--main-color-lightgrey);
   /* padding: 0 8.4vw 0 0; */
 }
 

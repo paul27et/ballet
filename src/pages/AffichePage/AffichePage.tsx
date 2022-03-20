@@ -48,7 +48,7 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
                       </div>
                       <div class={styles.titleContainer}>
                         <span class={styles.title}>
-                          <Link href={`/ballet/repertoir/${play.id}`}>{play.title}</Link>
+                          <Link class={styles.title} href={`/ballet/repertoir/${play.id}`}>{play.title}</Link>
                         </span>
                         <span class={styles.place}>{play.place}</span>
                       </div>

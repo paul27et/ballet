@@ -53,7 +53,7 @@
   font-weight: normal;
   font-size: min(2.5vw, 4vh);
   line-height: 140%;
-  color: var(--main-color);
+  color: var(--main-color-lightgrey);
   text-align: left;
   margin-top: 22.22vh;
   margin-left: 48.75vw;

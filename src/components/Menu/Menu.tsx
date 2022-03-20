@@ -4,6 +4,7 @@ import searchIcon from 'assets/searchIcon.svg';
 import logo from 'assets/logo.png';
 import { Button } from 'components';
 import styles from './Menu.module.css';
+import { Link } from 'solid-app-router';
 
 export const Menu: Component<{ onClick: Function }> = (props) => {
   const [local] = splitProps(props, ['onClick'])
@@ -11,7 +12,9 @@ export const Menu: Component<{ onClick: Function }> = (props) => {
     <div class={styles.menuContainer}>
       <img class={styles.logo} src={logo} alt=''></img>
       <div class={styles.menu}>
-        <Button text="Билеты" />
+        <Link href="/ballet/affiche">
+          <Button text="Билеты" />
+        </Link>
         <div class={styles.iconContainer}>
           <img class={styles.icon} src={searchIcon} />
         </div>
