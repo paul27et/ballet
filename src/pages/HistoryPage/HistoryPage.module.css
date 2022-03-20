@@ -26,6 +26,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  margin-top: 22.22vh;
 }
 
 .cardYear {
@@ -37,12 +38,24 @@
   text-transform: uppercase;
   color: var(--main-color);
   text-align: center;
+  position: relative;
+}
+
+.cardImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20.8vw;
+  height: 32vw;
+  object-fit: cover;
 }
 
 .cardTextContainer {
   display: flex;
   width: 100%;
   justify-content: end;
+  margin-top: 3.33vh;
 }
 
 .cardText {
