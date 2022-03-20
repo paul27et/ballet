@@ -1,24 +1,54 @@
 {
   "partners": [
     {
-      "link": "example.com",
+      "link": "https://tass.ru/",
       "text": "ТАСС",
       "image": "./partners/tass.png"
     },
     {
-      "link": "example.com",
+      "link": "https://www.ingos.ru/",
       "text": "ИНГОССТРАХ",
       "image": "./partners/ingosstrah.png"
     },
     {
-      "link": "example.com",
+      "link": "https://www.topspb.tv/",
       "text": "САНКТ-ПЕТЕРБУРГ",
       "image": "./partners/spb.png"
     },
     {
-      "link": "example.com",
+      "link": "https://www.corinthia.com/ru/st-petersburg/",
       "text": "CORINTHIA",
       "image": "./partners/corinthia.png"
+    },
+    {
+      "link": "https://www.fontanka.ru/",
+      "text": "фонтанка.ру",
+      "image": "./partners/fontanka.png"
+    },
+    {
+      "link": "https://www.culture.ru/",
+      "text": "культура.рф",
+      "image": "./partners/culture.png"
+    },
+    {
+      "link": "https://www.kayak.co.uk/Saint-Petersburg.13695.guide",
+      "text": "kayak",
+      "image": "./partners/kayak.png"
+    },
+    {
+      "link": "http://visit-petersburg.ru/",
+      "text": "visit petersburg",
+      "image": "./partners/visit.png"
+    },
+    {
+      "link": "https://grants.culture.ru/",
+      "text": "культура. гранты россии",
+      "image": "./partners/russian.png"
+    },
+    {
+      "link": "https://www.strana2020.ru/",
+      "text": "всероссийская перепись населения",
+      "image": "./partners/vpn.png"
     }
   ]
 }
