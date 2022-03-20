@@ -4,8 +4,8 @@ import { Component, createEffect, createSignal, For, Show, splitProps } from 'so
 import { HoverOverHoc } from '../../HoverOverHoc';
 import styles from './RepertoirListTab.module.css';
 
-export const RepertoirListItem: Component<{ idx: Function, item: RepertoirInterface, setImage: Function, setOffset: Function }> = (props) => {
-  const [local] = splitProps(props, ['idx', 'item', 'setImage', 'setOffset'])
+export const RepertoirListItem: Component<{ idx: Function, item: RepertoirInterface, setImage: Function, setOffset: Function, delay: boolean }> = (props) => {
+  const [local] = splitProps(props, ['idx', 'item', 'setImage', 'setOffset', 'delay'])
   let currentEl: HTMLImageElement | undefined
 
   const calculateOffset = () => {
@@ -22,15 +22,19 @@ export const RepertoirListItem: Component<{ idx: Function, item: RepertoirInterf
     local.setOffset(0)
   }
 
+  const aosDelay = () => {
+    return local.delay ? local.idx() * 100 + 100 : 100
+  }
+
   return (
     <div class={styles.listItem} onmouseover={onMouseOver} onmouseleave={onMouseLeave} ref={currentEl} >
-      <div class={styles.idx}>{local.idx() < 10 ? 0 : ''}{local.idx() + 1}/</div>
-      <Link href={local.item.id} class={styles.text}>{local.item.title}</Link>
+      <div class={styles.idx} data-aos="fade-up">{local.idx() < 10 ? 0 : ''}{local.idx() + 1}/</div>
+      <Link href={local.item.id} class={styles.text} data-aos="fade-up" data-aos-delay={`${aosDelay()}`}>{local.item.title}</Link>
     </div>
   )
 }
 
-export const RepertoirListTab: Component<{ list: RepertoirInterface[] }> = (props) => {
+export const RepertoirListTab: Component<{ list: RepertoirInterface[], delay: boolean }> = (props) => {
   const [local] = splitProps(props, ['list'])
   const [getIsAnyActive, setIsAnyActive] = createSignal(false)
   const [getImage, setImage] = createSignal('')
@@ -39,7 +43,6 @@ export const RepertoirListTab: Component<{ list: RepertoirInterface[] }> = (prop
 
   const trackOffset = (offset: number) => {
     if (img) {
-      console.log(getOffset())
       img.style.top = `calc(${offset}px + 3.47vw)`
     }
   }
@@ -55,7 +58,7 @@ export const RepertoirListTab: Component<{ list: RepertoirInterface[] }> = (prop
         <For each={local.list as RepertoirInterface[]}>
           {(item, idx) => (
             <HoverOverHoc getIsAnyActive={getIsAnyActive} setIsAnyActive={setIsAnyActive}>
-              <RepertoirListItem item={item} idx={idx} setImage={setImage} setOffset={setOffset} />
+              <RepertoirListItem item={item} idx={idx} setImage={setImage} setOffset={setOffset} delay />
             </HoverOverHoc>
           )}
         </For>

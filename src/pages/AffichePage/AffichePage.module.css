@@ -17,7 +17,7 @@
   width: 20.21vw;
   color: var(--main-color);
   border: none;
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: 1px solid rgba(255,255, 255, 0.6);
 }
 
 .playContainer {
@@ -39,7 +39,7 @@
   display: flex;
   justify-content: left;
   padding-bottom: 2.08vw;
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: 1px solid rgba(255,255, 255, 0.6);
   color: var(--main-color);
 }
 
@@ -47,7 +47,7 @@
   display: flex;
   justify-content: space-between;
   padding: 3.47vw 0;
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: 1px solid rgba(255,255, 255, 0.6);
 }
 
 .dateContainer {
@@ -75,6 +75,12 @@
 .title {
   composes: titleCormorant96 from global;
   color: var(--main-color);
+  transition: all 1s ease;
+}
+
+.title:hover {
+  transform: scale(1.02);
+  transition: all 1s ease;
 }
 
 .place {
@@ -85,4 +91,12 @@
 
 .buttonContainer {
   padding-top: 2.6vw;
+}
+
+.buttonLocal {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+  border: none;
+  text-transform: uppercase;
+  background: transparent;
 }

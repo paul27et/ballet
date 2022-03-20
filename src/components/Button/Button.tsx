@@ -1,13 +1,11 @@
 import { Component, splitProps } from 'solid-js';
 import styles from './Button.module.css';
 
-export const Button: Component<{text: string, borderless?: boolean, noPadding?: boolean, bigText?: boolean, noBackground: boolean}> = (props) => {
-  const [local] = splitProps(props, ['text', 'borderless', 'noPadding', 'bigText', 'noBackground']);
-  const style = `${local.bigText ? styles.button24 : styles.button} ${local.borderless && styles.borderless} ${local.noPadding && styles.noPadding} ${local.noBackground && styles.noBackground}`
+export const Button: Component<{ text: string, style?: string }> = (props) => {
+  const [local] = splitProps(props, ['text', 'style']);
+  const style = `${local.style ? local.style : styles.button}`
   return (
-    <button 
-      class={style}
-    >
+    <button class={style}>
       {local.text}
     </button>
   );

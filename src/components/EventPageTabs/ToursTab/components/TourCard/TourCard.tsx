@@ -12,11 +12,11 @@ export const TourCard: Component<{ tour: TourInterface}> = (props) => {
       <Show when={getModalActive()}>
         <ToursModal text={local.tour.fullDescription} image={local.tour.bigImage} closeCard={() => setModalActive(false)} />
       </Show>
-      <img class={styles.img} src={local.tour.image} alt='' />
+      <img class={styles.img} src={local.tour.image} alt='' data-aos="fade-up" />
       <div class={styles.descriptionContainer}>
-        <span class={styles.date}>{local.tour.date}</span>
-        <span class={styles.title}>{local.tour.title}</span>
-        <span class={styles.description}>{local.tour.description}</span>
+        <span class={styles.date} data-aos="fade-up">{local.tour.date}</span>
+        <span class={styles.title} data-aos="fade-up">{local.tour.title}</span>
+        <span class={styles.description} data-aos="fade-up">{local.tour.description}</span>
       </div>
     </div>
   );

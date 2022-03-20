@@ -9,6 +9,10 @@
   }
 }
 
+.landingPage {
+  scroll-behavior: smooth;
+}
+
 .videoBackground {
   width: 100vw;
   height: 100vh;
@@ -103,7 +107,14 @@
   text-align: left;
 }
 
+.bannersScrollContainer {
+  width: 100vw;
+  height: 100%;
+}
+
 .banner {
+  position: sticky;
+  top: 0;
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -170,6 +181,7 @@
 }
 
 .partnersList {
+  width: 54.8vw;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -180,4 +192,45 @@
   text-transform: uppercase;
   padding: 5.56vh 0;
   border-bottom: 1px solid;
+}
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  margin-top: 5.55vh;
+}
+
+.pages {
+  composes: textLibre18 from global;
+  color: var(--main-color-grey);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3.47vw;
+  align-items: center;
+}
+
+.page {
+  padding: 0 0.4vw;
+}
+
+.arrow {
+  opacity: 0.4;
+}
+
+.active {
+  opacity: 1;
+  color: var(--main-color);
+}
+
+.buttonLocal {
+  composes: textManrope18 from global;
+  text-transform: uppercase;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  padding: 1vw 3.82vw;
+  background-color: transparent;
+}
+
+.buttonLocal:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }

@@ -46,13 +46,16 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
   }
 
   return (
-    <div class={styles.siteMenu}>
+    <div class={styles.siteMenu} data-aos="fade-down">
       <div class={styles.over}>
         <div class={styles.imgContainer}>
           <img 
             class={`${styles.img} ${getActiveImage() !== mainImage ? getImageClass() : ''}`} 
             src={mainImage}
-            alt="" 
+            alt=""
+            data-aos="fade"
+            data-aos-delay="300"
+            data-aos-duration="1000"
           />
           <img 
             class={`${styles.img} ${getActiveImage() !== afishaImage ? getImageClass() : ''}`}
@@ -82,52 +85,64 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
         </div>
           <div class={styles.mainMenu}>
             <div class={styles.linkContainer}>
-              <span class={styles.number}>01/</span>
+              <span class={styles.number} data-aos="fade" data-aos-delay="300">01/</span>
               <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
                 <Link
                   class={styles.link}
                   href="/ballet/affiche"
                   onmouseover={() => onLinkMouseOver('affiche')}
                   onclick={() => local.onCloseClick(false)}
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  data-aos-duration="1000"
                 >
                   АФИША
                 </Link>
               </HoverOverHoc>
             </div>
             <div class={styles.linkContainer}>
-              <span class={styles.number}>02/</span>
+              <span class={styles.number} data-aos="fade" data-aos-delay="300">02/</span>
               <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
                 <Link 
                   class={styles.link} 
                   href="/ballet/about"
                   onmouseover={() => onLinkMouseOver('about')}
                   onclick={() => local.onCloseClick(false)}
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  data-aos-duration="1000"
                 >
                   О ТЕАТРЕ
                 </Link>
               </HoverOverHoc>
             </div>
             <div class={styles.linkContainer}>
-              <span class={styles.number}>03/</span>
+              <span class={styles.number} data-aos="fade" data-aos-delay="300">03/</span>
               <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
                 <Link 
                   class={styles.link} 
                   href="/ballet/events"
                   onmouseover={() => onLinkMouseOver('events')}
                   onclick={() => local.onCloseClick(false)}
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  data-aos-duration="1000"
                 >
                   СОБЫТИЯ
                 </Link>
               </HoverOverHoc>
             </div>
             <div class={styles.linkContainer}>
-              <span class={styles.number}>04/</span>
+              <span class={styles.number} data-aos="fade" data-aos-delay="300">04/</span>
               <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
                 <Link 
                   class={styles.link} 
                   href="/ballet/contacts"
                   onmouseover={() => onLinkMouseOver('contacts')}
                   onclick={() => local.onCloseClick(false)}
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  data-aos-duration="1000"
                 >
                   КОНТАКТЫ
                 </Link>

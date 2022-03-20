@@ -10,7 +10,6 @@
 
 .cardContainer {
   width: 48.61vw;
-  height: 23.19vw;
   text-align: left;
   margin-top: 6.9vw;
   opacity: 1;
@@ -42,9 +41,22 @@
   composes: textManrope18 from global;
   color: var(--main-color-grey);
   margin-top: 2.8vw;
-  padding-bottom: 5.2vw;
+  cursor: pointer;
   /* border-bottom: 1px solid var(--main-color); */
+}
+
+.moreText {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+  margin-top: 2vw;
+  transition: all 1s ease;
+}
+
+.border {
+  padding-top: 5.2vw;
+  height: 5px;
   box-shadow: 0 2px 1px -2px var(--main-color);
+  transition: all 1s ease;
 }
 
 .img {

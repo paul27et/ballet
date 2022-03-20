@@ -31,22 +31,6 @@ a {
   text-align: center;
 }
 
-.cursorRounded {
-  z-index: 999;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-}
-
-.cursorPointed {
-  z-index: 999;
-  width: 7px;
-  height: 7px;
-  background-color: white;
-  border-radius: 50%;
-}
-
 .header {
   background-color: #282c34;
   min-height: 100vh;

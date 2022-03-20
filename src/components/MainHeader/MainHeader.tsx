@@ -7,9 +7,11 @@ export const MainHeader: Component = (props) => {
   const [getTextClass, setTextClass] = createSignal('');
   const [getCurtainClass, setCurtainClass] = createSignal('');
 
-  // onMount(() => {
-  //   document.addEventListener('wheel', preventScroll, { passive: false })
-  // })
+  onMount(() => {
+    // document.addEventListener('wheel', preventScroll, { passive: false })
+    // setTimeout(() => {setContainerClass(styles.mainHeaderBg)}, 1000);
+    // setTimeout(() => setContainerClass(styles.collapsed), 2000);
+  })
 
   // onCleanup(() => {
   //   document.removeEventListener('wheel', preventScroll)
@@ -20,7 +22,8 @@ export const MainHeader: Component = (props) => {
   //   setTimeout(() => setTextClass(styles.textRemoved), 2000);
 
   //   setTimeout(() => setCurtainClass(styles.curtainRemoved), 2000);
-  //   setTimeout(() => setContainerClass(styles.collapsed), 2000);
+  //   setTimeout(() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' }), 2000);
+  // setTimeout(() => setContainerClass(styles.collapsed), 2000);
   //   setTimeout(() => document.removeEventListener('wheel', preventScroll), 2000);
   // })
 

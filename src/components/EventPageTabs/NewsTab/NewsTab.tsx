@@ -1,4 +1,4 @@
-import { Component, createSignal, For, onMount, Show, splitProps } from 'solid-js';
+import { Component, createEffect, createSignal, For, onMount, Show, splitProps } from 'solid-js';
 import { NewsCardInterface } from 'interfaces';
 import styles from './NewsTab.module.css';
 import { NewsCard } from 'components';
@@ -16,8 +16,7 @@ export const NewsTab: Component<{ news: NewsCardInterface[] }> = (props) => {
     <div id="newsTab" class={styles.newsTab}>
       <div class={styles.imgContainer}> 
         <Show when={getCurrentImage()}>
-          {/* <img class={styles.img} src={getCurrentImage()} alt=""/> */}
-          <img class={styles.img} src={getCurrentImage()} />
+          <img class={`${styles.img}`} src={getCurrentImage()} alt="" />
         </Show>
       </div>
       <div class={styles.newsList}>

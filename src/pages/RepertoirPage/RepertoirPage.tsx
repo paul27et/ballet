@@ -49,13 +49,13 @@ export const RepertoirPage: Component<{ onMenuButtonClick: Function, isMenuActiv
         <TabsMenu headers={HEADERS} active={getActiveTab()} onTabClick={(name: string) => onTabClick(name)} />
         <Switch>
           <Match when={getActiveTab() === HEADERS.classic}>
-            <RepertoirListTab list={classicPlays} />
+            <RepertoirListTab list={classicPlays} delay={false} />
           </Match>
           <Match when={getActiveTab() === HEADERS.modern}>
-            <RepertoirListTab list={modernPlays} />
+            <RepertoirListTab list={modernPlays} delay />
           </Match>
           <Match when={getActiveTab() === HEADERS.legacy}>
-            <RepertoirListTab list={legacyPlays} />
+            <RepertoirListTab list={legacyPlays} delay />
           </Match>
         </Switch>
         <Footer />

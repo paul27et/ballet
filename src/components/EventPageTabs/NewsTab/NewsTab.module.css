@@ -16,6 +16,7 @@
   width: 32.71vw;
   height: 66.5vh;
   object-fit: cover;
+  transition: all 1s ease;
 }
 
 @media (min-aspect-ratio: 16/9) {
