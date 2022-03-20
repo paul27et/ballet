@@ -312,11 +312,6 @@
         "./performance/chopin/gallery/chopinGallery3.jpg",
         "./performance/chopin/gallery/chopinGallery4.jpg"
       ]
-    }, 
-    {
-      "id": "pahita",
-      "section": "Классический",
-      "title": "Grand pas из балета «Пахита»"
     },
     {
       "id": "modernChor",
@@ -412,11 +407,6 @@
       ]
     },
     {
-      "id": "stoneBank",
-      "section": "Современный",
-      "title": "каменный берег"
-    },
-    {
       "id": "repetition",
       "section": "Современный",
       "title": "репетиция",
@@ -457,11 +447,6 @@
         "./performance/repetition/gallery/repetitionGallery3.jpg",
         "./performance/repetition/gallery/repetitionGallery2.jpg"
       ]
-    },
-    {
-      "id": "bird",
-      "section": "Современный",
-      "title": "жар-птица"
     },
     {
       "id": "queen",
@@ -604,11 +589,6 @@
       ]
     },
     {
-      "id": "russianBallet",
-      "section": "Наследие Якобсона",
-      "title": "Шедевры русского балета. Хореографические миниатюры леонида якобсона"
-    },
-    {
       "id": "outOfTime",
       "section": "Наследие Якобсона",
       "title": "Вне Времени. Шедевры Леонида Якобсона",
@@ -650,11 +630,6 @@
         "./performance/outOfTime/gallery/outOfTimeGallery3.jpg",
         "./performance/outOfTime/gallery/outOfTimeGallery4.jpg"
       ]
-    },
-    {
-      "id": "bug",
-      "section": "Наследие Якобсона",
-      "title": "клоп"
     },
     {
       "id": "roden",

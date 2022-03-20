@@ -1,46 +1,53 @@
 {
   "press": [
     {
-      "image": "./face.png",
+      "image": "./events/press/delfi.jpeg",
       "date": "06.10.2021",
       "link": "DELFI",
-      "text": "Андриан Фадеев: «Не люблю артистов, у которых в глазах только доллары»"
+      "text": "Андриан Фадеев: «Не люблю артистов, у которых в глазах только доллары»",
+      "href": "https://rus.delfi.lv/showtime/news/whatson/family/andrian-fadeev-ne-lyublyu-artistov-u-kotoryh-v-glazah-tolko-dollary.d?id=53628673"
     },
     {
-      "image": "./donKihot.png",
+      "image": "./events/press/showTime.jpeg",
       "date": "27.09.2021",
       "link": "DELFI / SHOW TIME",
-      "text": "Испанский огонь и питерская прописка: «Дон Кихот» на «Золотой маске в Латвии»"
+      "text": "Испанский огонь и питерская прописка: «Дон Кихот» на «Золотой маске в Латвии»",
+      "href": "https://rus.delfi.lv/showtime/news/whatson/family/ispanskij-ogon-i-piterskaya-propiska-don-kihot-na-zolotoj-maske-v-latvii.d?id=53619195"
     },
     {
-      "image": "./piterDonKihot.png",
+      "image": "./events/press/rusLsm.jpeg",
       "date": "18.10.2021",
       "link": "RUS.LSM.lv",
-      "text": "Петербургский «Дон Кихот» без глянца, на радость народу — роскошно!"
+      "text": "Петербургский «Дон Кихот» без глянца, на радость народу — роскошно!",
+      "href": "https://rus.lsm.lv/statja/za-efirom/za-efirom/andrey-shavrey-peterburgskiy-don-kihot-bez-gljanca-na-radost-narodu--roskoshno.a426002/"
     },
     {
-      "image": "./jackobson.png",
+      "image": "./events/press/iaInterfaks.jpeg",
       "date": "30.09.2021",
       "link": "ИА ИНТЕРФАКС",
-      "text": "Петербургский Театр балета Якобсона впервые выступит в Бахрейне"
+      "text": "Петербургский Театр балета Якобсона впервые выступит в Бахрейне",
+      "href": "https://www.interfax-russia.ru/northwest/news/peterburgskiy-teatr-baleta-yakobsona-vpervye-vystupit-v-bahreyne"
     },
     {
-      "image": "./mariinka.png",
+      "image": "./events/press/spbNews.jpeg",
       "date": "24.09.2021",
       "link": "САНКТ-ПЕТЕРБУРГ, НОВОСТИ",
-      "text": "Театр балета имени Л. Якобсона откроет 53-й сезон спектаклями на сцене Мариинки"
+      "text": "Театр балета имени Л. Якобсона откроет 53-й сезон спектаклями на сцене Мариинки",
+      "href": "https://topspb.tv/news/2021/09/24/teatr-baleta-im-l-yakobsona-otkroet-53-j-sezon-spektaklyami-na-scene-mariinki/"
     },
     {
-      "image": "./karelia.png",
+      "image": "./events/press/petrozavodsk.jpeg",
       "date": "05.10.2021",
       "link": "ПЕТРОЗАВОДСК ГОВОРИТ",
-      "text": "Уникальный театр балета покажет необычную программу в Карелии"
+      "text": "Уникальный театр балета покажет необычную программу в Карелии",
+      "href": "https://ptzgovorit.ru/news/unikalnyy-teatr-baleta-pokazhet-neobychnuyu-programmu-v-karelii"
     },
     {
-      "image": "./jisel.png",
+      "image": "./events/press/rusGazeta.jpeg",
       "date": "11.06.2021",
       "link": "РОССИЙСКАЯ ГАЗЕТА",
-      "text": "Экзамен для Жизели"
+      "text": "«Экзамен для Жизели»",
+      "href": "https://rg.ru/2021/06/11/reg-skfo/teatr-baleta-imeni-iakobsona-pokazal-zhizel-vo-vladikavkaze.html"
     }
   ]
 }

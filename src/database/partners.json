@@ -8,17 +8,17 @@
     {
       "link": "example.com",
       "text": "ИНГОССТРАХ",
-      "image": "./partners/vpn.png"
+      "image": "./partners/ingosstrah.png"
     },
     {
       "link": "example.com",
       "text": "САНКТ-ПЕТЕРБУРГ",
-      "image": "./partners/tass.png"
+      "image": "./partners/spb.png"
     },
     {
       "link": "example.com",
-      "text": "НЕТ КОРРУПЦИИ",
-      "image": "./partners/vpn.png"
+      "text": "CORINTHIA",
+      "image": "./partners/corinthia.png"
     }
   ]
 }
