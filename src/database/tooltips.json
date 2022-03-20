@@ -1,0 +1,112 @@
+{
+  "tooltips": [
+    {
+      "id": "4feb",
+      "number": "04",
+      "month": "Февраля",
+      "day": "пятница",
+      "name": "Щелкунчик",
+      "place": "19:00 / Александринский театр",
+      "image": "./performance/nutcracker/nutcracker.png"
+    },
+    {
+      "id": "5feb",
+      "number": "05",
+      "month": "Февраля",
+      "day": "Суббота",
+      "name": "Жизель",
+      "place": "18:00 / Мариинский театр, филиал в Республике Северная Осетия - Алания",
+      "image": "./performance/jiselle/jiselle.png"
+    },
+    {
+      "id": "8feb",
+      "number": "08",
+      "month": "Февраля",
+      "day": "Вторник",
+      "name": "Роден",
+      "place": "18:00 / Эрмитажный театр",
+      "image": "./performance/roden/roden.png"
+    },
+    {
+      "id": "12feb",
+      "number": "12",
+      "month": "Февраля",
+      "day": "Суббота",
+      "name": "ШОПЕНИАНА",
+      "place": "19:00 / Эрмитажный театр",
+      "image": "./performance/chopin/chopin.png"
+    },
+    {
+      "id": "14feb",
+      "number": "14",
+      "month": "Февраля",
+      "day": "Понедельник",
+      "name": "Дон кихот",
+      "place": "18:00 / Александринский театр",
+      "image": "./performance/donKihot/donKihot.png"
+    },
+    {
+      "id": "17feb",
+      "number": "17",
+      "month": "Февраля",
+      "day": "Четверг",
+      "name": "ДОН КИХОТ ",
+      "place": "18:00 / Мариинский театр, филиал в Республике Северная Осетия - Алания",
+      "image": "./performance/donKihot/donKihot.png"
+    },
+    {
+      "id": "22feb",
+      "number": "12",
+      "month": "Февраля",
+      "day": "Вторник",
+      "name": "щелкунчик",
+      "place": "19:00 / БКЗ «Октябрьский»",
+      "image": "./performance/nutcracker/nutcracker.png"
+    },
+    {
+      "id": "26feb",
+      "number": "26",
+      "month": "Февраля",
+      "day": "Суббота",
+      "name": "ШОПЕНИАНА",
+      "place": "18:00 / БКЗ «Октябрьский»",
+      "image": "./performance/chopin/chopin.png"
+    },
+    {
+      "id": "28feb",
+      "number": "26",
+      "month": "Февраля",
+      "day": "Понедельник",
+      "name": "Роден",
+      "place": "19:00 / Эрмитажный театр",
+      "image": "./performance/roden/roden.png"
+    },
+    {
+      "id": "7march",
+      "number": "07",
+      "month": "Марта",
+      "day": "Понедельник",
+      "name": "Роден",
+      "place": "19:00 / Александринский театр",
+      "image": "./performance/roden/roden.png"
+    },
+    {
+      "id": "21march",
+      "number": "21",
+      "month": "Марта",
+      "day": "Понедельник",
+      "name": "Щелкунчик",
+      "place": "19:00 / Мариинский театр, филиал в Республике Северная Осетия - Алания",
+      "image": "./performance/nutcracker/nutcracker.png"
+    },
+    {
+      "id": "22march",
+      "number": "22",
+      "month": "Марта",
+      "day": "Вторник",
+      "name": "Дон Кихот",
+      "place": "19:00 / Эрмитажный театр",
+      "image": "./performance/donKihot/donKihot.png"
+    }
+  ]
+}
