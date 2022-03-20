@@ -3,7 +3,7 @@ import { Component, createSignal, onMount, Show, splitProps } from 'solid-js';
 import nutcrackerBanner from 'assets/banners/nutcrackerBanner.png';
 import lakeBanner from 'assets/banners/lakeBanner.png';
 import rodenBanner from 'assets/banners/rodenBanner.png';
-import video from 'assets/videoBackground.mp4'
+import video from 'assets/mainVideo.mp4'
 import styles from './LandingPage.module.css';
 import { Partners, Calendar, Banner } from './components';
 
