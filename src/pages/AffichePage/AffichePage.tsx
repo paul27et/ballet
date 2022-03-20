@@ -4,6 +4,7 @@ import { Button, Footer, MainHeader, Menu, SiteMenu } from 'components';
 import { months } from 'database/affiche.json'
 import { MonthInterface, PlayInterface } from 'interfaces';
 import styles from './AffichePage.module.css';
+import { Link } from 'solid-app-router';
 
 export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
@@ -33,8 +34,7 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
             <div>
               <div 
                 class={`${styles.month} ${idx() === 0 ? styles.firstMonth : styles.notFirstMonth}`} 
-                data-aos="fade-up" 
-                // data-aos-offset={`-${window.innerHeight}`}
+                data-aos="fade-up"
               >
                 {Object.keys(month)[0]}
               </div>
@@ -47,7 +47,9 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
                         <span class={styles.daytime}>{play.daytime}</span>
                       </div>
                       <div class={styles.titleContainer}>
-                        <span class={styles.title}>{play.title}</span>
+                        <span class={styles.title}>
+                          <Link href={`/ballet/repertoir/${play.id}`}>{play.title}</Link>
+                        </span>
                         <span class={styles.place}>{play.place}</span>
                       </div>
                     </div>
