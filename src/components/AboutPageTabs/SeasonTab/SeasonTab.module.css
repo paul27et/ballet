@@ -1,0 +1,46 @@
+.seasonTabCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleContainer {
+  text-align: left;
+  margin-top: 11.1vh;
+}
+
+.offset {
+  padding-top: 11.1vh;
+}
+
+.title {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: min(17.36vw, 27.78vh);
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.titleNumbers {
+  font-family: "Libre Caslon Display", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: min(15.28vw, 24.44vh);
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.description {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: min(2.5vw, 4vh);
+  line-height: 140%;
+  color: var(--main-color);
+  text-align: left;
+  margin-top: 22.22vh;
+  margin-left: 48.75vw;
+  float: right;
+}

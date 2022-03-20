@@ -25,11 +25,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
   font-family: 'Cormorant Garamond', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14.9vw;
+  font-size: min(14.9vw, 23.9vh);
   text-transform: uppercase;
   color: #ECEAE4;
 }

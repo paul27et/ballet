@@ -15,3 +15,4 @@ export * from './DancerCard';
 export * from './FullScreenModal';
 export * from './RepertoirPageTabs';
 export * from './PlayModal';
+export * from './AboutPageTabs';

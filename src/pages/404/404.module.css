@@ -7,7 +7,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: min(45.14vw, 72.2vh);
-  line-height: min(45.83vw, 73.3);
+  line-height: min(45.83vw, 73.3vh);
   text-transform: uppercase;
   text-align: center;
   color: var(--main-color);

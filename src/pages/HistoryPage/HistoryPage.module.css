@@ -1,0 +1,53 @@
+.aboutPage {
+  padding: 0 2.29vw;
+}
+
+.contentHeader {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+  width: 100vw;
+  height: 49.1vw;
+  margin-top: 11.1vh;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+}
+
+.mainText {
+  text-align: left;
+  width: 40.69vw;
+  margin: 11.53vw 8.26vw 0 0;
+}
+
+.cardsContainer {
+  padding: 0 7.57vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardYear {
+  font-family: "Libre Caslon Display", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: min(45.14vw, 72.22vh);
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.cardTextContainer {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.cardText {
+  composes: textManrope24 from global;
+  color: var(--main-color);
+  text-align: left;
+  width: 40.625vw;
+}
