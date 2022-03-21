@@ -82,3 +82,54 @@
 .link:hover {
   color: var(--main-color);
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .over {
+    display: none;
+  }
+
+  .siteMenu {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    width: 80vw;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    display: flex;
+    padding-right: 11.18vw;
+    justify-content: space-between;
+  }
+
+  .mainMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6.67vw;
+    text-align: left;
+  }
+
+  .link {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10.67vw;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+
+  .number {
+    font-family: 'Libre Caslon Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.93vw;
+    line-height: 120%;  
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin: 2vw 3.47vw 0;
+  }
+
+  .link:hover .link:active {
+    color: var(--main-color);
+  }
+}

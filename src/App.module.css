@@ -23,6 +23,10 @@ body {
   overflow: hidden;
 }
 
+:global(#root.opaque) {
+  opacity: 0.5;
+}
+
 a {
   text-decoration: none; /* no underline */
 }
@@ -234,10 +238,4 @@ a {
 
 :global(.accordion-button::after) {
   width: 0;
-}
-
-@media(max-aspect-ratio: 12/16) {
-  .app {
-    margin-top: 44px;
-  }
 }

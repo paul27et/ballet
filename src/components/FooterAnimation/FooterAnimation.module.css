@@ -16,7 +16,7 @@
 
 @media(max-aspect-ratio: 12/16) {
   .animationElement {
-    width: 300%;
+    width: 1000%;
     height: 15vw;
     margin-top: 5vw;
     background-size: contain;
