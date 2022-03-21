@@ -33,7 +33,7 @@
   background-color: transparent;
 }
 
-@media(max-width: 500px) {
+@media(max-aspect-ratio: 12/16) {
 
   .menuContainer {
     display: flex;

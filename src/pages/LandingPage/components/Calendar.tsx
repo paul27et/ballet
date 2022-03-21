@@ -8,7 +8,7 @@ import { CalendarTooltip } from "./CalendarTooltip"
 
 export const Calendar: Component<{ month: string, setMonth: Function }> = (props) => {
   const [local] = splitProps(props, ['month', 'setMonth'])
-  const isMobile = window.innerWidth < 400;
+  const isMobile = window.innerWidth / window.innerHeight < 0.75;
 
   if (isMobile) {
     return (

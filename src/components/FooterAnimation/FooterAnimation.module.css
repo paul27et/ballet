@@ -14,7 +14,7 @@
   margin-top: 5.55vh;
 }
 
-@media(max-width: 500px) {
+@media(max-aspect-ratio: 12/16) {
   .animationElement {
     width: 300%;
     height: 15vw;

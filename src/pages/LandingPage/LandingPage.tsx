@@ -11,7 +11,7 @@ import { Partners, Calendar, Banner } from './components';
 export const LandingPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
   const [getMonth, setMonth] = createSignal('Февраль')
-  const isMobile = window.innerWidth < 400;
+  const isMobile = window.innerWidth / window.innerHeight < 0.75;
 
   return (
     <div class={styles.landingPage}>

@@ -9,7 +9,7 @@ import { Link } from 'solid-app-router';
 
 export const Menu: Component<{ onClick: Function }> = (props) => {
   const [local] = splitProps(props, ['onClick'])
-  const isMobile = window.innerWidth < 400;
+  const isMobile = window.innerWidth / window.innerHeight < 0.75;
 
   return (
     <div class={styles.menuContainer}>

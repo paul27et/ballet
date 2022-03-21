@@ -236,7 +236,7 @@ a {
   width: 0;
 }
 
-@media(max-width: 500px) {
+@media(max-aspect-ratio: 12/16) {
   .app {
     margin-top: 44px;
   }

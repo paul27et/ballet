@@ -5,7 +5,7 @@ import styles from '../LandingPage.module.css'
 export const Banner: Component<{ image: string, title: string, subtitle?: string, date?: string, type: string, day: string }> = (props) => {
   const [local] = splitProps(props, ['image', 'title', 'subtitle', 'type', 'date', 'day'])
   const bgUrl = local.image.replace('/ballet', '.')
-  const isMobile = window.innerWidth < 400;
+  const isMobile = window.innerWidth / window.innerHeight < 0.75;
   const dateArray = local.date?.split(' ')
 
   if (isMobile) {
