@@ -1,3 +1,14 @@
+@keyframes slideOutLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+}
+
 .playPage {
   padding: 0 2.29vw;
 }
@@ -148,6 +159,10 @@
   display: none;
 }
 
+.imageSlide {
+  animation: slideOutLeft 60s ease both;
+}
+
 .arrowIcon {
   padding-left: 1vw;
   opacity: 0.4;
@@ -165,6 +180,19 @@
   border: none;
   background: transparent;
   text-transform: uppercase;
+}
+
+.localButton:after {
+  display: block;
+  content: '';
+  border-bottom: 1px solid var(--main-color);  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+  transform-origin:  0% 50%;
+}
+
+.localButton:hover:after { 
+  transform: scaleX(1); 
 }
 
 .age {

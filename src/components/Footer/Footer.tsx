@@ -7,16 +7,16 @@ export const Footer: Component = () => {
     <div class={styles.footerContainer}>
       <div class={styles.socialMediaContainer}>
         <div class={styles.socialMedia}>
-          <a>
+          <a href="https://vk.com/yacobsonballetofficial">
             вконтакте
           </a>
-          <a>
+          <a href="https://www.facebook.com/yacobsonballet/?ref=br_rs&pnref=lhc">
             facebook
           </a>
-          <a>
+          <a href="https://www.youtube.com/channel/UCSgPRkPw3UoJNCDDW2wahrg?feature=watch">
             youtube
           </a>
-          <a>
+          <a href="https://www.instagram.com/yacobsonballet/">
             instagram
           </a>
         </div>

@@ -1,5 +1,5 @@
 .footerContainer {
-  margin-top: 34.72vw;
+  margin-top: 27.8vh;
 }
 
 .socialMediaContainer {
@@ -25,11 +25,11 @@
 }
 
 a {
-  color: var(--main-color-grey);
+  color: var(--main-color);
 }
 
 a:hover {
-  color: var(--main-color);
+  color: #aeaeae;
 }
 
 .links {

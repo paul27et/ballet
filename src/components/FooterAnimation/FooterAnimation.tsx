@@ -1,0 +1,32 @@
+import { Link } from 'solid-app-router'
+import { Component, createSignal, onMount } from 'solid-js'
+import graphic from 'assets/graphic.svg'
+import styles from './FooterAnimation.module.css'
+
+export const FooterAnimation: Component = () => {
+  const [getBgPos, setBgPos] = createSignal(10)
+  const [getBgPos1, setBgPos1] = createSignal(20)
+  const [getBgPos2, setBgPos2] = createSignal(-7)
+  const [getBgPos3, setBgPos3] = createSignal(-23)
+
+  onMount(() => {
+    document.addEventListener('mousemove', mouseMoveListener)
+    document.addEventListener('scroll', mouseMoveListener)
+  })
+
+  const mouseMoveListener = () => {
+    setBgPos(getBgPos() + 0.03)
+    setBgPos1(getBgPos1() - 0.04)
+    setBgPos2(getBgPos2() + 0.02)
+    setBgPos3(getBgPos3() - 0.01)
+  }
+
+  return (
+    <div class={styles.animationContainer}>
+      <div class={styles.animationElement} style={{ 'background-image': `url(${graphic})`, 'background-position-x': `${getBgPos()}%` }} />
+      <div class={styles.animationElement} style={{ 'background-image': `url(${graphic})`, 'background-position-x': `${getBgPos1()}%` }} />
+      <div class={styles.animationElement} style={{ 'background-image': `url(${graphic})`, 'background-position-x': `${getBgPos2()}%` }} />
+      <div class={styles.animationElement} style={{ 'background-image': `url(${graphic})`, 'background-position-x': `${getBgPos3()}%` }} />
+    </div>
+  );
+};

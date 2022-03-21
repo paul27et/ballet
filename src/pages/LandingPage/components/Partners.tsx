@@ -49,7 +49,14 @@ export const Partners: Component = () => {
           <For each={partners.slice(getPage() * 4 - 4, getPage() * 4)}>
             {(partner: { text: string, link: string, image: string }) => (
               <HoverOverHoc getIsAnyActive={getIsAnyActive} setIsAnyActive={setIsAnyActive}>
-                <div class={styles.partnerItem} onmouseover={() => onMouseOver(partner.image)} onmouseleave={onMouseLeave} data-aos="fade-up">
+                <div 
+                  class={styles.partnerItem} 
+                  onmouseover={() => onMouseOver(partner.image)} 
+                  ontouchstart={() => onMouseOver(partner.image)} 
+                  onmouseleave={onMouseLeave} 
+                  ontouchend={onMouseLeave}
+                  data-aos="fade-up"
+                >
                   <a href={partner.link}>{partner.text}</a>
                 </div>
               </HoverOverHoc>

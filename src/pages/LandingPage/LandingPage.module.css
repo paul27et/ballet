@@ -203,11 +203,16 @@
 }
 
 .pages {
-  composes: textLibre18 from global;
+  font-family: 'Libre Caslon Display', serif;;
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(1.6vw, 2.4vh);
+  line-height: 150%;  
+  text-transform: uppercase;
   color: var(--main-color-grey);
   display: flex;
   justify-content: space-between;
-  padding: 0 3.47vw;
+  padding: 0 2vw;
   align-items: center;
 }
 
@@ -235,4 +240,303 @@
 
 .buttonLocal:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tooltipTitle {
+  display: flex;
+}
+
+:global(#root.shadowed) {
+  opacity: 0.1;
+}
+
+:global(body.shadowed) {
+  /* background-color: rgb(63, 63, 63); */
+}
+
+.tooltipNumber {
+  font-family: 'Libre Caslon Display', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(2.5vw, 4vh);
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.tooltipMonth {
+  composes: titleCormorant36 from global;
+  color: var(--main-color);
+  padding-left: 0.5vw;
+}
+
+.tooltipSubtitle {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+  text-transform: uppercase;
+}
+
+.tooltipContent {
+  display: flex;
+  gap: 2.08vw;
+}
+
+.tooltipImage {
+  width: min(21.32vw, 34vh);
+  height: min(11.9vw, 19.1vh);
+  object-fit: cover;
+}
+
+.tooltipDescription {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.tooltipContentTitle {
+  composes: titleCormorant28 from global;
+  color: var(--main-color);
+}
+
+.tooltipContentSubtitle {
+  composes: textManrope18 from global;
+  color: var(--main-color-grey);
+}
+
+:global(.popover-arrow) {
+  visibility: hidden;
+}
+
+:global(#calendarPopover) {
+  border-radius: 0;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-color-lightgrey);
+  max-width: 49.3vw;
+  padding: 2.3vw;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+:global(.popover-header) {
+  padding: 1vh 16vw 2.8vh 16vw;
+  margin-bottom: 0;
+  background-color: var(--main-bg-color);
+  border-bottom: 1px solid var(--main-color);
+  border-radius: 0;
+  text-align: center;
+}
+
+:global(.popover-body) {
+  padding: 3.9vh 0 0 0;
+}
+
+@media(max-width: 400px) {
+  .contentContainer {
+    padding: 0 4vw;
+  }
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 3.47vw 0 2.22vh 0;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 5px 0;
+  }
+  
+  .title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.8vw;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--main-color);
+    display: flex;
+  }
+
+  .titleNumber {
+    padding: 0 3px;
+  }
+
+  .titleNumber {
+    font-family: 'Libre Caslon Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.8vw;
+    text-transform: uppercase;
+  }
+
+  .rowContainer {
+    display: flex;
+    gap: 8.5vw;
+  }
+
+  .dateContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .date {
+    font-family: 'Libre Caslon Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10vw;
+    text-transform: uppercase;
+    color: var(--main-color);
+  }
+
+  .time {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5vw;
+    color: var(--main-color-grey);
+    word-wrap: none;
+    width: 16.2vw;
+  }
+
+  .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10vw;
+    text-transform: uppercase;
+    color: var(--main-color);
+  }
+
+  .nameContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .subname {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5vw;
+    color: var(--main-color-grey);
+  }
+
+  .afficheLink {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.8vw;
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-top: 68vw;
+  }
+
+  .bannersContainer {
+    margin-top: 22.4vw;
+  }
+
+  .afficheTitle {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5vw;
+    color: var(--main-color-grey);
+  }
+
+  .bannersTitle {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5vw;
+    color: var(--main-color-grey);
+    padding-left: 4vw;
+  }
+
+  .titleContainerPlay {
+    display: flex;
+    flex-direction: column;
+    margin: 3.47vw 0 8.5vw 0;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 5.3vw 0;
+  }
+
+  .mobileImage {
+    width: 100%;
+  }
+  
+  .bannerMobile {
+    padding: 0 4vw;
+    margin-bottom: 20vw;
+  }
+
+  .mobileBannerTitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.67vw;
+    line-height: 10.67vw;
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-top: 4vw;
+  }
+
+  .mobileBannerSubtitle {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5vw;
+    color: var(--main-color-grey);
+  }
+
+  .mobileButtonLocal {
+    border: none;
+    background: transparent;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.8vw;
+    text-transform: uppercase;
+    color: var(--main-color);
+    padding: 0;
+  }
+
+  .mobileDescription {
+    text-align: left;
+  }
+
+  .partnersContainer {
+    padding: 0 4vw;
+  }
+
+  .partnersTitle {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5vw;
+    color: var(--main-color-grey);
+  }
+
+  .partnerItem {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8vw;
+    text-transform: uppercase;
+    padding: 5.3vw 0;
+    border-bottom: 1px solid;
+  }
+
+  .partnersList {
+    width: 70vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .partnerImageContainer {
+    width: 20vw;
+  }
 }

@@ -25,7 +25,8 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
         img.height = intViewportHeight * 0.74
       }
     }
-    img.src = src;
+    img.src = src
+    img.classList.add(styles.imageSlide)
     return img
   }
 

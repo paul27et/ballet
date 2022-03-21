@@ -10,4 +10,5 @@ export interface DancerPlayInterface {
   image: string,
   title: string,
   description: string,
+  id: string,
 }

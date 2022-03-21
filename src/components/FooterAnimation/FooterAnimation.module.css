@@ -1,0 +1,15 @@
+.animationContainer {
+  width: 100vw;
+  margin-top: 27.8vh;
+  overflow: hidden;
+  margin-left: -2.29vw;
+}
+
+.animationElement {
+  width: 300%;
+  height: 13.67vh;
+  background-size: contain;
+  background-repeat: repeat-x;
+  overflow: hidden;
+  margin-top: 5.55vh;
+}

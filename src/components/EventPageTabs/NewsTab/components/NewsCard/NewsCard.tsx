@@ -36,15 +36,15 @@ export const NewsCard: Component<{ news: NewsCardInterface, setImage: Function, 
       <div class={styles.date} data-aos="fade-up">{local.news.date}</div>
       <div class={styles.title} data-aos="fade-up">{local.news.title}</div>
       <div class={styles.description} data-aos="fade-up">{local.news.description}</div>
-      <div class={styles.more} onclick={onClick} data-aos="fade-up">
-        <span>{getOpened() ? '–' : '+'}</span>
-        {'\u00A0\u00A0\u00A0Подробнее'}
-      </div>
       <Show when={getOpened()}>
         <div class={styles.moreText} data-aos="fade-up">
           {getMore()}
         </div>
       </Show>
+      <div class={styles.more} onclick={onClick} data-aos="fade-up">
+        <span>{getOpened() ? '–' : '+'}</span>
+        {'\u00A0\u00A0\u00A0Подробнее'}
+      </div>
       <div class={styles.border} data-aos="fade-up"></div>
     </div>
   );

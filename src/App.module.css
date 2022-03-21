@@ -160,7 +160,7 @@ a {
 }
 
 :global(.textLibre93) {
-  font-family: 'Libre Caslon Display', serif;;
+  font-family: 'Libre Caslon Display', serif;
   font-style: normal;
   font-weight: 400;
   font-size: min(6.46vw, 10.33vh);
@@ -169,7 +169,7 @@ a {
 }
 
 :global(.textLibre80) {
-  font-family: 'Libre Caslon Display', serif;;
+  font-family: 'Libre Caslon Display', serif;
   font-style: normal;
   font-weight: 400;
   font-size: min(5.55vw, 8.89vh);
@@ -178,7 +178,7 @@ a {
 }
 
 :global(.textLibre18) {
-  font-family: 'Libre Caslon Display', serif;;
+  font-family: 'Libre Caslon Display', serif;
   font-style: normal;
   font-weight: 400;
   font-size: min(1.25vw, 2vh);
@@ -234,4 +234,10 @@ a {
 
 :global(.accordion-button::after) {
   width: 0;
+}
+
+@media(max-width: 400px) {
+  .app {
+    margin-top: 44px;
+  }
 }

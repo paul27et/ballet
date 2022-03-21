@@ -3,6 +3,7 @@ import { Component, createSignal, onMount, Show, splitProps } from 'solid-js';
 import nutcrackerBanner from 'assets/banners/nutcrackerBanner.png';
 import lakeBanner from 'assets/banners/lakeBanner.png';
 import rodenBanner from 'assets/banners/rodenBanner.png';
+import arrowRight from 'assets/arrowRight.svg';
 import video from 'assets/mainVideo.mp4'
 import styles from './LandingPage.module.css';
 import { Partners, Calendar, Banner } from './components';
@@ -10,6 +11,7 @@ import { Partners, Calendar, Banner } from './components';
 export const LandingPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
   const [getMonth, setMonth] = createSignal('Февраль')
+  const isMobile = window.innerWidth < 400;
 
   return (
     <div class={styles.landingPage}>
@@ -34,13 +36,19 @@ export const LandingPage: Component<{ onMenuButtonClick: Function, isMenuActive:
               <Calendar month={getMonth()} setMonth={setMonth} />
             </div>
           </div>
+          <Show when={isMobile}>
+            <div class={styles.afficheLink} data-aos="fade-up">
+              Вся афиша
+              <img src={arrowRight} alt="" />
+            </div>
+          </Show>
         </div>
         <div class={styles.bannersContainer}>
-          <div class={styles.bannersTitle}>Ближайшие спектакли</div>
+          <div class={styles.bannersTitle}>Премьеры</div>
           <div class={styles.bannersScrollContainer}>
-            <Banner image={lakeBanner} title="Лебединое озеро" subtitle="12 февраля 2022 в 19:00 / Мариинский - 2" type="Балет в 3-х актах" />
-            <Banner image={nutcrackerBanner} title="Щелкунчик" subtitle="22 февраля 2022 в 19:00 / Александринский театр" type="Балет в 3-х актах" />
-            <Banner image={rodenBanner} title="Роден" type="Хореографические миниатюры" />
+            <Banner image={lakeBanner} title="Лебединое озеро" subtitle="19:00 / Мариинский - 2" date="12 февраля" type="Балет в 3-х актах" day="Пятница"/>
+            <Banner image={nutcrackerBanner} title="Щелкунчик" subtitle="19:00 / Александринский театр" date="22 февраля" type="Балет в 3-х актах" day="Суббота" />
+            <Banner image={rodenBanner} title="Роден" type="Хореографические миниатюры" date="23 февраля" day="Воскресенье" />
           </div>
         </div>
         <Partners />

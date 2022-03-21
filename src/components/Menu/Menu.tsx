@@ -1,25 +1,27 @@
 import { Component, splitProps } from 'solid-js';
 import menuIcon from 'assets/menuIcon.svg';
-import searchIcon from 'assets/searchIcon.svg';
-import logo from 'assets/logo.png';
+import menuIconSmall from 'assets/burger.svg';
+import logoSmall from 'assets/logo/logo_small.svg';
+import logo from 'assets/logo/logo_medium.svg';
 import { Button } from 'components';
 import styles from './Menu.module.css';
 import { Link } from 'solid-app-router';
 
 export const Menu: Component<{ onClick: Function }> = (props) => {
   const [local] = splitProps(props, ['onClick'])
+  const isMobile = window.innerWidth < 400;
+
   return (
     <div class={styles.menuContainer}>
-      <img class={styles.logo} src={logo} alt=''></img>
+      <Link href="/ballet">
+        <img class={styles.logo} src={isMobile ? logoSmall : logo} alt="" />
+      </Link>
       <div class={styles.menu}>
         <Link href="/ballet/affiche">
-          <Button text="Билеты" />
+          <Button text="Билеты" style={styles.localButton} />
         </Link>
         <div class={styles.iconContainer}>
-          <img class={styles.icon} src={searchIcon} />
-        </div>
-        <div class={styles.iconContainer}>
-          <img class={styles.icon} src={menuIcon} onclick={() => local.onClick(true)} />
+          <img class={styles.icon} src={isMobile ? menuIconSmall : menuIcon} onclick={() => local.onClick(true)} />
         </div>
       </div>
     </div>

@@ -100,3 +100,16 @@
   text-transform: uppercase;
   background: transparent;
 }
+
+.buttonLocal:after {
+  display: block;
+  content: '';
+  border-bottom: 1px solid var(--main-color);  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+  transform-origin:  0% 50%;
+}
+
+.buttonLocal:hover:after { 
+  transform: scaleX(1); 
+}

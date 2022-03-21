@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+select:focus {
+  outline: 0;
+}
+
 [data-aos="new-animation"] {
   opacity: 0;
   transform: translate(-50%, -20%);

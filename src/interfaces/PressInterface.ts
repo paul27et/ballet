@@ -5,5 +5,6 @@ export interface PressCardInterface {
     text: string;
     link: string;
     date: string;
+    href: string;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, createEffect, createSignal, For, onMount, splitProps } from 'solid-js';
+import { Component, createEffect, createSignal, For, onMount, Show, splitProps } from 'solid-js';
 import { DancerInterface, DancerPlayInterface } from 'interfaces';
 import arrowLeft from 'assets/arrowLeft.svg';
 import arrowRight from 'assets/arrowRight.svg';
@@ -7,9 +7,10 @@ import closeIcon from 'assets/close.svg';
 import { dancers } from 'database/dancers.json' 
 import styles from './DancerCard.module.css';
 import { FullScreenModal } from 'components';
+import { Link } from 'solid-app-router';
 
 const PlayCard: Component<DancerPlayInterface & { getIsAnyActive: Function, setIsAnyActive: Function }> = (props) => {
-  const [local] = splitProps(props, ['image', 'title', 'description', 'getIsAnyActive', 'setIsAnyActive'])
+  const [local] = splitProps(props, ['image', 'title', 'description', 'id', 'getIsAnyActive', 'setIsAnyActive'])
   const [getIsActive, setIsActive] = createSignal('active')
   
   const onMouseOver = () => {
@@ -40,11 +41,13 @@ const PlayCard: Component<DancerPlayInterface & { getIsAnyActive: Function, setI
   }
 
   return (
-    <div class={`${styles.repertoirPlay} ${getAdditionalClass()}`} onmouseover={onMouseOver} onmouseleave={onMouseLeave}>
-      <img class={styles.playImage} src={local.image} alt="" />
-      <div class={styles.playTitle}>{local.title}</div>
-      <div class={styles.playDescription}>{local.description}</div>
-    </div>
+    <Link href={`/ballet/repertoir/${local.id}`}>
+      <div class={`${styles.repertoirPlay} ${getAdditionalClass()}`} onmouseover={onMouseOver} onmouseleave={onMouseLeave} data-aos="fade-up">
+        <img class={styles.playImage} src={local.image} alt="" />
+        <div class={styles.playTitle}>{local.title}</div>
+        <div class={styles.playDescription}>{local.description}</div>
+      </div>
+    </Link>
   )
 } 
 
@@ -54,7 +57,7 @@ export const DancerCard: Component<{ name: string, closeCard: Function }> = (pro
   const [getIsAnyActive, setIsAnyActive] = createSignal(false)
 
   const parseText = (text: string) => {
-    return text.split('|').map(textItem => <div>{textItem}<br /><br /></div>)
+    return text.split('|').map(textItem => <div data-aos="fade-up">{textItem}<br /><br /></div>)
   }
 
   return (
@@ -67,31 +70,34 @@ export const DancerCard: Component<{ name: string, closeCard: Function }> = (pro
         <div class={styles.closeContainer} onclick={() => local.closeCard()}>
           <img src={closeIcon} alt="" />
         </div>
-        <div class={styles.name}>{dancer.name}</div>
-        <div class={styles.jobContainer}>
+        <div class={styles.name} data-aos="fade-up">{dancer.name}</div>
+        <div class={styles.jobContainer} data-aos="fade-up">
           <div class={styles.jobTitle}>Категория</div>
           <div class={styles.job}>{dancer.job}</div>
         </div>
         <div class={styles.careerContainer}>
-          <div class={styles.careerTitle}>Карьера</div>
+          <div class={styles.careerTitle} data-aos="fade-up">Карьера</div>
           <div class={styles.career}>{parseText(dancer.career)}</div>
         </div>
-        <div class={styles.repertoirContainer}>
-          <div class={styles.repertoirTitle}>Репертуар</div>
-          <div class={styles.repertoirPlaysContainer}>
-            <For each={dancer.repertoir}>
-              {(play: DancerPlayInterface) => (
-                <PlayCard
-                  image={play.image}
-                  title={play.title}
-                  description={play.description}
-                  getIsAnyActive={getIsAnyActive} 
-                  setIsAnyActive={setIsAnyActive} 
-                />
-              )}
-            </For>
+        <Show when={dancer.repertoir.length > 0}>
+          <div class={styles.repertoirContainer}>
+            <div class={styles.repertoirTitle}>Репертуар</div>
+            <div class={styles.repertoirPlaysContainer}>
+              <For each={dancer.repertoir}>
+                {(play: DancerPlayInterface) => (
+                  <PlayCard
+                    image={play.image}
+                    title={play.title}
+                    id={play.id}
+                    description={play.description}
+                    getIsAnyActive={getIsAnyActive} 
+                    setIsAnyActive={setIsAnyActive} 
+                  />
+                )}
+              </For>
+            </div>
           </div>
-        </div>
+        </Show>
       </div>
       <div class={styles.arrowContainer}>
         <img class={styles.arrow} src={arrowRight} alt=""/>

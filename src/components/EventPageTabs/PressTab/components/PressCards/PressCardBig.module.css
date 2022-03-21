@@ -8,6 +8,12 @@
 .image {
   width: 83.33vw;
   height: 42.01vw;
+  transition: all 1s ease;
+}
+
+.image:hover {
+  opacity: 0.8;
+  transition: all 1s ease;
 }
 
 .imageFooter {

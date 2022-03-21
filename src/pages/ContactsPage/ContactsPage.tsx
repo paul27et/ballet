@@ -3,6 +3,7 @@ import { Footer, MainHeader, Menu, SiteMenu } from 'components';
 // @ts-ignore
 import { contacts } from 'database/contacts.json';
 import styles from './ContactsPage.module.css';
+import { FooterAnimation } from '../../components/FooterAnimation';
 
 export const ContactsPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
@@ -72,6 +73,7 @@ export const ContactsPage: Component<{ onMenuButtonClick: Function, isMenuActive
           </div>
         </div>
       </div>
+      <FooterAnimation />
       <Footer />
     </div>
   );
