@@ -1,5 +1,5 @@
 import { Link } from 'solid-app-router'
-import { Component, createSignal, onMount } from 'solid-js'
+import { Component, createSignal, onCleanup, onMount } from 'solid-js'
 import graphic from 'assets/graphic.svg'
 import styles from './FooterAnimation.module.css'
 
@@ -11,14 +11,21 @@ export const FooterAnimation: Component = () => {
 
   onMount(() => {
     document.addEventListener('mousemove', mouseMoveListener)
+    document.addEventListener('touchstart', mouseMoveListener)
     document.addEventListener('scroll', mouseMoveListener)
+  })
+
+  onCleanup(() => {
+    document.removeEventListener('mousemove', mouseMoveListener)
+    document.addEventListener('touchstart', mouseMoveListener)
+    document.removeEventListener('scroll', mouseMoveListener)
   })
 
   const mouseMoveListener = () => {
     setBgPos(getBgPos() + 0.03)
-    setBgPos1(getBgPos1() - 0.04)
-    setBgPos2(getBgPos2() + 0.02)
-    setBgPos3(getBgPos3() - 0.01)
+    setBgPos1(getBgPos1() - 0.05)
+    setBgPos2(getBgPos2() + 0.06)
+    setBgPos3(getBgPos3() - 0.04)
   }
 
   return (

@@ -13,3 +13,14 @@
   overflow: hidden;
   margin-top: 5.55vh;
 }
+
+@media(max-width: 500px) {
+  .animationElement {
+    width: 300%;
+    height: 15vw;
+    margin-top: 5vw;
+    background-size: contain;
+    background-repeat: repeat-x;
+    overflow: hidden;
+  }
+}

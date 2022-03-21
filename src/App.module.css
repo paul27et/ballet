@@ -236,7 +236,7 @@ a {
   width: 0;
 }
 
-@media(max-width: 400px) {
+@media(max-width: 500px) {
   .app {
     margin-top: 44px;
   }
