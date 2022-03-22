@@ -19,3 +19,33 @@
   padding: 2.4vw 0;
   margin: 0 2.29vw;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .menuContainer {
+    position: sticky;
+    top: 0;
+    height: 100%;
+    padding-top: 1%;
+    background-color: var(--main-bg-color);
+    z-index: 100;
+    margin-left: -4vw;
+    width: 100vw;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 9.33vw;
+    border-bottom: 1px solid var(--main-color-grey);
+    border-top: 1px solid var(--main-color-grey);
+    text-transform: uppercase;
+    background-color: var(--main-bg-color);
+    padding: 5.33vw 4vw 5.33vw 4vw;
+    margin: 0;
+    overflow: scroll;
+    white-space: nowrap;
+  }
+  .menu::-webkit-scrollbar {
+    display: none;
+  }
+}

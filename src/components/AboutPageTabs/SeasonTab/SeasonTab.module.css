@@ -59,3 +59,27 @@
   margin-left: 48.75vw;
   float: right;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .titleContainer {
+    text-align: left;
+    margin-top: 9.33vw;
+  }
+
+  .offset {
+    padding-top: 14vw;
+  }
+
+  .description {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color-lightgrey);
+    text-align: left;
+    margin-top: 9.3vw;
+    margin-left: 0;
+    float: right;
+  }
+}

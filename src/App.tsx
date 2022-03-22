@@ -23,8 +23,8 @@ export const preventScroll = (e: Event) => {
   return false;
 }
 
-export const parseText = (text: string) => {
-  return text.split('|').map(textItem => <div data-aos="fade-up">{textItem}<br /><br /></div>)
+export const parseText = (text: string, noAnimation?: boolean) => {
+  return text.split('|').map(textItem => <div data-aos={noAnimation ? "" : "fade-up"}>{textItem}<br /><br /></div>)
 }
 
 const App: Component = () => {

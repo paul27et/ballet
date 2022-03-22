@@ -9,3 +9,17 @@
 .menuContainer {
   margin-bottom: 2.47vw;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .container {
+    padding: 0 4vw;
+  }
+
+  .tabItem {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6.4vw;
+    line-height: 120%;
+  }
+}

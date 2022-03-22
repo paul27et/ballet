@@ -69,3 +69,63 @@
   display: flex;
   justify-content: center;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .contentHeader {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color);
+    width: 100vw;
+    height: auto;
+    margin-top: 0;
+    display: flex;
+    justify-content: end;
+  }
+
+  .mainText {
+    text-align: left;
+    width: 100%;
+    margin: 13.33vw 4vw 0 4vw;
+  }
+
+  .cardsContainer {
+    padding: 0 4vw;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vw;
+  }
+
+  .cardText {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color-lightgrey);
+    text-align: left;
+    width: 100%;
+  }
+
+  .cardImage {
+    z-index: 5;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 73.33vw;
+    height: 47.73vw;
+    object-fit: cover;
+  }
+
+  .cardTextContainer {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    margin-top: 50vw;
+  }
+}

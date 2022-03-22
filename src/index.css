@@ -27,3 +27,16 @@ select:focus {
   transform: translate(-50%, -50%);
   opacity: 1;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  [data-aos="new-animation"] {
+    opacity: 0;
+    transform: translate(-50%, 20%);
+    transition-property: transform, opacity;
+  }
+
+  [data-aos="new-animation"].aos-animate {
+    transform: translate(-50%, -10%);
+    opacity: 1;
+  }
+}

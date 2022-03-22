@@ -11,3 +11,21 @@
 .menuItemActive {
   color: var(--main-color);
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .menuItem {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.4vw;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+  .textStyle {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.4vw;
+    line-height: 120%;
+  }
+}

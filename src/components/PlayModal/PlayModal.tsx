@@ -13,10 +13,10 @@ export const PlayModal: Component<{ text: string, image: string, closeCard: Func
         <img class={styles.image} src={local.image} alt="" />
         <div class={styles.descriptionContainer}>
           <div class={styles.closeContainer} onclick={() => local.closeCard()}>
-            <img src={closeIcon} alt="" />
+            <img class={styles.closeIcon} src={closeIcon} alt="" />
           </div>
           <div class={styles.text}>
-            {parseText(local.text)}
+            {parseText(local.text, true)}
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ export const FaceCard: Component<FaceInterface & { getIsAnyActive: Function, set
   const [local] = splitProps(props, ['image', 'name', 'job', 'getIsAnyActive', 'setIsAnyActive'])
   const [getIsActive, setIsActive] = createSignal('active')
   const [getDancerCard, setDancerCard] = createSignal(false)
+  const isMobile = window.innerWidth / window.innerHeight < 0.75;
 
   const onMouseOver = () => {
     setIsActive('colored')
@@ -41,6 +42,8 @@ export const FaceCard: Component<FaceInterface & { getIsAnyActive: Function, set
     return ''
   }
 
+  const nameTxt = isMobile ? local.name : local.name.split(' ').map((text: string) => <span>{text}<br /></span>)
+
   return (
     <div 
       class={`${styles.faceCard} ${getAdditionalClass()}`} 
@@ -52,7 +55,7 @@ export const FaceCard: Component<FaceInterface & { getIsAnyActive: Function, set
         <DancerCard name={local.name} closeCard={() => setDancerCard(false)} />
       </Show>
       <img class={styles.faceImage} src={local.image} alt="" />
-      <span class={styles.faceName}>{local.name.split(' ').map((text: string) => <span>{text}<br /></span>)}</span>
+      <span class={styles.faceName}>{nameTxt}</span>
       <span class={styles.faceJob}>{local.job}</span>
     </div>
   );

@@ -29,3 +29,48 @@
 .descriptionContainer::-webkit-scrollbar {
   display: none;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .toursModal {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow-y: scroll;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    margin-top: 12.16vw;
+  }
+
+  .text {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color-lightgrey);
+    padding: 0 4vw 0 4vw;
+  }
+
+  .descriptionContainer {
+    padding: 6.94vw 8.4vw 0 0;
+    overflow-y: visible;
+  }
+
+  .closeContainer {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    text-align: end;
+    background-color: var(--main-bg-color);
+    padding: 2.08vw 2.29vw 2.08vw 0;
+  }
+
+  .closeIcon {
+    width: 8vw;
+  }
+}

@@ -36,3 +36,46 @@
   color: var(--main-color-grey);
   composes: textManrope18 from global;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .listTab {
+    padding-top: 20vw;
+  }
+
+  .listItem {
+    display: flex;
+    padding-top: 6.67vw;
+  }
+
+  .idx {
+    font-family: 'Libre Caslon Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.93vw;
+    line-height: 110%;  
+    text-transform: uppercase;
+    color: var(--main-color);
+    padding-right: 2.67vw;
+    padding-top: 1.18vw;
+    vertical-align: top;
+  }
+
+  .text {
+    color: var(--main-color);
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6.93vw;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+
+  .subText {
+    color: var(--main-color-grey);
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3vw;
+    line-height: 140%;
+  }
+}

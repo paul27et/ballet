@@ -1,4 +1,4 @@
-import { Footer, MainHeader, Menu, SiteMenu } from 'components';
+import { Footer, MainHeader, Menu, SiteMenu, TabsMenu } from 'components';
 import { Component, For, Show, splitProps } from 'solid-js';
 import mainBg from 'assets/history/mainBg.png'
 // @ts-ignore
@@ -9,6 +9,9 @@ import { parseText } from '../../App';
 
 export const HistoryPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
+  const isMobile = window.innerWidth / window.innerHeight < 0.75;
+
+  const style = isMobile ? {} : {'background-image': `url(${mainBg})`}
 
   const splitString = (str: string) => {
     const arr = str.split('')
@@ -34,7 +37,7 @@ export const HistoryPage: Component<{ onMenuButtonClick: Function, isMenuActive:
           <Menu onClick={(state: boolean) => local.onMenuButtonClick(state)} />
         </div>
       </div>
-      <div class={styles.contentHeader} style={{'background-image': `url(${mainBg})`}} data-aos="fade-up">
+      <div class={styles.contentHeader} style={style} data-aos="fade-up">
         <div class={styles.mainText}>
           {parseText(texts.mainText)}
         </div>

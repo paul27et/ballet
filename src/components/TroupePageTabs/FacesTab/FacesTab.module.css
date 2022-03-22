@@ -47,3 +47,43 @@
   composes: textManrope18 from global;
   color: var(--main-color-grey);
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .faceImage {
+    height: 92.27vw;
+    width: 92.27vw;
+    filter: grayscale(1);
+    transition: all 1s ease;
+  }
+
+  .facesContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 9.33vw;
+    row-gap: 13.33vw;
+    column-gap: 13.33vw;
+  }
+
+  .faceName {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6.5vw;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-top: 1.5vw;
+    width: 100%;
+  }
+  
+  .faceJob {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+  }
+  
+}

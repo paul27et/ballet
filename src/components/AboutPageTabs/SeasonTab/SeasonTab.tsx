@@ -15,33 +15,34 @@ const SeasonTabCard: Component<{ title: string, text: string, titleNumbers?: str
   const [getAnimation, setAnimation] = createSignal('')
   let REF
 
-  const intersectionOptions = {
-    root: null,  // use the viewport
-    rootMargin: '-21% 0px -32% 0px',
-    threshold: 1.0
-  }
+  // const intersectionOptions = {
+  //   root: null,  // use the viewport
+  //   rootMargin: '-21% 0px -32% 0px',
+  //   threshold: 1.0
+  // }
   
-  const intersectionCallback = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.intersectionRatio >= 1) {
-        console.log("Fully visible!");
-        setAnimation(styles.titleAnimation)
-      } else {
-        console.log("Not fully visible!");
-      }
-    });
-  }
+  // const intersectionCallback = (entries, observer) => {
+  //   entries.forEach(entry => {
+  //     if (entry.intersectionRatio >= 1) {
+  //       console.log("Fully visible!");
+  //       setAnimation(styles.titleAnimation)
+  //     } else {
+  //       console.log("Not fully visible!");
+  //     }
+  //   });
+  // }
 
-  const observer = new IntersectionObserver(intersectionCallback, intersectionOptions);
+  // const observer = new IntersectionObserver(intersectionCallback, intersectionOptions);
 
-  onMount(() => {
-    observer.observe(REF)
-  })
+  // onMount(() => {
+  //   observer.observe(REF)
+  // })
 
   return (
     <div class={styles.seasonTabCard}>
       <div class={`${styles.titleContainer} ${local.idx > 0 && styles.offset}`}>
-        <div class={`${styles.title} ${getAnimation().length > 0 && styles.titleAnimation}`}>
+        {/* <div class={`${styles.title} ${getAnimation().length > 0 && styles.titleAnimation}`}> */}
+        <div class={`${styles.title}`}>
           <div data-aos="fade-up" ref={REF}>
               {local.title}
           </div>
