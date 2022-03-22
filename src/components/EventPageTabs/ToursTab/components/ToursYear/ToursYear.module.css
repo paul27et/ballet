@@ -11,3 +11,21 @@
   height: 100%;
   padding-top: 14.4vw;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .toursContainer {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .title {
+    font-family: 'Libre Caslon Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.67vw;
+    line-height: 110%;  
+    text-transform: uppercase;
+    padding: 0;
+    margin-bottom: 9.33vw;
+  }
+}

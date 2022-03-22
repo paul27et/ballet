@@ -8,3 +8,11 @@
   justify-content: space-between;
 }
 
+@media(max-aspect-ratio: 12/16) {
+  .pressTab {
+    display: flex;
+    flex-direction: column;
+    gap: 20vw;
+  }
+}
+

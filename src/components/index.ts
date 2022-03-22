@@ -16,3 +16,4 @@ export * from './FullScreenModal';
 export * from './RepertoirPageTabs';
 export * from './PlayModal';
 export * from './AboutPageTabs';
+export * from './FooterAnimation';

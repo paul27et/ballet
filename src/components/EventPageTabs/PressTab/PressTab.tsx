@@ -5,13 +5,26 @@ import styles from './PressTab.module.css';
 
 export const PressTab: Component<{ press: any }> = (props) => {
   const [local] = splitProps(props, ['press'])
-  // @ts-ignore
-  let elements : NodeListOf<Element> = []
-  let windowHeight = 0
+  const isMobile = window.innerWidth / window.innerHeight < 0.75;
 
   onMount(() => {
     document.getElementById('pressTab')?.scrollIntoView()
   })
+
+  if (isMobile) {
+    return (
+      <div id="pressTab" class={styles.pressTab}>
+        <PressCardSmall data={local.press[0]} />
+        <PressCardSmall data={local.press[1]} />
+        <PressCardBig data={local.press[2]} />
+        <PressCardSmall data={local.press[3]} />
+        <PressCardSmall data={local.press[4]} />
+        <PressCardSmall data={local.press[5]} />
+        <PressCardSmall data={local.press[6]} />
+        <Footer />
+      </div>
+    )
+  }
 
   return (
     <div id="pressTab" class={styles.pressTab}>

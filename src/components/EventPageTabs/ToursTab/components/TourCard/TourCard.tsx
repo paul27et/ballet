@@ -8,7 +8,7 @@ export const TourCard: Component<{ tour: TourInterface}> = (props) => {
   const [getModalActive, setModalActive] = createSignal(false)
 
   return (
-    <div class={styles.tour} onclick={() => setModalActive(true)}>
+    <div class={styles.tour} onclick={() => setModalActive(true)} data-aos="fade-up">
       <Show when={getModalActive()}>
         <ToursModal text={local.tour.fullDescription} image={local.tour.bigImage} closeCard={() => setModalActive(false)} />
       </Show>
