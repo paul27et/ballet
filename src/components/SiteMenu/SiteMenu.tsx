@@ -111,6 +111,22 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
               <div class={styles.linkContainer}>
                 <span class={styles.number} data-aos="fade" data-aos-delay="300">02/</span>
                 <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
+                  <Link
+                    class={styles.link}
+                    href="/ballet/repertoir"
+                    onmouseover={() => onLinkMouseOver('affiche')}
+                    onclick={() => local.onCloseClick(false)}
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                    data-aos-duration="1000"
+                  >
+                    РЕПЕРТУАР
+                  </Link>
+                </HoverOverHoc>
+              </div>
+              <div class={styles.linkContainer}>
+                <span class={styles.number} data-aos="fade" data-aos-delay="300">03/</span>
+                <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
                   <Link 
                     class={styles.link} 
                     href="/ballet/about"
@@ -125,7 +141,7 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
                 </HoverOverHoc>
               </div>
               <div class={styles.linkContainer}>
-                <span class={styles.number} data-aos="fade" data-aos-delay="300">03/</span>
+                <span class={styles.number} data-aos="fade" data-aos-delay="300">04/</span>
                 <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
                   <Link 
                     class={styles.link} 
@@ -141,7 +157,7 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
                 </HoverOverHoc>
               </div>
               <div class={styles.linkContainer}>
-                <span class={styles.number} data-aos="fade" data-aos-delay="300">04/</span>
+                <span class={styles.number} data-aos="fade" data-aos-delay="300">05/</span>
                 <HoverOverHoc setIsAnyActive={setIsActive} getIsAnyActive={getIsActive}>
                   <Link 
                     class={styles.link} 
