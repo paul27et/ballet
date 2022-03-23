@@ -9,27 +9,80 @@
   }
 }
 
+@keyframes fade {
+  0% {
+    background-color: var(--main-color);
+  }
+  75% {
+    background-color: var(--main-bg-color);
+  }
+  100% {
+    color: transparent;
+    background-color: transparent;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background-position: 100% 200%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes saturateColor {
+  0% {
+    background: var(--main-bg-color);
+  }
+  100% {
+    background: transparent;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes removeComponent {
+  0% {
+    top: 0;
+  }
+  75% {
+    top: 75vh;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 100vh;
+  }
+}
+
 
 .mainHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   max-height: 100vh;
-  background: var(--main-bg-color);
-  background: linear-gradient(to bottom, var(--main-bg-color) 50%, var(--main-color) 50%) top;
+  z-index: 999;
+  color: var(--main-color);
+
+  background: linear-gradient(var(--main-color), var(--main-color) 50%, var(--main-bg-color) 50%, var(--main-bg-color));
+  /* background-color: transparent; */
   background-size: 100% 200%;
-  transition: all 0.8s ease-out;
-}
-
-.mainHeaderBg {
-  background-position: bottom;
-}
-
-/* .mainHeaderBg {
-  background: bottom;
-} */
-
-.collapsed {
-  max-height: 0;
+  animation-name: changeColor, removeComponent;
+  animation-duration: 1500ms, 1500ms;
+  animation-delay: 0ms, 1500ms;
+  animation-timing-function: linear, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-iteration-count: 1, 1;
 }
 
 .text {
@@ -43,30 +96,6 @@
   font-weight: 400;
   font-size: min(14.9vw, 23.9vh);
   text-transform: uppercase;
-  color: #ECEAE4;
-}
-
-.textRemoved {
-  display: none;
-}
-
-.curtain {
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  top: 100vh;
-  background-color: var(--main-color);
-  transition: all 0.8s ease;
-}
-
-.curtainClosed {
-  top: 0;
-}
-
-.curtainRemoved {
-  top: -100vh;
 }
 
 @media(max-aspect-ratio: 12/16) {
