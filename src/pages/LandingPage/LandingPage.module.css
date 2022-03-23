@@ -90,11 +90,22 @@
 
 .tableLink {
   color: var(--main-color);
+  transition: all 1s ease;
+}
+
+.tableLink:hover {
+  color: var(--main-color-lightgrey);
+  transition: all 1s ease;
+}
+
+.mobileArrow {
+  cursor: pointer;
 }
 
 .arrowInactive {
   opacity: 0.5;
   transition: all 1s ease;
+  cursor: default;
 }
 
 .bannersContainer {
@@ -126,8 +137,7 @@
 
 .bannerTextContainer {
   text-align: left;
-  width: 39.3vw;
-  margin-left: 11.46vw;
+  margin-left: 8.3vw;
 }
 
 .bannerTitle {
@@ -135,9 +145,13 @@
   color: var(--main-color);
 }
 
+.bannerTitle:hover {
+  color: var(--main-color-lightgrey);
+}
+
 .bannerSubtitle {
   composes: textManrope18 from global;
-  color: var(--main-color-grey);
+  color: var(--main-color-lightgrey);
 }
 
 .button {
@@ -222,10 +236,12 @@
 
 .arrow {
   opacity: 0.4;
+  cursor: default;
 }
 
 .active {
   opacity: 1;
+  cursor: pointer;
   color: var(--main-color);
 }
 
@@ -239,7 +255,9 @@
 }
 
 .buttonLocal:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  color: var(--main-color-lightgrey);
+  border: 1px solid var(--main-color-lightgrey);
 }
 
 .tooltipTitle {
@@ -329,9 +347,19 @@
 }
 
 @media(max-aspect-ratio: 12/16) {
+
+  .menuContainer {
+    padding: 0 4vw;
+  }
+
+  .menuContainer > div {
+    padding: 0 4vw;
+  }
+
   .contentContainer {
     padding: 0 4vw;
   }
+
   .titleContainer {
     display: flex;
     justify-content: space-between;
@@ -481,7 +509,9 @@
   }
 
   .mobileImage {
-    width: 100%;
+    margin-left: -4vw;
+    margin-right: -4vw;
+    width: -webkit-fill-available;
   }
   
   .bannerMobile {
@@ -526,6 +556,7 @@
 
   .partnersContainer {
     padding: 0 4vw;
+    margin-top: 20vw;
   }
 
   .partnersTitle {
@@ -555,5 +586,18 @@
 
   .partnerImageContainer {
     width: 20vw;
+  }
+
+  .pagination {
+    justify-content: flex-end;
+  }
+
+  .arrow {
+    width: 9.33vw;
+  }
+
+  .pages {
+    font-size: 2.93vw;
+    padding: 0 6.13vw;
   }
 }

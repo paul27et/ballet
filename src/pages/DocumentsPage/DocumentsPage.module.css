@@ -15,3 +15,89 @@
 .documentLink:hover {
   color: inherit;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .documentsPage {
+    padding: 0 4vw;
+  }
+
+  .menuContainer {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-bg-color);
+    z-index: 100;
+  }
+
+  .menuContainer > div {
+    position: sticky;
+    top: 0;
+    align-items: center;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .accordionContainer {
+    margin-top: 6.67vw;
+  }
+
+  :global(.accordion-button) {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.56vw;
+    line-height: 110%;
+    background-color: var(--main-bg-color);
+    color: inherit;
+    padding: 0;
+  }
+  
+  :global(.accordion-button:focus) {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6.9vw;
+    line-height: 110%;
+    background-color: var(--main-bg-color);
+    color: inherit;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  :global(.accordion-button:not(.collapsed)) {
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
+    padding: 0;
+  }
+  
+  :global(.accordion-body) {
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    text-align: left;
+  }
+  
+  :global(.accordion-item) {
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    padding: 5.33vw 0;
+  }
+  
+  :global(.accordion-flush .accordion-item) {
+    border-bottom: 0.1px solid var(--main-color);
+    transition: all 1s ease;
+  }
+
+  :global(.accordion-flush .accordion-item:last-child) {
+    border-bottom: none;
+    transition: all 1s ease;
+  }
+  
+  :global(.accordion-flush > *:last-child .accordion-item:last-child) {
+    border-bottom: none;
+  }
+  
+  :global(.accordion-button::after) {
+    width: 0;
+  }
+}

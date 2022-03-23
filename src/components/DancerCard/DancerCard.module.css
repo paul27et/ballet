@@ -109,7 +109,7 @@
 }
 
 .playTitle {
-  composes: textManrope24 from global;
+  composes: titleCormorant28 from global;
   color: var(--main-color);
   text-transform: uppercase;
   margin-top: 1.04vw;

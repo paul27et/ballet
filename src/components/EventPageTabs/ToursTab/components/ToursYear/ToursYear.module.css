@@ -9,13 +9,16 @@
   position: sticky;
   top: 0;
   height: 100%;
-  padding-top: 14.4vw;
 }
 
 @media(max-aspect-ratio: 12/16) {
   .toursContainer {
-    margin-top: 0;
+    margin-top: 20vw;
     text-align: left;
+  }
+
+  .firstContainer {
+    margin-top: 9.33vw;
   }
 
   .title {

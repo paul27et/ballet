@@ -37,8 +37,8 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
     return ""
   }
 
-  const mobilePlayItem = (play: PlayInterface, month: MonthInterface) => (
-    <div class={styles.play} data-aos={dataAos}>
+  const mobilePlayItem = (play: PlayInterface, month: MonthInterface, isLast: boolean) => (
+    <div class={`${styles.play} ${isLast && styles.last}`} data-aos={dataAos}>
       <div class={styles.playContainer}>
         <div class={styles.titleContainerMobile}>
           <div class={styles.dateContainer}>
@@ -72,7 +72,9 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
         <Show when={local.isMenuActive}>
           <SiteMenu onCloseClick={(state: boolean) => local.onMenuButtonClick(state)} />
         </Show>
-        <Menu onClick={(state: boolean) => local.onMenuButtonClick(state)} />
+        <div class={styles.menuContainer}>
+          <Menu onClick={(state: boolean) => local.onMenuButtonClick(state)} />
+        </div>
         <div class={styles.selectContainer}>
           <select class={styles.select}>
             <option>Всё время</option>
@@ -81,13 +83,24 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
           </select>
           <select class={styles.select}>
             <option>Все спектакли</option>
+            <option>Вне времени</option>
+            <option>Дон Кихот</option>
             <option>Жизель</option>
+            <option>Лебединое озеро</option>
+            <option>Лики современной хореографии</option>
+            <option>Пиковая дама</option>
+            <option>Репетиция</option>
+            <option>Роден</option>
+            <option>Ромео и Джульетта</option>
+            <option>Свадебный кортеж</option>
+            <option>Спартак</option>
+            <option>Спящая красавица</option>
             <option>Щелкунчик</option>
           </select>
         </div>
         <For each={months as MonthInterface[]}>
           {(month, idx) => (
-            <div>
+            <div class={styles.mobileMarginTop}>
               <div 
                 class={`${styles.month} ${idx() === 0 ? styles.firstMonth : styles.notFirstMonth}`} 
                 data-aos={dataAos}
@@ -95,8 +108,8 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
                 {Object.keys(month)[0]}
               </div>
               <For each={Object.values(month)[0] as PlayInterface[] }>
-                {(play) => {
-                  return isMobile ? mobilePlayItem(play, month) : (
+                {(play, idx) => {
+                  return isMobile ? mobilePlayItem(play, month, idx() === Object.values(month)[0].length - 1) : (
                     <div class={styles.play} data-aos={dataAos}>
                       <div class={styles.playContainer}>
                         <div class={styles.dateContainer}>

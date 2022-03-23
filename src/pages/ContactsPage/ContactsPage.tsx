@@ -17,7 +17,9 @@ export const ContactsPage: Component<{ onMenuButtonClick: Function, isMenuActive
       <Show when={local.isMenuActive}>
         <SiteMenu onCloseClick={(state: boolean) => local.onMenuButtonClick(state)} />
       </Show>
-      <Menu onClick={(state: boolean) => local.onMenuButtonClick(state)} />
+      <div class={styles.menuContainer}>
+        <Menu onClick={(state: boolean) => local.onMenuButtonClick(state)} />
+      </div>
       <div class={styles.getInTouch}>
         <div class={styles.address} data-aos={dataAos}>
           191014, Санкт-Петербург,<br /> ул. Маяковского, 15

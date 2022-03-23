@@ -4,6 +4,7 @@ import aboutImage from 'assets/menu/about.png'
 import afishaImage from 'assets/menu/afisha.png'
 import contactsImage from 'assets/menu/contacts.png'
 import eventsImage from 'assets/menu/events.png'
+import repertoirImage from 'assets/menu/repertoir.png'
 import closeIcon from 'assets/close.svg'
 import styles from './SiteMenu.module.css';
 import { HoverOverHoc } from 'components';
@@ -45,6 +46,9 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
       case 'events':
         setActiveImage(eventsImage)
         break;
+      case 'repertoir':
+        setActiveImage(repertoirImage)
+        break;
       default:
         break;
     }
@@ -85,6 +89,11 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
               src={eventsImage}
               alt=""
             />
+            <img 
+              class={`${styles.img} ${getActiveImage() !== repertoirImage ? getImageClass() : ''}`}
+              src={repertoirImage}
+              alt=""
+            />
           </div>
         </div>
         <div class={styles.menuContainer}>
@@ -114,7 +123,7 @@ export const SiteMenu: Component<{ onCloseClick: Function }> = (props) => {
                   <Link
                     class={styles.link}
                     href="/ballet/repertoir"
-                    onmouseover={() => onLinkMouseOver('affiche')}
+                    onmouseover={() => onLinkMouseOver('repertoir')}
                     onclick={() => local.onCloseClick(false)}
                     data-aos="fade-up"
                     data-aos-delay="300"

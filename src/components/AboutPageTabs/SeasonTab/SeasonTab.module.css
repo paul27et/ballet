@@ -45,6 +45,7 @@
   line-height: 100%;
   text-transform: uppercase;
   color: var(--main-color);
+  white-space: nowrap;
 }
 
 .description {

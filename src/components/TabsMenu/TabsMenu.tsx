@@ -17,7 +17,7 @@ export const TabsMenu: Component<TabsMenuInterface> = (props) => {
   }
 
   return (
-    <div class={styles.menuContainer}>
+    <div class={styles.menuContainer} id="tabMenu">
       <div class={styles.menu}>
         <For each={Object.entries(local.headers)}>
           {([key, item], idx) => 

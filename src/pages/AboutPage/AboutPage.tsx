@@ -18,7 +18,7 @@ const Redirect: Component<{ to: string }> = (props) => {
 }
 
 export const AboutPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
-  const HEADERS = { season: '53-й сезон', story: 'История', repertoir: 'Репертуар', troupe: 'Труппа' }
+  const HEADERS = { season: '53-й сезон', story: 'История', troupe: 'Труппа' }
 
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
   const [getActiveTab, setActiveTab] = createSignal(HEADERS.season)
@@ -40,9 +40,6 @@ export const AboutPage: Component<{ onMenuButtonClick: Function, isMenuActive: b
           </Match>
           <Match when={getActiveTab() === HEADERS.story}>
             <Redirect to="/ballet/history/" />
-          </Match>
-          <Match when={getActiveTab() === HEADERS.repertoir}>
-            <Redirect to="/ballet/repertoir/" />
           </Match>
           <Match when={getActiveTab() === HEADERS.troupe}>
             <Redirect to="/ballet/troupe/" />

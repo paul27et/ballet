@@ -4,6 +4,20 @@
   justify-content: space-between;
   margin: 5.21vw 0 6.94vw 24.375vw;
   padding-bottom: 6.94vw;
+  cursor: pointer;
+}
+
+.tour:hover .img {
+  opacity: 0.8;
+}
+
+.tour:hover .description {
+  color: var(--main-color);
+}
+
+.noBorder {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .img {
@@ -39,8 +53,8 @@
     display: flex;
     border-bottom: 1px solid rgba(255,255, 255, 0.4);
     justify-content: start;
-    margin: 5.21vw 0 6.94vw 0;
-    padding-bottom: 6.94vw;
+    margin: 0 0 9.33vw 0;
+    padding-bottom: 9.33vw;
   }
 
   .img {
@@ -75,5 +89,10 @@
 
   .description {
     display: none;
+  }
+
+  .noBorder {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 }

@@ -18,7 +18,7 @@ export const Menu: Component<{ onClick: Function }> = (props) => {
       </Link>
       <div class={styles.menu}>
         <Link href="/ballet/affiche">
-          <Button text="Билеты" style={styles.localButton} />
+          <Button text="Билеты" style={styles.localButton} hover />
         </Link>
         <div class={styles.iconContainer}>
           <img class={styles.icon} src={isMobile ? menuIconSmall : menuIcon} onclick={() => local.onClick(true)} />

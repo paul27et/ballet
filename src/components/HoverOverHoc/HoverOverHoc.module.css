@@ -20,6 +20,28 @@
   }
 }
 
+@keyframes fadeinGrey {
+  from { 
+    color: var(--main-color-lightgrey);
+    border-bottom-color: var(--main-color-lightgrey);
+  }
+  to { 
+    color: var(--main-color-grey);
+    border-bottom-color: var(--main-color-grey);
+  }
+}
+
+@keyframes fadeoutGrey {
+  from { 
+    color: var(--main-color-grey); 
+    border-bottom-color: var(--main-color-grey);
+  }
+  to { 
+    color: var(--main-color-lightgrey);
+    border-bottom-color: var(--main-color-lightgrey);
+  }
+}
+
 .active * {
   color: var(--main-color);
   border-bottom-color: var(--main-color);
@@ -30,4 +52,17 @@
   color: var(--main-color-grey);
   border-bottom-color: var(--main-color-grey);
   animation: fadein 0.5s ease-in alternate;
+}
+
+
+.activeGrey * {
+  color: var(--main-color-lightgrey);
+  border-bottom-color: var(--main-color-lightgrey);
+  animation: fadeoutGrey 0.5s ease-in alternate;
+}
+
+.inactiveGrey * {
+  color: var(--main-color-grey);
+  border-bottom-color: var(--main-color-grey);
+  animation: fadeinGrey 0.5s ease-in alternate;
 }

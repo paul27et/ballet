@@ -31,6 +31,10 @@
   margin-top: 0.69vw;
 }
 
+.text:hover {
+  color: var(--main-color-lightgrey);
+}
+
 @media(max-aspect-ratio: 12/16) {
   .pressCardBig {
     height: auto;

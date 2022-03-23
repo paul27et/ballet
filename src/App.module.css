@@ -229,11 +229,20 @@ a {
   background-color: var(--main-bg-color);
   color: inherit;
   padding: 5.21vw 0;
-  border-bottom: 1px solid;
 }
 
 :global(.accordion-flush .accordion-item:last-child) {
   border-bottom: 1px solid;
+  transition: all 1s ease;
+}
+
+:global(.accordion-flush .accordion-item:last-child:hover) {
+  border-bottom: 1px solid;
+  transition: all 1s ease;
+}
+
+:global(.accordion-flush > *:last-child .accordion-item:last-child) {
+  border-bottom: none;
 }
 
 :global(.accordion-button::after) {

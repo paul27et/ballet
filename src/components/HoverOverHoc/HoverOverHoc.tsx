@@ -1,8 +1,8 @@
 import { Component, createSignal, splitProps } from 'solid-js';
 import styles from './HoverOverHoc.module.css';
 
-export const HoverOverHoc: Component<{ setIsAnyActive: Function, getIsAnyActive: Function }> = (props) => {
-  const [local] = splitProps(props, ['setIsAnyActive', 'getIsAnyActive'])
+export const HoverOverHoc: Component<{ setIsAnyActive: Function, getIsAnyActive: Function, notMainColor?: boolean }> = (props) => {
+  const [local] = splitProps(props, ['setIsAnyActive', 'getIsAnyActive', 'notMainColor'])
   const [getIsActive, setIsActive] = createSignal(false)
 
   const onMouseOver = () => {
@@ -16,7 +16,7 @@ export const HoverOverHoc: Component<{ setIsAnyActive: Function, getIsAnyActive:
   }
 
   const calculateStyle = () => {
-    return ((local.getIsAnyActive() && getIsActive()) || (!local.getIsAnyActive() && !getIsActive())) ? styles.active : styles.inactive
+    return ((local.getIsAnyActive() && getIsActive()) || (!local.getIsAnyActive() && !getIsActive())) ? (local.notMainColor ? styles.activeGrey : styles.active) : (local.notMainColor ? styles.inactiveGrey : styles.inactive)
   }
 
   return (

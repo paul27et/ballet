@@ -107,9 +107,9 @@ export const Calendar: Component<{ month: string, setMonth: Function }> = (props
   return (
     <div class={styles.table}>
       <div class={`${styles.titleContainer} ${styles.month}`} data-aos="fade-up">
-        <img class={`${local.month === 'Февраль' && styles.arrowInactive}`} src={arrowLeft} alt= "" onclick={() => local.setMonth('Февраль')} />
+        <img class={`${styles.mobileArrow} ${local.month === 'Февраль' && styles.arrowInactive}`} src={arrowLeft} alt= "" onclick={() => local.setMonth('Февраль')} />
         <div class={styles.title}>{local.month}</div>
-        <img class={`${local.month === 'Март' && styles.arrowInactive}`} src={arrowRight} alt= "" onclick={() => local.setMonth('Март')} />
+        <img class={`${styles.mobileArrow} ${local.month === 'Март' && styles.arrowInactive}`} src={arrowRight} alt= "" onclick={() => local.setMonth('Март')} />
       </div>
       <Switch>
         <Match when={local.month === 'Февраль'}>
@@ -128,10 +128,7 @@ export const Calendar: Component<{ month: string, setMonth: Function }> = (props
             <div class={styles.flexRow} role="cell">2</div>
             <div class={styles.flexRow} role="cell">3</div>
             <div class={styles.flexRow} role="cell">
-              <CalendarTooltip id="4feb" placement="left">
-                {/* <Link class={styles.tableLink} href="/ballet/affiche">4</Link> */}
-                <div class={styles.tableLink}>4</div>
-              </CalendarTooltip>
+              <Link class={styles.tableLink} href="/ballet/affiche">4</Link>
             </div>
             <div class={styles.flexRow} role="cell"><Link class={styles.tableLink} href="/ballet/affiche">5</Link></div>
             <div class={styles.flexRow} role="cell">6</div>

@@ -6,4 +6,21 @@
   .aboutPage {
     padding: 0 4vw;
   }
+
+  .menuContainer {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-bg-color);
+    z-index: 100;
+  }
+
+  .menuContainer > div {
+    position: sticky;
+    top: 0;
+    align-items: center;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 0;
+  }
 }

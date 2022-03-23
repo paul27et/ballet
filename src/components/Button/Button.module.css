@@ -27,3 +27,8 @@
 .noBackground {
   background: transparent;
 }
+
+.hover:hover {
+  border: 1px solid var(--main-color-lightgrey);
+  color: var(--main-color-lightgrey);
+}

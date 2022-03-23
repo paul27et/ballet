@@ -1,9 +1,11 @@
 import { Footer, Menu, SiteMenu } from 'components';
 import { Component, createSignal, onMount, Show, splitProps } from 'solid-js';
-import nutcrackerBanner from 'assets/banners/nutcrackerBanner.png';
-import lakeBanner from 'assets/banners/lakeBanner.png';
+import outOfTimeBanner from 'assets/banners/outOfTimeBanner.png';
+import repetitionBanner from 'assets/banners/repetitionBanner.png';
 import rodenBanner from 'assets/banners/rodenBanner.png';
-import arrowRight from 'assets/arrowRight.svg';
+import outOfTimeBannerMobile from 'assets/banners/outOfTimeBannerMobile.png';
+import repetitionBannerMobile from 'assets/banners/repetitionBannerMobile.png';
+import rodenBannerMobile from 'assets/banners/rodenBannerMobile.png';
 import video from 'assets/mainVideo.mp4'
 import styles from './LandingPage.module.css';
 import { Partners, Calendar, Banner } from './components';
@@ -48,9 +50,33 @@ export const LandingPage: Component<{ onMenuButtonClick: Function, isMenuActive:
         <div class={styles.bannersContainer}>
           <div class={styles.bannersTitle}>Премьеры</div>
           <div class={styles.bannersScrollContainer}>
-            <Banner image={lakeBanner} title="Лебединое озеро" subtitle="19:00 / Мариинский - 2" date="12 февраля" type="Балет в 3-х актах" day="Пятница"/>
-            <Banner image={nutcrackerBanner} title="Щелкунчик" subtitle="19:00 / Александринский театр" date="22 февраля" type="Балет в 3-х актах" day="Суббота" />
-            <Banner image={rodenBanner} title="Роден" type="Хореографические миниатюры" date="23 февраля" day="Воскресенье" />
+            <Banner 
+              image={isMobile ? repetitionBannerMobile : repetitionBanner} 
+              title="Репетиция" 
+              subtitle="19:00 / Мариинский театр" 
+              date="04 февраля" 
+              type="Балет в 3-х актах" 
+              day="Пятница" 
+              id="repetition" 
+            />
+            <Banner 
+              image={isMobile ? rodenBannerMobile : rodenBanner} 
+              title="Роден" 
+              subtitle="19:00 / Эрмитажный театр" 
+              date="08 февраля" 
+              type="Балет в 3-х актах" 
+              day="Суббота" 
+              id="roden" 
+            />
+            <Banner 
+              image={isMobile ? outOfTimeBannerMobile : outOfTimeBanner} 
+              title="Вне времени. шедевры леонида якобсона" 
+              subtitle="19:00 / Мариинский театр" 
+              type="Хореографические миниатюры" 
+              date="04 февраля" 
+              day="Воскресенье" 
+              id="outOfTime" 
+            />
           </div>
         </div>
         <Partners />

@@ -46,7 +46,9 @@ export const RepertoirPage: Component<{ onMenuButtonClick: Function, isMenuActiv
         <div class={styles.menuContainer}>
           <Menu onClick={(state: boolean) => local.onMenuButtonClick(state)} />
         </div>
-        <TabsMenu headers={HEADERS} active={getActiveTab()} onTabClick={(name: string) => onTabClick(name)} />
+        <div class={styles.tabsMenuContainer}>
+          <TabsMenu headers={HEADERS} active={getActiveTab()} onTabClick={(name: string) => onTabClick(name)} />
+        </div>
         <Switch>
           <Match when={getActiveTab() === HEADERS.classic}>
             <RepertoirListTab list={classicPlays} delay={false} />
@@ -58,7 +60,7 @@ export const RepertoirPage: Component<{ onMenuButtonClick: Function, isMenuActiv
             <RepertoirListTab list={legacyPlays} delay />
           </Match>
         </Switch>
-        <Footer />
+        <Footer offset />
       </div>
     </div>
   );
