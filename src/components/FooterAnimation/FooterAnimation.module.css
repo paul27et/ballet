@@ -15,6 +15,13 @@
 }
 
 @media(max-aspect-ratio: 12/16) {
+  .animationContainer {
+    width: 100%;
+    margin-top: 27.8vh;
+    overflow: hidden;
+    margin-left: -2.29vw;
+  }
+
   .animationElement {
     width: 1000%;
     height: 15vw;

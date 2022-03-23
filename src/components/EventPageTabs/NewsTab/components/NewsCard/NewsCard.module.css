@@ -68,3 +68,79 @@
   height: 41vw;
   width: 32vw;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .cardContainer {
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+    opacity: 1;
+    animation: fadeout 0.5s ease-in alternate;
+  }
+
+  .img {
+    height: auto;
+    width: 100%;
+  }
+
+  .date {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.46vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+    margin-top: 4vw;
+  }
+  
+  .title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6.4vw;
+    line-height: 120%;
+    color: var(--main-color);
+    margin: 1.33vw 0 4vw 0;
+  }
+  
+  .description {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color-lightgrey);
+  }
+  
+  .more {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.46vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+    margin-top: 5.33vw;
+    cursor: pointer;
+    transition: all 1s ease;
+  }
+  
+  .more:hover {
+    color: var(--main-color-lightgrey);
+    transition: all 1s ease;
+  }
+  
+  .moreText {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color-lightgrey);
+    margin-top: 2vw;
+    transition: all 1s ease;
+  }
+  
+  .border {
+    display: none;
+  }
+}

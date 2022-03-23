@@ -11,7 +11,7 @@ export const Banner: Component<{ image: string, title: string, subtitle?: string
   if (isMobile) {
     return (
       <div class={styles.bannerMobile}>
-        <div class={`${styles.titleContainerPlay}`} data-aos="fade-up">
+        <div class={`${styles.titleContainerPlay}`} data-aos="fade">
           <div class={styles.title}>
             <div class={styles.titleNumber}>{dateArray && dateArray[0]}</div>
             {dateArray && dateArray[1]}
@@ -20,11 +20,11 @@ export const Banner: Component<{ image: string, title: string, subtitle?: string
             {local.day}
           </div>
         </div>
-        <img class={styles.mobileImage} src={bgUrl} alt="" data-aos="fade-up" />
+        <img class={styles.mobileImage} src={bgUrl} alt="" data-aos="fade" />
         <div class={styles.mobileDescription}>
-          <div class={styles.mobileBannerTitle} data-aos="fade-up">{local.title}</div>
-          <div class={styles.mobileBannerSubtitle} data-aos="fade-up">{local.subtitle}</div>
-          <div class={styles.button} data-aos="fade-up">
+          <div class={styles.mobileBannerTitle} data-aos="fade">{local.title}</div>
+          <div class={styles.mobileBannerSubtitle} data-aos="fade">{local.subtitle}</div>
+          <div class={styles.button} data-aos="fade">
             <Button text={local.subtitle ? "Купить билет": "Билетов нет"} style={styles.mobileButtonLocal} />
           </div>
         </div>

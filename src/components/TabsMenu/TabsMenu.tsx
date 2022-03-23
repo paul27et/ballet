@@ -14,7 +14,6 @@ export const TabsMenu: Component<TabsMenuInterface> = (props) => {
 
   const onTabClick = (name: string) => {
     local.onTabClick(name)
-    
   }
 
   return (

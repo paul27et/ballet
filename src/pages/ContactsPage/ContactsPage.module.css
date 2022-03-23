@@ -71,3 +71,101 @@
   composes: textManrope24 from global;
   color: var(--main-color);
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .page {
+    padding: 0 4vw;
+  }
+  
+  .getInTouch {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+    margin-top: 13.33vw;
+    padding-bottom: 13.33vw;
+    border-bottom: 1px solid var(--main-color-grey);
+  }
+
+  .address {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 120%;
+    padding-bottom: 0;
+    color: var(--main-color);
+    text-align: left;
+  }
+  
+  .contactUs {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16.53vw;
+    line-height: 100%;
+    color: var(--main-color);
+    text-align: right;
+    margin-top: 20vw;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16vw;
+    justify-content: flex-start;
+    gap: 13.33vw;
+  }
+  
+  .contactsColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 13.33vw;
+  }
+  
+  .firstColumn {
+    width: 100%;
+  }
+  
+  .secondColumn {
+    width: 100%;
+  }
+  
+  .thirdColumn {
+    width: 100%;
+  }
+  
+  .contactCard {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .title {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.46vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+  }
+  
+  .phone {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color);
+    margin-top: 2.67vw;
+  }
+  
+  .mail {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color);
+  }
+}

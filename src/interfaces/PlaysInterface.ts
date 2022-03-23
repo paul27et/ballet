@@ -4,6 +4,7 @@ export interface PlayInterface {
   daytime: string,
   title: string,
   place: string,
+  image: string,
 }
 
 export interface MonthInterface {

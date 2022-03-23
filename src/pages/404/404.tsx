@@ -11,11 +11,13 @@ export const ErrorPage: Component<{ onMenuButtonClick: Function, isMenuActive: b
       <Show when={local.isMenuActive}>
         <SiteMenu onCloseClick={(state: boolean) => local.onMenuButtonClick(state)} />
       </Show>
-      <div class={styles.title}>
-        404
-      </div>
-      <div class={styles.sorry}>
-        Извините, страница не найдена 
+      <div class={styles.text}>
+        <div class={styles.title}>
+          404
+        </div>
+        <div class={styles.sorry}>
+          Извините, страница не найдена 
+        </div>
       </div>
     </div>
   );

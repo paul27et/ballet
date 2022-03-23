@@ -13,16 +13,22 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
   const [getModalActive, setModalActive] = createSignal(false)
   const playId = useParams().id;
   const play = repertoir.find((play: RepertoirInterface) => play.id === playId)
+  const isMobile = window.innerWidth / window.innerHeight < 0.75;
 
   const processImage = (src: string) => {
     const img = new Image();
     const intViewportHeight = window.innerHeight;
+    const intViewportWidth = window.innerWidth;
     img.onload = function() {
       const { naturalWidth: width, naturalHeight: height } = img
-      if (width > height) {
-        img.height = intViewportHeight * 0.55
+      if (isMobile) {
+        img.width = intViewportWidth
       } else {
-        img.height = intViewportHeight * 0.74
+        if (width > height) {
+          img.height = intViewportHeight * 0.55
+        } else {
+          img.height = intViewportHeight * 0.74
+        }
       }
     }
     img.src = src
@@ -75,7 +81,14 @@ export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: bo
             <div class={styles.smallTitle}>Описание</div>
             <div class={styles.descriptionText}>
               {play.description}
-              <img class={styles.arrowIcon} src={arrowRight} alt="" onclick={() => setModalActive(true)} />
+              {isMobile ? (
+                <div class={styles.moreMobile}>
+                  <div class={styles.moreTextMobile}>Подробнее</div>
+                  <img class={styles.arrowIcon} src={arrowRight} alt="" onclick={() => setModalActive(true)} />
+                </div>
+              ) : (
+                <img class={styles.arrowIcon} src={arrowRight} alt="" onclick={() => setModalActive(true)} />
+              )}
               <Show when={getModalActive()}>
                 <PlayModal text={play.fullDescription} image={play.modalImage} closeCard={() => setModalActive(false)} />
               </Show>

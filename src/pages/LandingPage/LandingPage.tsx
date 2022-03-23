@@ -7,6 +7,7 @@ import arrowRight from 'assets/arrowRight.svg';
 import video from 'assets/mainVideo.mp4'
 import styles from './LandingPage.module.css';
 import { Partners, Calendar, Banner } from './components';
+import { Link } from 'solid-app-router';
 
 export const LandingPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
@@ -29,7 +30,7 @@ export const LandingPage: Component<{ onMenuButtonClick: Function, isMenuActive:
       <div>
         <div class={styles.contentContainer}>
           <div class={styles.affiche}>
-            <div class={styles.afficheTitle} data-aos="fade-up">Афиша</div>
+            <div class={styles.afficheTitle} data-aos={isMobile ? "fade" :"fade-up"}>Афиша</div>
           </div>
           <div class={styles.calendarContainer}>
             <div class={styles.calendar}>
@@ -37,10 +38,11 @@ export const LandingPage: Component<{ onMenuButtonClick: Function, isMenuActive:
             </div>
           </div>
           <Show when={isMobile}>
-            <div class={styles.afficheLink} data-aos="fade-up">
-              Вся афиша
-              <img src={arrowRight} alt="" />
-            </div>
+            <Link href="/ballet/affiche">
+              <div class={styles.afficheLink} data-aos={isMobile ? "fade" :"fade-up"}>
+                Вся афиша
+              </div>
+            </Link>
           </Show>
         </div>
         <div class={styles.bannersContainer}>

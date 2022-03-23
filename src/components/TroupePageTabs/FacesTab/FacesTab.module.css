@@ -52,7 +52,7 @@
   .faceImage {
     height: 92.27vw;
     width: 92.27vw;
-    filter: grayscale(1);
+    filter: none;
     transition: all 1s ease;
   }
 
@@ -85,5 +85,4 @@
     line-height: 140%;
     color: var(--main-color-grey);
   }
-  
 }

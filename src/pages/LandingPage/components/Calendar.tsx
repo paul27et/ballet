@@ -1,63 +1,104 @@
 import { Link } from "solid-app-router"
-import { Component, createSignal, Match, splitProps, Switch } from "solid-js"
+import { Component, createSignal, For, Match, splitProps, Switch } from "solid-js"
 import arrowLeft from 'assets/arrowLeft.svg'
 import arrowRight from 'assets/arrowRight.svg'
 import styles from '../LandingPage.module.css'
-import { Overlay, Tooltip } from "solid-bootstrap"
 import { CalendarTooltip } from "./CalendarTooltip"
+
+const calendarMobile = [
+  {
+    "startDate": "1",
+    "endDate": "6",
+    "month": "ФЕВ",
+    "plays": [
+      {
+        "date": "04",
+        "time": "ПТ - 19:00",
+        "name": "Щелкунчик",
+        "subname": "Александрйиский театр"
+      },
+      {
+        "date": "05",
+        "time": "CБ - 18:00",
+        "name": "Жизель",
+        "subname": "Мариинский театр, филиал в Республике Северная Осетия - Алания"
+      }
+    ]
+  },
+  {
+    "startDate": "7",
+    "endDate": "12",
+    "month": "ФЕВ",
+    "plays": [
+      {
+        "date": "08",
+        "time": "ПТ - 19:00",
+        "name": "Щелкунчик",
+        "subname": "Александрйиский театр"
+      },
+      {
+        "date": "11",
+        "time": "CБ - 18:00",
+        "name": "Жизель",
+        "subname": "Мариинский театр, филиал в Республике Северная Осетия - Алания"
+      }
+    ]
+  }
+]
 
 export const Calendar: Component<{ month: string, setMonth: Function }> = (props) => {
   const [local] = splitProps(props, ['month', 'setMonth'])
+  const [getPlaysToShow, setPlaysToShow] = createSignal(0)
   const isMobile = window.innerWidth / window.innerHeight < 0.75;
+
+  const onPrevClick = () => {
+    if (getPlaysToShow() > 0) {
+      setPlaysToShow(getPlaysToShow() - 1)
+    }
+  }
+
+  const onNextClick = () => {
+    if (getPlaysToShow() < calendarMobile.length - 1) {
+      setPlaysToShow(getPlaysToShow() + 1)
+    }
+  } 
 
   if (isMobile) {
     return (
       <>
-        <div class={`${styles.titleContainer} ${styles.month}`} data-aos="fade-up">
-          <img class={styles.arrowInactive} src={arrowLeft} alt= "" />
+        <div class={`${styles.titleContainer} ${styles.month}`} data-aos="fade">
+          <img class={`${styles.mobileArrow} ${getPlaysToShow() === 0 && styles.arrowInactive}`} src={arrowLeft} alt= "" onclick={onPrevClick} />
           <div class={styles.title}>
-            <div class={styles.titleNumber}>1</div>
-            {`${local.month.slice(0, 3)} - `}
-            <div class={styles.titleNumber}>6</div>
-            {` ${local.month.slice(0, 3)}`}
+            <div class={styles.titleNumber}>{calendarMobile[getPlaysToShow()].startDate}</div>
+            {calendarMobile[getPlaysToShow()].month + " - "} 
+            <div class={styles.titleNumber}>{calendarMobile[getPlaysToShow()].endDate}</div>
+            {calendarMobile[getPlaysToShow()].month}
           </div>
-          <img src={arrowRight} alt= "" />
+          <img class={`${styles.mobileArrow} ${getPlaysToShow() === calendarMobile.length - 1 && styles.arrowInactive}`} src={arrowRight} alt= "" onclick={onNextClick} />
         </div>
-        <div class={`${styles.rowContainer} ${styles.month}`} data-aos="fade-up">
-          <div class={styles.dateContainer}>
-            <div class={styles.date}>
-              04
+        <For each={calendarMobile[getPlaysToShow()].plays}>
+          {(play) => (
+            <div class={`${styles.rowContainer} ${styles.month}`} data-aos="fade">
+              <div class={styles.dateContainer}>
+                <div class={styles.date}>
+                  {play.date}
+                </div>
+                <div class={styles.time} >
+                  {play.time}
+                </div>
+              </div>
+              <div class={styles.nameContainer}>
+                <div class={styles.name}>
+                  {play.name}
+                </div>
+                <div class={styles.subname} >
+                  {play.subname}
+                </div>
+              </div>
             </div>
-            <div class={styles.time} >
-              ПТ - 19:00
-            </div>
-          </div>
-          <div class={styles.nameContainer}>
-            <div class={styles.name}>
-              Щелкунчик
-            </div>
-            <div class={styles.subname} >
-              Александрйиский театр
-            </div>
-          </div>
-        </div>
-        <div class={`${styles.rowContainer} ${styles.month}`} data-aos="fade-up">
-          <div class={styles.dateContainer}>
-            <div class={styles.date}>
-              05
-            </div>
-            <div class={styles.time} >
-              СБ - 18:00
-            </div>
-          </div>
-          <div class={styles.nameContainer}>
-            <div class={styles.name}>
-              Жизель
-            </div>
-            <div class={styles.subname} >
-              Мариинский театр, филиал в Республике Северная Осетия - Алания
-            </div>
-          </div>
+          )}
+        </For>
+        <div class={styles.borderMobile} data-aos="fade">
         </div>
       </>
     )

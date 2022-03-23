@@ -68,3 +68,9 @@
 .curtainRemoved {
   top: -100vh;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .mainHeader {
+    width: 100%;
+  }
+}

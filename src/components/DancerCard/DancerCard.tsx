@@ -42,7 +42,7 @@ const PlayCard: Component<DancerPlayInterface & { getIsAnyActive: Function, setI
 
   return (
     <Link href={`/ballet/repertoir/${local.id}`}>
-      <div class={`${styles.repertoirPlay} ${getAdditionalClass()}`} onmouseover={onMouseOver} onmouseleave={onMouseLeave} data-aos="fade-up">
+      <div class={`${styles.repertoirPlay} ${getAdditionalClass()}`} onmouseover={onMouseOver} onmouseleave={onMouseLeave} >
         <img class={styles.playImage} src={local.image} alt="" />
         <div class={styles.playTitle}>{local.title}</div>
         <div class={styles.playDescription}>{local.description}</div>
@@ -55,52 +55,101 @@ export const DancerCard: Component<{ name: string, closeCard: Function }> = (pro
   const [local] = splitProps(props, ['name', 'closeCard'])
   const dancer = dancers.find((dancer: DancerInterface) => dancer.name.toLowerCase() == local.name.toLowerCase())
   const [getIsAnyActive, setIsAnyActive] = createSignal(false)
+  const isMobile = window.innerWidth / window.innerHeight < 0.75;
 
   const parseText = (text: string) => {
-    return text.split('|').map(textItem => <div data-aos="fade-up">{textItem}<br /><br /></div>)
+    return text.split('|').map(textItem => <div >{textItem}<br /><br /></div>)
+  }
+
+  if (isMobile) {
+    return (
+      <FullScreenModal>
+        <div class={styles.dancerModal}>
+          <div class={styles.descriptionContainer}>
+            <div class={styles.closeContainer} onclick={() => local.closeCard()}>
+              <img src={closeIcon} alt="" />
+            </div>
+            <div class={styles.name}>{dancer.name}</div>
+            <div class={styles.jobContainer} >
+              <div class={styles.jobTitle}>Категория</div>
+              <div class={styles.job}>{dancer.job}</div>
+            </div>
+            <img class={styles.dancerImage} src={dancer.image} alt="" />
+            <div class={styles.careerContainer}>
+              <div class={styles.careerTitle}>Карьера</div>
+              <div class={styles.career}>{parseText(dancer.career)}</div>
+            </div>
+            <Show when={dancer.repertoir.length > 0}>
+              <div class={styles.repertoirContainer}>
+                <div class={styles.repertoirTitle}>Репертуар</div>
+                <div class={styles.repertoirPlaysContainer}>
+                  <For each={dancer.repertoir}>
+                    {(play: DancerPlayInterface) => (
+                      <PlayCard
+                        image={play.image}
+                        title={play.title}
+                        id={play.id}
+                        description={play.description}
+                        getIsAnyActive={getIsAnyActive} 
+                        setIsAnyActive={setIsAnyActive} 
+                      />
+                    )}
+                  </For>
+                </div>
+              </div>
+            </Show>
+          </div>
+          <div class={styles.arrowContainer}>
+            <img class={styles.arrow} src={arrowRight} alt=""/>
+          </div>
+        </div>
+      </FullScreenModal>
+    )
   }
 
   return (
     <FullScreenModal>
-      <img class={styles.dancerImage} src={dancer.image} alt="" />
-      <div class={styles.arrowContainer} >
-        <img class={styles.arrow} src={arrowLeft} alt=""/>
-      </div>
-      <div class={styles.descriptionContainer}>
-        <div class={styles.closeContainer} onclick={() => local.closeCard()}>
-          <img src={closeIcon} alt="" />
+      <div class={styles.dancerModal}>
+        <img class={styles.dancerImage} src={dancer.image} alt="" />
+        <div class={styles.arrowContainer} >
+          <img class={styles.arrow} src={arrowLeft} alt=""/>
         </div>
-        <div class={styles.name} data-aos="fade-up">{dancer.name}</div>
-        <div class={styles.jobContainer} data-aos="fade-up">
-          <div class={styles.jobTitle}>Категория</div>
-          <div class={styles.job}>{dancer.job}</div>
-        </div>
-        <div class={styles.careerContainer}>
-          <div class={styles.careerTitle} data-aos="fade-up">Карьера</div>
-          <div class={styles.career}>{parseText(dancer.career)}</div>
-        </div>
-        <Show when={dancer.repertoir.length > 0}>
-          <div class={styles.repertoirContainer}>
-            <div class={styles.repertoirTitle}>Репертуар</div>
-            <div class={styles.repertoirPlaysContainer}>
-              <For each={dancer.repertoir}>
-                {(play: DancerPlayInterface) => (
-                  <PlayCard
-                    image={play.image}
-                    title={play.title}
-                    id={play.id}
-                    description={play.description}
-                    getIsAnyActive={getIsAnyActive} 
-                    setIsAnyActive={setIsAnyActive} 
-                  />
-                )}
-              </For>
-            </div>
+        <div class={styles.descriptionContainer}>
+          <div class={styles.closeContainer} onclick={() => local.closeCard()}>
+            <img src={closeIcon} alt="" />
           </div>
-        </Show>
-      </div>
-      <div class={styles.arrowContainer}>
-        <img class={styles.arrow} src={arrowRight} alt=""/>
+          <div class={styles.name}>{dancer.name}</div>
+          <div class={styles.jobContainer} >
+            <div class={styles.jobTitle}>Категория</div>
+            <div class={styles.job}>{dancer.job}</div>
+          </div>
+          <div class={styles.careerContainer}>
+            <div class={styles.careerTitle}>Карьера</div>
+            <div class={styles.career}>{parseText(dancer.career)}</div>
+          </div>
+          <Show when={dancer.repertoir.length > 0}>
+            <div class={styles.repertoirContainer}>
+              <div class={styles.repertoirTitle}>Репертуар</div>
+              <div class={styles.repertoirPlaysContainer}>
+                <For each={dancer.repertoir}>
+                  {(play: DancerPlayInterface) => (
+                    <PlayCard
+                      image={play.image}
+                      title={play.title}
+                      id={play.id}
+                      description={play.description}
+                      getIsAnyActive={getIsAnyActive} 
+                      setIsAnyActive={setIsAnyActive} 
+                    />
+                  )}
+                </For>
+              </div>
+            </div>
+          </Show>
+        </div>
+        <div class={styles.arrowContainer}>
+          <img class={styles.arrow} src={arrowRight} alt=""/>
+        </div>
       </div>
     </FullScreenModal>
   );

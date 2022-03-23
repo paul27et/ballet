@@ -7,6 +7,7 @@
           "title": "Щелкунчик",
           "place": "Александринский театр",
           "date": "04",
+          "image": "./performance/nutcracker/nutcracker.png",
           "daytime": "ПТ - 19:00"
         },
         {
@@ -14,6 +15,7 @@
           "title": "Жизель",
           "place": "Мариинский театр, филиал в Республике Северная Осетия - Алания",
           "date": "05",
+          "image": "./performance/jiselle/jiselle.png",
           "daytime": "СБ - 18:00"
         },
         {
@@ -21,6 +23,7 @@
           "title": "роден",
           "place": "Эрмитажный театр",
           "date": "08",
+          "image": "./performance/roden/roden.png",
           "daytime": "ВТ - 18:00"
         },
         {
@@ -28,6 +31,7 @@
           "title": "шопениана",
           "place": "Эрмитажный театр",
           "date": "12",
+          "image": "./performance/chopin/chopin.png",
           "daytime": "СБ - 19:00"
         },
         {
@@ -35,6 +39,7 @@
           "title": "Дон Кихот",
           "place": "Александринский театр",
           "date": "14",
+          "image": "./performance/donKihot/donKihot.png",
           "daytime": "ПН - 18:00"
         },
         {
@@ -42,6 +47,7 @@
           "title": "Дон Кихот",
           "place": "Мариинский театр, филиал в Республике Северная Осетия - Алания",
           "date": "17",
+          "image": "./performance/donKihot/donKihot.png",
           "daytime": "ЧТ - 18:00"
         },
         {
@@ -49,6 +55,7 @@
           "title": "Щелкунчик",
           "place": "БКЗ «Октябрьский»",
           "date": "22",
+          "image": "./performance/nutcracker/nutcracker.png",
           "daytime": "ВТ - 19:00"
         },
         {
@@ -56,6 +63,7 @@
           "title": "шопениана",
           "place": "БКЗ «Октябрьский»",
           "date": "26",
+          "image": "./performance/chopin/chopin.png",
           "daytime": "СБ - 18:00"
         },
         {
@@ -63,6 +71,7 @@
           "title": "роден",
           "place": "Эрмитажный театр",
           "date": "28",
+          "image": "./performance/roden/roden.png",
           "daytime": "ПН - 19:00"
         }
       ]
@@ -73,6 +82,7 @@
           "title": "роден",
           "place": "Александринский театр",
           "date": "07",
+          "image": "./performance/roden/roden.png",
           "daytime": "ПН - 19:00"
         },
         {
@@ -80,6 +90,7 @@
           "title": "Щелкунчик",
           "place": "Мариинский театр, филиал в Республике Северная Осетия - Алания",
           "date": "21",
+          "image": "./performance/nutcracker/nutcracker.png",
           "daytime": "ПН - 19:00"
         },
         {
@@ -87,6 +98,7 @@
           "title": "Дон Кихот",
           "place": "Эрмитажный театр",
           "date": "22",
+          "image": "./performance/donKihot/donKihot.png",
           "daytime": "ВТ - 19:00"
         }
       ]

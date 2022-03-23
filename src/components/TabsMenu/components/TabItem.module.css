@@ -1,15 +1,22 @@
 .menuItem {
   composes: titleManrope36 from global;
   color: var(--main-color-grey);
+  transition: all 1s ease;
+  cursor: pointer;
 }
 
-.textStyle {
-  composes: titleManrope24 from global;
-  color: var(--main-color-grey);
+.menuItem:hover {
+  color: var(--main-color-lightgrey);
+  transition: all 1s ease;
 }
 
 .menuItemActive {
   color: var(--main-color);
+  transition: all 1s ease;
+}
+
+.textStyle {
+  composes: titleManrope24 from global;
 }
 
 @media(max-aspect-ratio: 12/16) {
@@ -21,6 +28,7 @@
     line-height: 120%;
     text-transform: uppercase;
   }
+
   .textStyle {
     font-family: "Manrope", sans-serif;
     font-style: normal;

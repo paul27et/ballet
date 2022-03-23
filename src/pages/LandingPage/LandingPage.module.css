@@ -367,7 +367,13 @@
 
   .rowContainer {
     display: flex;
-    gap: 8.5vw;
+    gap: 7.5vw;
+    padding-top: 4vw;
+  }
+
+  .mobileArrow {
+    width: 10.67vw;
+    height: 10.67vw;
   }
 
   .dateContainer {
@@ -381,6 +387,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 10vw;
+    line-height: 110%;
     text-transform: uppercase;
     color: var(--main-color);
   }
@@ -390,9 +397,11 @@
     font-style: normal;
     font-weight: normal;
     font-size: 3.5vw;
+    line-height: 140%;
     color: var(--main-color-grey);
     word-wrap: none;
-    width: 16.2vw;
+    width: 20vw;
+    padding-top: 0.53vw;
   }
 
   .name {
@@ -400,6 +409,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 10vw;
+    line-height: 110%;
     text-transform: uppercase;
     color: var(--main-color);
   }
@@ -415,17 +425,28 @@
     font-style: normal;
     font-weight: normal;
     font-size: 3.5vw;
+    line-height: 140%;
     color: var(--main-color-grey);
+    padding-top: 0.53vw;
+  }
+
+  .borderMobile {
+    padding-top: 6.67vw;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   }
 
   .afficheLink {
     font-family: 'Cormorant Garamond', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 4.8vw;
+    font-size: 6vw;
     text-transform: uppercase;
     color: var(--main-color);
-    margin-top: 68vw;
+    margin-top: 6.67vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 28.8vw;
   }
 
   .bannersContainer {

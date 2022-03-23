@@ -21,3 +21,41 @@
   margin-bottom: 4.6vw;
   color: var(--main-color);
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .errorPage {
+    padding: 0 4vw;
+  }
+
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title {
+    font-family: "Libre Caslon Display", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56vw;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--main-color);
+    margin-top: 1.39vw;
+  }
+  
+  .sorry {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    text-align: center;
+    margin: 0;
+    color: var(--main-color);
+  }
+}

@@ -11,7 +11,11 @@ interface TabItemInterface {
 export const TabItem: Component<TabItemInterface> = (props) => {
   const [local] = splitProps(props, ['item', 'active', 'onClick', 'textStyle'])
   return (
-    <div class={`${local.textStyle ? styles.textStyle : styles.menuItem} ${local.active ? styles.menuItemActive : ''}`} onclick={() => local.onClick(local.item)}>
+    <div 
+      class={`${styles.menuItem} ${local.textStyle ? styles.textStyle : ''} ${local.active ? styles.menuItemActive : ''}`} 
+      onclick={() => local.onClick(local.item)}
+      id={local.active ? "tabItemActive" : ""}
+    >
       {local.item}
     </div>
   );

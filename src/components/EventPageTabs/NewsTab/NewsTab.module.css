@@ -19,17 +19,31 @@
   transition: all 1s ease;
 }
 
-@media(max-aspect-ratio: 12/16) {
-  .img {
-    width: 28vw;
-    height: 62.5vh;
-    object-fit: cover;
-  }
-}
-
 .newsList {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding-bottom: 2.4vw;
+}
+
+@media(max-aspect-ratio: 12/16) {
+  .newsTab {
+    padding-top: 6.67vw;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .newsList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 2.4vw;
+    gap: 20vw;
+  }
+
+  .img {
+    width: 28vw;
+    height: 62.5vh;
+    object-fit: cover;
+  }
 }

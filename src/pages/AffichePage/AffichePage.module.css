@@ -113,3 +113,167 @@
 .buttonLocal:hover:after { 
   transform: scaleX(1); 
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .affichePage {
+    padding: 0 4vw;
+  }
+
+  .selectContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6.67vw;
+    margin-top: 16vw;
+  }
+  
+  .select {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.47vw;
+    line-height: 140%;
+    background-color: var(--main-color-bg);
+    padding: 10px 0;
+    width: 100%;
+    color: var(--main-color);
+    border: none;
+    border-bottom: 1px solid rgba(255,255, 255, 0.6);
+    background-image: url(/src/assets/downArrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+  }
+
+  .month {
+    display: none;
+  }
+
+  .playContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .play {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5.33vw 0 20vw 0;
+    border-bottom: 1px solid rgba(255,255, 255, 0.6);
+  }
+
+  .titleContainerMobile {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5.33vw;
+    border-bottom: 1px solid rgba(255,255, 255, 0.6);
+  }
+
+  .dateContainer {
+    justify-content: center;
+  }
+
+  .date {
+    font-family: 'Libre Caslon Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.4vw;
+    line-height: 120%;  
+    text-transform: uppercase;
+    color: var(--main-color);
+  }
+
+  .monthTitle {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6.4vw;
+    line-height: 120%;
+    color: var(--main-color);
+    transition: all 1s ease;
+    padding-left: 2vw;
+    text-transform: uppercase;
+  }
+
+  .daytime {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.47vw;
+    line-height: 120%;
+    color: var(--main-color-grey);
+    padding: 0.625vw;
+  }
+  
+  .dateContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .afficheImage {
+    margin-top: 5.33vw;
+    width: 100%;
+  }
+
+  .title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.67vw;
+    line-height: 110%;
+    color: var(--main-color);
+    transition: all 1s ease;
+    color: var(--main-color);
+    transition: all 1s ease;
+    margin-top: 4vw;
+  }
+
+  .place {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.47vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+    padding-top: 0.8vw;
+    text-align: left;
+  }
+
+  .buttonContainer {
+    padding: 0;
+    margin-top: 5.33vw;
+    text-align: left;
+  }
+  
+  .buttonLocal {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.8vw;
+    line-height: 120%;
+    color: var(--main-color);
+    border: none;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 0;
+  }
+  
+  .buttonLocal:after {
+    display: block;
+    content: '';
+    border-bottom: 1px solid var(--main-color);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:  0% 50%;
+  }
+  
+  .buttonLocal:hover:after { 
+    transform: scaleX(1); 
+  }
+}

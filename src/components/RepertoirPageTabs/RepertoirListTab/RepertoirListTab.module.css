@@ -27,7 +27,7 @@
 .idx {
   composes: textLibre18 from global;
   padding-right: 1.04vw;
-  padding-top: 1.18vw;
+  padding-top: 0.9vh;
   vertical-align: top;
 }
 
@@ -49,4 +49,54 @@
   object-fit: cover;
   z-index: -1;
   animation: fadein 1s ease;
+}
+
+.listItemText {
+  display: flex;
+}
+
+@media(max-aspect-ratio: 12/16) {
+  .listItem {
+    display: flex;
+    flex-direction: column;
+    padding-top: 13.33vw;
+    width: 100%;
+  }
+
+  .mobileImage {
+    width: 100%;
+  }
+
+  .listContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: -8vw;
+  }
+
+  .listItemText {
+    display: flex;
+    margin-top: 4vw;
+  }
+
+  .idx {
+    font-family: 'Libre Caslon Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.93vw;
+    line-height: 120%;
+    text-transform: uppercase;
+    padding-right: 3.47vw;
+    padding-top: 1.5vw;
+    vertical-align: top;
+  }
+
+  .text {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.67vw;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
 }

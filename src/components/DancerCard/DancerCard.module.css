@@ -1,14 +1,4 @@
-.dancerCard {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1060;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  outline: 0;
-  background-color: var(--main-bg-color);
+.dancerModal {
   display: flex;
 }
 
@@ -148,4 +138,172 @@
 .playImage {
   filter: grayscale(1);
   transition: all 1s ease;
+}
+
+@media(max-aspect-ratio: 12/16) {
+  .dancerModal {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 0 4vw;
+  }
+
+  .closeContainer {
+    position: fixed;
+    display: flex;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 2.08vw 2.29vw 2.08vw 0;
+    justify-content: flex-end;
+    background-color: var(--main-bg-color);
+  }
+
+  .name {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: normal;
+    word-spacing: 10000px;
+    font-size: 10.67vw;
+    line-height: 110%;
+    color: var(--main-color);
+    text-transform: uppercase;
+    margin-top: 10vw;
+  }
+
+  .jobContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6.67vw;
+    gap: 1.33vw;
+  }
+
+  .jobTitle {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.46vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+  }
+  
+  .job {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color-lightgrey);
+  }
+
+  .dancerImage {
+    margin-top: 9vw;
+    width: 100%;
+    height: auto;
+  }
+
+  .careerContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 13.33vw;
+    gap: 1.33vw;
+  }
+  
+  .careerTitle {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.46vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+  }
+  
+  .career {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color-lightgrey);
+  }
+
+  .descriptionContainer {
+    padding-top: 6.94vw;
+    overflow-y: visible;
+  }
+
+  .repertoirTitle {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.46vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+  }
+
+  .repertoirContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12vw;
+    gap: 5.33vw;
+  }
+
+  .repertoirPlaysContainer {
+    margin-top: 0;
+    margin-bottom: 2.29vw;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2.08vw;
+    row-gap: 13.33vw;
+    width: 100%;
+  }
+  
+  .repertoirPlay {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+  }
+  
+  .playTitle {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6.4vw;
+    line-height: 120%;
+    color: var(--main-color);
+    text-transform: uppercase;
+    margin-top: 4vw;
+  }
+  
+  .playDescription {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.46vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+  }
+  
+  .repertoirPlayInactive {
+    opacity: 0.2;
+    transition: all 1s ease;
+  }
+  
+  .repertoirPlayInactive .playImage {
+    filter: grayscale(1);
+    transition: all 1s ease;
+  }
+  
+  .repertoirPlayColored .playImage {
+    filter: grayscale(0);
+    transition: all 1s ease;
+  }
+  
+  .playImage {
+    width: 100%;
+    filter: none;
+    transition: all 1s ease;
+  }
 }

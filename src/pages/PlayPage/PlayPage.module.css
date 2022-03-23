@@ -198,3 +198,256 @@
 .age {
   padding-left: 2.08vw;
 }
+
+@media(max-aspect-ratio: 12/16) {
+  .playPage {
+    padding: 0 4vw;
+  }
+  
+  .title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9.6vw;
+    line-height: 110%;
+    color: var(--main-color);
+    text-align: left;
+    margin-top: 1.33vw;
+  }
+
+  .imageContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vw;
+  }
+
+  .playType {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.46vw;
+    line-height: 140%;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--main-color-lightgrey);
+  }
+
+  .age {
+    padding-left: 4vw;
+  }
+
+  .image {
+    margin-top: 1.33vw;
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .closePlays {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vw;
+  }
+
+  .smallTitle {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.46vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+    text-align: left;
+  }
+
+  .playsList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vw;
+  }
+  
+  .playItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5.33vw 0;
+    border-bottom: 1px solid var(--main-color-grey);
+    align-items: self-start;
+  }
+  
+  .playItem:first-of-type {
+    border-top: 1px solid var(--main-color-grey);
+  }
+  
+  .playItemText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0;
+  }
+  
+  .date {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color);
+  }
+  
+  .place {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color);
+  }
+
+  .localButton {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 120%;
+    color: var(--main-color);
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 0;
+    margin-top: 5.33vw;
+  }
+  
+  .localButton:after {
+    display: block;
+    content: '';
+    border-bottom: 1px solid var(--main-color);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:  0% 50%;
+  }
+  
+  .localButton:hover:after { 
+    transform: scaleX(1); 
+  }
+
+  .descriptionContainer {
+    margin-top: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20vw;
+  }
+  
+  .description {
+    width: 100%;
+  }
+  
+  .descriptionText {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 160%;
+    color: var(--main-color);
+    text-align: left;
+    margin-top: 8vw;
+  }
+  
+  .info {
+    margin-top: 5.21vw;
+  }
+
+  .moreMobile {
+    display: flex;
+    align-items: center;
+    margin-top: 5.33vw;
+  }
+
+  .moreTextMobile {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 5.33vw;
+    line-height: 120%;
+    text-transform: uppercase;
+    padding-right: 2vw;
+  }
+
+  .arrowIcon {
+    width: 10.67vw;
+    height: 10.67vw;
+  }
+
+  .info {
+    margin-top: 13.33vw;
+  }
+  
+  .infoItem {
+    text-align: left;
+    padding: 5.33vw 0;
+    border-bottom: 1px solid var(--main-color-grey);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .infoItem:first-of-type {
+    border-top: 1px solid var(--main-color-grey);
+  }
+  
+  .infoText {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.27vw;
+    line-height: 120%;
+    color: var(--main-color);
+  }
+  
+  .infoTitle {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.46vw;
+    line-height: 140%;
+    color: var(--main-color-grey);
+    padding-top: 0.8vw;
+  }
+
+  .peopleContainer {
+
+  }
+  
+  .peopleList {
+    margin-top: 2.67vw;
+  }
+  
+  .peopleItem {
+    padding-top: 5.33vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery {
+    margin-top: 20vw;
+  }
+  
+  .imagesContainer {
+    margin-top: 8vw;
+    height: auto;
+    display: flex;
+    margin-left: -4vw;
+    width: 100vw;
+    gap: 0;
+    overflow-x: scroll;
+    align-items: end;
+  }
+  
+  .imagesContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .imageSlide {
+    animation: none;
+    padding: 0 4vw;
+  }
+}
