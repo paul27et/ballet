@@ -10,6 +10,8 @@ export const PressTab: Component<{ press: any }> = (props) => {
   onMount(() => {
     if (!isMobile) {
       document.getElementById('pressTab')?.scrollIntoView()
+    } else {
+      window.scrollTo(0, 0)
     }
   })
 
