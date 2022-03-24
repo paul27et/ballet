@@ -5,7 +5,7 @@ import styles from './PressTab.module.css';
 
 export const PressTab: Component<{ press: any }> = (props) => {
   const [local] = splitProps(props, ['press'])
-  const isMobile = window.innerWidth / window.innerHeight < 0.75;
+  const isMobile = window.innerWidth / window.innerHeight < 0.75
 
   onMount(() => {
     if (!isMobile) {
