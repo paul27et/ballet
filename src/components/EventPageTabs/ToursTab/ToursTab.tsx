@@ -6,11 +6,16 @@ import { Footer } from '../../Footer';
 
 export const ToursTab: Component<{ tours: any }> = (props) => {
   const [local] = splitProps(props, ['tours'])
+  const isMobile = window.innerWidth / window.innerHeight < 0.75
 
   onMount(() => {
-    const element = document.getElementById('toursTab');
-    const y = element.getBoundingClientRect().top + window.pageYOffset - 150;
-    window.scrollTo({top: y, behavior: 'smooth'});
+    if (isMobile) {
+      document.getElementById('toursTab')?.scrollIntoView()
+    } else {
+      const element = document.getElementById('toursTab');
+      const y = element.getBoundingClientRect().top + window.pageYOffset - 150;
+      window.scrollTo({top: y, behavior: 'smooth'});
+    }
   })
 
   return (
