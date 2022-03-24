@@ -42,7 +42,7 @@
   .tabsMenuContainer {
     position: sticky;
     top: 0;
-    margin-left: 1.9vw;
+    margin-left: 0;
     z-index: 150;
   }
 }
