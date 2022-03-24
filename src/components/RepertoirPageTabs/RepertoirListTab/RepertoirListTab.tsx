@@ -1,13 +1,13 @@
 import { RepertoirInterface } from 'interfaces';
 import { Link } from 'solid-app-router';
-import { Component, createEffect, createSignal, For, Show, splitProps } from 'solid-js';
+import { Component, createEffect, createSignal, For, onMount, Show, splitProps } from 'solid-js';
 import { HoverOverHoc } from '../../HoverOverHoc';
 import styles from './RepertoirListTab.module.css';
 
 export const RepertoirListItem: Component<{ idx: Function, item: RepertoirInterface, setImage: Function, setOffset: Function, delay: boolean }> = (props) => {
   const [local] = splitProps(props, ['idx', 'item', 'setImage', 'setOffset', 'delay'])
   let currentEl: HTMLImageElement | undefined
-  const isMobile = window.innerWidth / window.innerHeight < 0.75;
+  const isMobile = window.innerWidth / window.innerHeight < 0.75
 
   const calculateOffset = () => {
     return currentEl ? currentEl.offsetTop : 0
@@ -54,6 +54,10 @@ export const RepertoirListTab: Component<{ list: RepertoirInterface[], delay: bo
   const [getOffset, setOffset] = createSignal(0)
   const isMobile = window.innerWidth / window.innerHeight < 0.75;
   let img: HTMLImageElement | undefined
+
+  onMount(() => {
+    window.scrollTo(0, 0)
+  })
 
   const trackOffset = (offset: number) => {
     if (img) {
