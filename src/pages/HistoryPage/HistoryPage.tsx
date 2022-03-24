@@ -1,14 +1,33 @@
 import { Footer, MainHeader, Menu, SiteMenu, TabsMenu } from 'components';
-import { Component, For, Show, splitProps } from 'solid-js';
+import { Component, createSignal, For, Match, onMount, Show, splitProps, Switch } from 'solid-js';
 import mainBg from 'assets/history/mainBg.png'
 // @ts-ignore
 import { texts } from 'database/history.json'
 import styles from './HistoryPage.module.css';
 import { parseText } from '../../App';
+import { useNavigate } from 'solid-app-router';
+
+
+
+const Redirect: Component<{ to: string }> = (props) => {
+  const navigate = useNavigate()
+  const [local] = splitProps(props, ['to'])
+
+  onMount(() => {
+    navigate(local.to)
+  })
+
+  return (
+    <>
+    </>
+  )
+}
 
 
 export const HistoryPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
+  const HEADERS = { season: '53-й сезон', story: 'История', troupe: 'Труппа' }
+  const [getActiveTab, setActiveTab] = createSignal(HEADERS.story)
   const isMobile = window.innerWidth / window.innerHeight < 0.75;
 
   const style = isMobile ? {} : {'background-image': `url(${mainBg})`}
@@ -37,6 +56,20 @@ export const HistoryPage: Component<{ onMenuButtonClick: Function, isMenuActive:
           <Menu onClick={(state: boolean) => local.onMenuButtonClick(state)} />
         </div>
       </div>
+      <div class={styles.tabsMenuContainer}>
+        <TabsMenu headers={HEADERS} active={getActiveTab()} onTabClick={setActiveTab} />
+      </div>
+      <Switch>
+        <Match when={getActiveTab() === HEADERS.season}>
+          <Redirect to="/ballet/about" />
+        </Match>
+        <Match when={getActiveTab() === HEADERS.story}>
+          <Redirect to="/ballet/history/" />
+        </Match>
+        <Match when={getActiveTab() === HEADERS.troupe}>
+          <Redirect to="/ballet/troupe/" />
+        </Match>
+      </Switch>
       <div class={styles.contentHeader} style={style} data-aos="fade-up">
         <div class={styles.mainText}>
           {parseText(texts.mainText)}

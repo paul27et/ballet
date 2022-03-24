@@ -9,7 +9,7 @@ export const ToursTab: Component<{ tours: any }> = (props) => {
 
   onMount(() => {
     const element = document.getElementById('toursTab');
-    const y = element.getBoundingClientRect().top + window.pageYOffset - 200;
+    const y = element.getBoundingClientRect().top + window.pageYOffset - 150;
     window.scrollTo({top: y, behavior: 'smooth'});
   })
 

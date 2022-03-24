@@ -45,6 +45,10 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
     return ""
   }
 
+  const parseDaytime = (str: string) => {
+    return str.slice(4) + ' / '
+  }
+
   const mobilePlayItem = (play: PlayInterface, month: MonthInterface, isLast: boolean) => (
     <div class={`${styles.play} ${isLast && styles.last}`} data-aos={dataAos}>
       <div class={styles.playContainer}>
@@ -64,7 +68,7 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
           <span class={styles.title}>
             <Link class={styles.title} href={`/ballet/repertoir/${play.id}`}>{play.title}</Link>
           </span>
-          <span class={styles.place}>{play.place}</span>
+          <span class={styles.place}>{parseDaytime(play.daytime)}{play.place}</span>
         </div>
       </div>
       <div class={styles.buttonContainer}>

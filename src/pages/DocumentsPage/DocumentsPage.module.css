@@ -16,6 +16,10 @@
   color: inherit;
 }
 
+.footerContainer {
+  padding: 0 2.29vw;
+}
+
 @media(max-aspect-ratio: 12/16) {
   .documentsPage {
     padding: 0 4vw;
@@ -99,5 +103,9 @@
   
   :global(.accordion-button::after) {
     width: 0;
+  }
+
+  .footerContainer {
+    padding: 0 4vw;
   }
 }

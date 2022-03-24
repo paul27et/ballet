@@ -34,7 +34,7 @@
 
 .subText {
   color: var(--main-color-grey);
-  composes: textManrope18 from global;
+  composes: textManrope18Bold from global;
 }
 
 @media(max-aspect-ratio: 12/16) {

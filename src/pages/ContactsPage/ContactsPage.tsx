@@ -9,7 +9,7 @@ export const ContactsPage: Component<{ onMenuButtonClick: Function, isMenuActive
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
   const isMobile = window.innerWidth / window.innerHeight < 0.75;
 
-  const dataAos = isMobile ? 'fade' : 'fade-up'
+  const dataAos = isMobile ? '' : 'fade-up'
 
   return (
     <div class={styles.page}>

@@ -67,7 +67,9 @@ export const DocumentsPage: Component<{ onMenuButtonClick: Function, isMenuActiv
           </Accordion>
         </div>
       </div>
-      <Footer />
+      <div class={styles.footerContainer}>
+        <Footer />
+      </div>
     </>
   );
 };

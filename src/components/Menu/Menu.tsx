@@ -1,5 +1,6 @@
-import { Component, splitProps } from 'solid-js';
+import { Component, Show, splitProps } from 'solid-js';
 import menuIcon from 'assets/menuIcon.svg';
+import searchIcon from 'assets/searchIcon.svg';
 import menuIconSmall from 'assets/burger.svg';
 import logoSmall from 'assets/logo/logo_small.svg';
 import logo from 'assets/logo/logo_medium.svg';
@@ -20,6 +21,11 @@ export const Menu: Component<{ onClick: Function }> = (props) => {
         <Link href="/ballet/affiche">
           <Button text="Билеты" style={styles.localButton} hover />
         </Link>
+        <Show when={!isMobile}>
+          <div class={styles.iconContainer}>
+            <img class={styles.icon} src={searchIcon} onclick={() => local.onClick(true)} />
+          </div>
+        </Show>
         <div class={styles.iconContainer}>
           <img class={styles.icon} src={isMobile ? menuIconSmall : menuIcon} onclick={() => local.onClick(true)} />
         </div>

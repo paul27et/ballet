@@ -33,7 +33,11 @@ export const AboutPage: Component<{ onMenuButtonClick: Function, isMenuActive: b
         <div class={styles.menuContainer}>
           <Menu onClick={(state: boolean) => local.onMenuButtonClick(state)} />
         </div>
+      </div>
+      <div class={styles.tabsMenuContainer}>
         <TabsMenu headers={HEADERS} active={getActiveTab()} onTabClick={setActiveTab} />
+      </div>
+      <div class={styles.aboutPage}>
         <Switch>
           <Match when={getActiveTab() === HEADERS.season}>
             <SeasonTab />
@@ -45,10 +49,10 @@ export const AboutPage: Component<{ onMenuButtonClick: Function, isMenuActive: b
             <Redirect to="/ballet/troupe/" />
           </Match>
         </Switch>
-        <div class={styles.menuContainer}>
-          <Footer />
-        </div>
       </div>
+      <div class={styles.footerContainer}>
+        <Footer />
+      </div>`
     </>
   );
 };

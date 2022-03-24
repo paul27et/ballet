@@ -70,6 +70,13 @@
   justify-content: center;
 }
 
+.tabsMenuContainer {
+  position: sticky;
+  top: 0;
+  margin-left: 2.29vw;
+  z-index: 150;
+}
+
 @media(max-aspect-ratio: 12/16) {
   .contentHeader {
     font-family: "Manrope", sans-serif;
@@ -83,6 +90,13 @@
     margin-top: 0;
     display: flex;
     justify-content: end;
+  }
+
+  .tabsMenuContainer {
+    position: sticky;
+    top: 0;
+    margin-left: 4vw;
+    z-index: 150;
   }
 
   .mainText {

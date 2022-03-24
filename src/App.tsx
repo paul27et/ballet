@@ -24,7 +24,17 @@ export const preventScroll = (e: Event) => {
 }
 
 export const parseText = (text: string, noAnimation?: boolean) => {
-  return text.split('|').map(textItem => <div data-aos={noAnimation ? "" : "fade-up"}>{textItem}<br /><br /></div>)
+  const textParts = text.split('|')
+  return textParts.map((textItem, idx) => {
+    if (idx === textParts.length - 1) {
+      return (
+        <div data-aos={noAnimation ? "" : "fade-up"}>{textItem}</div>
+      )
+    }
+    return (
+      <div data-aos={noAnimation ? "" : "fade-up"}>{textItem}<br /><br /></div>
+    )
+  })
 }
 
 const App: Component = () => {

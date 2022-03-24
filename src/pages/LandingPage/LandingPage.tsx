@@ -80,7 +80,7 @@ export const LandingPage: Component<{ onMenuButtonClick: Function, isMenuActive:
           </div>
         </div>
         <Partners />
-        <div class={styles.menuContainer}>
+        <div class={styles.footerContainer}>
           <Footer />
         </div>
       </div>

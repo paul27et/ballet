@@ -3,10 +3,32 @@
   overflow-x: hidden;
 }
 
+.tabsMenuContainer {
+  position: sticky;
+  top: 0;
+  margin-left: 2.29vw;
+  z-index: 150;
+}
+
+.footerContainer {
+
+}
+
 @media(max-aspect-ratio: 12/16) {
   .aboutPage {
     padding: 0 4vw;
     overflow-x: hidden;
+  }
+
+  .tabsMenuContainer {
+    position: sticky;
+    top: 0;
+    margin-left: 4vw;
+    z-index: 150;
+  }
+
+  .footerContainer {
+    padding: 0 4vw;
   }
 
   .menuContainer {
