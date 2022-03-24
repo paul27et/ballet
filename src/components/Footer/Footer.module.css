@@ -91,7 +91,11 @@ a:hover {
     justify-content: space-between;
     text-align: left;
     gap: 1.33vw;
-    margin: 4vw 0 16.5vw 0;
+    margin: 4vw 0;
     color: var(--main-color-grey);
+  }
+
+  .offset {
+    margin-top: 26.7vw;
   }
 }

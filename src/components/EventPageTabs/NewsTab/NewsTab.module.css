@@ -1,12 +1,11 @@
 .newsTab {
-  padding-top: 7.5vw;
   display: flex;
   justify-content: space-between;
 }
 
 .imgContainer {
   position: sticky;
-  top: 10vw;
+  top: 6vw;
   height: 100%;
   padding-top: 8.33vw;
 }
@@ -23,7 +22,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-bottom: 5vw;
 }
 
 @media(max-aspect-ratio: 12/16) {

@@ -6,7 +6,6 @@ import arrowRight from 'assets/arrowRight.svg'
 // @ts-ignore
 import { repertoir } from 'database/repertoir.json';
 import styles from './PlayPage.module.css';
-import { stringify } from 'querystring';
 
 export const PlayPage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])

@@ -9,10 +9,6 @@ export const NewsTab: Component<{ news: NewsCardInterface[] }> = (props) => {
   const [getBlur, setBlur] = createSignal(false)
   const isMobile = window.innerWidth / window.innerHeight < 0.75;
 
-  onMount(() => {
-    document.getElementById('newsTab')?.scrollIntoView()
-  })
-
   return (
     <>
       <div id="newsTab" class={styles.newsTab}>

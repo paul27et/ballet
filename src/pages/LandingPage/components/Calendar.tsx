@@ -128,7 +128,7 @@ export const Calendar: Component<{ month: string, setMonth: Function }> = (props
             <div class={styles.flexRow} role="cell">2</div>
             <div class={styles.flexRow} role="cell">3</div>
             <div class={styles.flexRow} role="cell">
-              <Link class={styles.tableLink} href="/ballet/affiche">4</Link>
+              <Link class={styles.tableLink} href="/ballet/affiche?scrollTo=04nutcracker">4</Link>
             </div>
             <div class={styles.flexRow} role="cell"><Link class={styles.tableLink} href="/ballet/affiche">5</Link></div>
             <div class={styles.flexRow} role="cell">6</div>

@@ -12,7 +12,11 @@ export const MainHeader: Component = (props) => {
 
   return ( 
     <>
-
+    {/* <div class={`${styles.mainHeader}`}>
+      <span class={`${styles.text}`}>
+        {props.children}
+      </span>
+    </div> */}
     </>
   )
 };

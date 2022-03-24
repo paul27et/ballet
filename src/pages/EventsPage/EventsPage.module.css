@@ -1,5 +1,5 @@
 .contentContainer {
-  padding: 0 2.91vw;
+  padding: 0 2.29vw;
 }
 
 .menuContainer {
@@ -16,6 +16,7 @@
     top: 0;
     background-color: var(--main-bg-color);
     z-index: 100;
+    margin-bottom: 0;
   }
 
   .menuContainer > div {

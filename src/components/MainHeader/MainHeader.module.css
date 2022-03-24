@@ -33,10 +33,10 @@
 
 @keyframes saturateColor {
   0% {
-    background: var(--main-bg-color);
+    background: linear-gradient(var(--main-bg-color), var(--main-bg-color));
   }
   100% {
-    background: transparent;
+    background: linear-gradient(transparent, var(--main-bg-color) 25%, var(--main-bg-color));
   }
 }
 
@@ -74,15 +74,16 @@
   z-index: 999;
   color: var(--main-color);
 
-  background: linear-gradient(var(--main-color), var(--main-color) 50%, var(--main-bg-color) 50%, var(--main-bg-color));
+  /* background: linear-gradient(var(--main-color), var(--main-color) 50%, var(--main-bg-color) 50%, var(--main-bg-color)); */
   /* background-color: transparent; */
-  background-size: 100% 200%;
-  animation-name: changeColor, removeComponent;
+  /* background-size: 100% 200%; */
+  background: var(--main-bg-color);
+  animation-name: saturateColor, removeComponent;
   animation-duration: 1500ms, 1500ms;
   animation-delay: 0ms, 1500ms;
-  animation-timing-function: linear, linear;
-  animation-fill-mode: forwards, forwards;
-  animation-iteration-count: 1, 1;
+  animation-timing-function: linear, linear, linear;
+  animation-fill-mode: forwards, forwards, forwards;
+  animation-iteration-count: 1, 1, 1;
 }
 
 .text {

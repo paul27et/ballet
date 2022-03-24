@@ -1,15 +1,23 @@
-import { Component, For, Show, splitProps } from 'solid-js';
+import { Component, createEffect, For, onMount, Show, splitProps } from 'solid-js';
 import { Button, Footer, MainHeader, Menu, SiteMenu } from 'components';
 // @ts-ignore
 import { months } from 'database/affiche.json'
 import { MonthInterface, PlayInterface } from 'interfaces';
 import styles from './AffichePage.module.css';
-import { Link } from 'solid-app-router';
+import { Link, useParams, useSearchParams } from 'solid-app-router';
 
 export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive: boolean }> = (props) => {
   const [local] = splitProps(props, ['onMenuButtonClick', 'isMenuActive'])
   const isMobile = window.innerWidth / window.innerHeight < 0.75;
+  const [searchParams, setSearchParams] = useSearchParams();
   const dataAos = isMobile ? 'fade' : 'fade-up'
+
+  onMount(() => {
+    if (searchParams.scrollTo) {
+      setTimeout(() => document.getElementById(searchParams.scrollTo)?.scrollIntoView(true), 700)
+    }
+  })
+
 
   const parseMonth = (str: string) => {
     if (str.toLowerCase() === "февраль") {
@@ -49,7 +57,7 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
             <div class={styles.daytime}>{parseTime(play.daytime)}</div>
           </div>
         </div>
-        <Link class={styles.title} href={`/ballet/repertoir/${play.id}`}>
+        <Link href={`/ballet/repertoir/${play.id}`}>
           <img class={styles.afficheImage} src={play.image} alt="" />
         </Link>
         <div class={styles.titleContainer}>
@@ -110,7 +118,7 @@ export const AffichePage: Component<{ onMenuButtonClick: Function, isMenuActive:
               <For each={Object.values(month)[0] as PlayInterface[] }>
                 {(play, idx) => {
                   return isMobile ? mobilePlayItem(play, month, idx() === Object.values(month)[0].length - 1) : (
-                    <div class={styles.play} data-aos={dataAos}>
+                    <div class={styles.play} id={play.date + play.id} data-aos={dataAos}>
                       <div class={styles.playContainer}>
                         <div class={styles.dateContainer}>
                           <span class={styles.date}>{play.date}</span>
