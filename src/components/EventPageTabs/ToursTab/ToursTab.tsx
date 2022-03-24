@@ -9,9 +9,7 @@ export const ToursTab: Component<{ tours: any }> = (props) => {
   const isMobile = window.innerWidth / window.innerHeight < 0.75
 
   onMount(() => {
-    if (isMobile) {
-      document.getElementById('toursTab')?.scrollIntoView()
-    } else {
+    if (!isMobile) {
       const element = document.getElementById('toursTab');
       const y = element.getBoundingClientRect().top + window.pageYOffset - 150;
       window.scrollTo({top: y, behavior: 'smooth'});
